@@ -1,0 +1,2 @@
+este projeto calcula o faturamento de cada loja contida em uma planilha,
+enviando as informação de faturamento por loja para um e-mail.
