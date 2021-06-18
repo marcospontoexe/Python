@@ -1,0 +1,2 @@
+esta pasta contém vários exercícios desenvovidos durante o curso de python básico,
+realizado no canal do youtube "curso em vídeos"
