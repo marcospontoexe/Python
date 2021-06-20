@@ -1,0 +1,6 @@
+Para realizar a gravação dos voluntários, foi usado o código "Banco_Dados". 
+Este código grava automaticamente um áudio de dois segundos para cada comando,
+ com uma frequência de amostragem de 16000 bits por segundo.
+Os audios são salvados dentro da pasta em que se encontra o 
+arquivo "Banco_Dados.py", por tanto é necessário criar pastas distintas para 
+cada comando gravado.

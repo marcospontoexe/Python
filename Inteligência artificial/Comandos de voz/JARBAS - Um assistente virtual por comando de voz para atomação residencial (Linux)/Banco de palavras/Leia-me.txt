@@ -1,0 +1,4 @@
+Esta pasta contém o banco de palavras construido durante o desenvolvimento 
+do projeto jarbas.
+Para criar cada audio foi usado o programa "Banco de dados", da pasta 
+banco de dados
