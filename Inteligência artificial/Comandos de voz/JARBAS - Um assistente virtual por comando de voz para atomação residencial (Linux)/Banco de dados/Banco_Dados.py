@@ -12,5 +12,7 @@ for i in range(0, len(comandos)):
         #arecord -d 10 -r 48000 -c 2 -f S16_LE audio.wav
         #gravar = "arecord -D hw:audiocodec, 0 -f dat -d 2 -c 1 -r 16000"
         #cmd = str(gravar) + str(speaker) + str("-") + str(i) + str ("-") + str(rodada) + str(".wav")
-        cmd = 'arecord -D hw:audiocodec,0 -f dat -d 2 -c 1 -r 16000 ' + str(speaker) + str('-') + str(i) + str('-') + str(rodada) + str('.wav')
-        os.system(cmd)
+        
+        #cmd = 'arecord -D hw:audiocodec,0 -f dat -d 2 -c 1 -r 16000 ' + str(speaker) + str('-') + str(i) + str('-') + str(rodada) + str('.wav')
+        #os.system(cmd)
+        os.system(f'arecord -D hw:0,0 -f dat -d 2 -c 1 -r 16000 {speaker}-{i}-{rodada}.wav')
