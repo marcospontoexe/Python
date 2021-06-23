@@ -1,6 +1,15 @@
 Para realizar a gravação dos voluntários, foi usado o código "Banco_Dados". 
-Este código grava automaticamente um áudio de dois segundos para cada comando,
- com uma frequência de amostragem de 16000 bits por segundo.
-Os audios são salvados dentro da pasta em que se encontra o 
+Este código grava automaticamente três áudios de dois segundos para cada 
+comando, com uma frequência de amostragem de 16000 bits por segundo.
+Os audios são salvos dentro da pasta em que se encontra o 
 arquivo "Banco_Dados.py", por tanto é necessário criar pastas distintas para 
 cada comando gravado.
+
+No terminal do linux digitar "arecord -l", para verificar o card e o device 
+da entrada de som, para usar como parâmentro do comando "arecord".
+
+Para fazer alterações no alsamixer, entre sempre como adm: "sudo alsamixer",
+para que as alterações sejam salvas após fechar o alsamixer. Se mesmo assim 
+o alsamixer não estiver salvando as alterações após o sistema ser reiniciado, 
+use o comando "sudo alsactl store" para gravar as alterações.
+
