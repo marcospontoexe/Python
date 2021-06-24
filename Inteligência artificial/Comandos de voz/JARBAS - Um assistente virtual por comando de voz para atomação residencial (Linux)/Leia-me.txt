@@ -1,4 +1,4 @@
-Este projeto foi desenvolvido durante meu tcc.
+Este projeto foi desenvolvido durante meu tcc, e funciona em Linux.
 Neste trabalho foi desenvolvido um assistente que consiste
 de um tradutor homem/máquina para comandos curtos de voz que, auxiliado por
  uma Rede Neural Artificial do tipo Multilayer Perceptron, interpreta comandos
