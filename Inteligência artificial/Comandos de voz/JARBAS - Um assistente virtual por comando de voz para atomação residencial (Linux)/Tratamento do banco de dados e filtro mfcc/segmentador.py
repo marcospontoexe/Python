@@ -109,17 +109,16 @@ for comando in range(10):
 		print('limiar inferior de energia: '+str(lim_inferior))
 		print('ENERGIA MÁXIMA: '+ str(vMax))
 		print('\n')
-
-
+		
 
 	#imprime os gŕaficos do vetor de energia, além do audio original, áudio apenas com a regiaão falada, e finalmente o audio segmentado
-		plt.subplot(5,1,1)
+		plt.subplot(4,1,1)
 		plt.plot(energy)
-		plt.subplot(5,1,2)
+		plt.subplot(4,1,2)
 		plt.plot(x)
-		plt.subplot(5,1,3)
+		plt.subplot(4,1,3)
 		plt.plot(y)
-		plt.subplot(5,1,4)
+		plt.subplot(4,1,4)
 		plt.plot(z)
 		plt.show()
 				
