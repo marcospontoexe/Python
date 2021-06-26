@@ -145,7 +145,7 @@ for comando in range(10):
 
 '''O comando "comm > nome_do_arquivo.csv" deverá ser usado no terminal,
 afim de gravar as saidas da função "sys.stdout.write()" em um arqui .csv
-exemplo: python3 mfcc.py com > terino.csv
+exemplo: python3 mfcc.py comm > terino.csv
 '''
 
 
