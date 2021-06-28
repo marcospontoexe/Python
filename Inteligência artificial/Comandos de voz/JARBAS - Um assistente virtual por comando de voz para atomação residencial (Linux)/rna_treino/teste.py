@@ -8,7 +8,7 @@ import os
 import math
 import matplotlib.ticker as mticker
 import time
-import alsaaudio
+import pyalsaaudio		#(https://stackoverflow.com/questions/23190348/alsaaudio-library-not-working)
 from python_speech_features import mfcc, delta, logfbank
 from pybrain.tools.shortcuts import buildNetwork
 from pybrain.datasets import SupervisedDataSet

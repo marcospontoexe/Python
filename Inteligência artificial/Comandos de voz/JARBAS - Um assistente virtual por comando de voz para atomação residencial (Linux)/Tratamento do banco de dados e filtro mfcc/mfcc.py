@@ -30,7 +30,7 @@ for comando in range(10):
 	if (comando == 9):
 		comando_aux = f"{pasta}/19-Café"
 
-	for speaker in range(1, 3):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
+	for speaker in range(66, 76):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
 		audio = f'{comando_aux}/{speaker}.wav'
 		[fs,xi] = wav.read(audio)
 		#normalização do amplitude de 15 bits. Isso deixa a amplitude entre um intervalo de 1 e -1
