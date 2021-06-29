@@ -26,7 +26,7 @@ y_train = df.iloc[:, nInputs:(nInputs+nOutputs)].values
 X_train_norm = X_train/np.max(np.abs(X_train))
 
 #rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, hiddenclass=TanhLayer, outclass=SoftmaxLayer)
-rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, outclass=SoftmaxLayer)
+rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, outclass=TanhLayer)
 base = SupervisedDataSet(nInputs, nOutputs)
 
 for i in range(len(X_train)):

@@ -6,7 +6,7 @@ from pybrain3.structure.modules import SoftmaxLayer
 from pybrain3.structure.modules import SigmoidLayer
 from pybrain3.structure.modules import TanhLayer
 from pybrain3.structure.modules import BiasUnit
-from pybrain3.tools.customxml import NetworkWriter
+from pybrain.tools.customxml import NetworkWriter	#necessário pybrain v0.3.3
 
 #import pybrain3
 import numpy as np
@@ -32,14 +32,15 @@ X_train_norm = X_train/np.max(np.abs(X_train))
 rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, outclass=SoftmaxLayer)
 base = SupervisedDataSet(nInputs, nOutputs)
 
-# insere os dados na rede neural
+# insere os dados na rede neuraloftmax
 for i in range(len(X_train)):
 	base.addSample(X_train_norm[i],y_train[i])
 
 # treinamento da rede neural pelo metodo back propagation
 treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.005, momentum = 0.06, batchlearning=False)
 #treinamento.trainUntilConvergence(maxEpochs=250, verbose=None, continueEpochs=30, validationProportion=0.25)
-epocas = 180
+epocas = 600
+
 learning_rate = np.zeros(epocas)
 for i in range(1, epocas):
     erro = treinamento.train()
