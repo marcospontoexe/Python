@@ -37,9 +37,9 @@ for i in range(len(X_train)):
 	base.addSample(X_train_norm[i],y_train[i])
 
 # treinamento da rede neural pelo metodo back propagation
-treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.005, momentum = 0.06, batchlearning=False)
+treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.02, momentum = 0.1, batchlearning=False)
 #treinamento.trainUntilConvergence(maxEpochs=250, verbose=None, continueEpochs=30, validationProportion=0.25)
-epocas = 600
+epocas = 100
 
 learning_rate = np.zeros(epocas)
 for i in range(1, epocas):

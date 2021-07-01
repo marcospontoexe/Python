@@ -30,7 +30,7 @@ for comando in range(10):
 	if (comando == 9):
 		comando_aux = f"{pasta}/19-Café"
 
-	for speaker in range(66, 76):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
+	for speaker in range(65, 76):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
 		audio = f'{comando_aux}/{speaker}.wav'
 		[fs,xi] = wav.read(audio)
 		#normalização do amplitude de 15 bits. Isso deixa a amplitude entre um intervalo de 1 e -1
@@ -55,7 +55,7 @@ for comando in range(10):
 		iMax = np.argmax(energy)	#indice  onde foi encontrado o maior valor da amostra energy
 		vMax = energy[iMax]			#o maior valor da amostra energy
 		#calcula o limiar inferior de energia
-		A = 0.01
+		A = 0.05
 		lim_inferior = A*vMax
 
 		#a variável silencio verefica se a veriável energy é menor que o lim_inferior 
