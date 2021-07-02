@@ -1,11 +1,11 @@
 
-from pybrain3.tools.shortcuts import buildNetwork  
-from pybrain3.datasets import SupervisedDataSet
-from pybrain3.supervised.trainers import BackpropTrainer
-from pybrain3.structure.modules import SoftmaxLayer
-from pybrain3.structure.modules import SigmoidLayer
-from pybrain3.structure.modules import TanhLayer
-from pybrain3.structure.modules import BiasUnit
+from pybrain.tools.shortcuts import buildNetwork  
+from pybrain.datasets import SupervisedDataSet
+from pybrain.supervised.trainers import BackpropTrainer
+from pybrain.structure.modules import SoftmaxLayer
+from pybrain.structure.modules import SigmoidLayer
+from pybrain.structure.modules import TanhLayer
+from pybrain.structure.modules import BiasUnit
 from pybrain.tools.customxml import NetworkWriter	#necessário pybrain v0.3.3
 
 #import pybrain3
@@ -13,7 +13,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-seed = 143
+seed = 176
 np.random.seed(seed)
 
 nInputs = 130

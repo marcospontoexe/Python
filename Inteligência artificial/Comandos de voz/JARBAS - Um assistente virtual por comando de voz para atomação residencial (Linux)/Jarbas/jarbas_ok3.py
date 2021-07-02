@@ -2,32 +2,29 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 import pandas as pd
-#import scipy.io.wavfile as wav
+import scipy.io.wavfile as wav
 import sys
-#import os
+import os
 #import math
 #import matplotlib.ticker as mticker
 #import time
 import alsaaudio
-
+import pybrain
 from python_speech_features import mfcc, delta, logfbank
-#from pybrain3.tools.xml import networkreader
-#from pybrain.tools.customxml import networkreader
 from pybrain.tools.customxml import NetworkReader
-#import pybrain.tools.customxml.networkreader as reader
 
 #from functools import partial
 from random import randrange, uniform,randint
 #from subprocess import call
 
-seed = 143
+seed = 176
 np.random.seed(seed)
 
 nInputs = 130
 hidden_layers = 36
 nOutputs = 10
 net = NetworkReader.readFrom('model.xml')
-limiar = 0.001
+limiar = 0.05
 periodo = 70
 fs = 16000
 grava = 0
@@ -54,7 +51,7 @@ os.system('echo 0 > /sys/class/gpio/gpio20/value')
 while(True):
 	# abre a interface de audio para leitura (1 canal, fs: 16KHz, 32 bits em float)
 	inp = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK)
-	inp.setchannels(1)
+	inp.setchannels(2)
 	inp.setrate(16000)
 	inp.setformat(alsaaudio.PCM_FORMAT_FLOAT_LE)
 	inp.setperiodsize(periodo)	
@@ -149,7 +146,7 @@ while(True):
 			if(jarbas == False):
 				if(indice == 0):		
 					jarbas = True	
-					wav.write('Jarbas_'+str(cont_gravacao)+'.wav', 16000, xi)
+					wav.write(f'Jarbas_{str(cont_gravacao)}.wav', 16000, xi)
 					cont_gravacao += 1					
 				else:
 					'''	
@@ -176,7 +173,7 @@ while(True):
 					barra = range(N)
 					plt.xticks(barra, labels, rotation='horizontal')
 					comando1 = str(labels[np.argmax(activate)])
-					wav.write(str(comando1)+'_'+str(cont_gravacao)+'.wav', 16000, xi)
+					wav.write(f"{str(comando1)} {str(cont_gravacao)}.wav", 16000, xi)
 					cont_gravacao += 1
 				if(k == 1):
 					jarbas = False
@@ -190,7 +187,7 @@ while(True):
 						#comandinho = 'mosquitto_pub -h 192.168.43.142 -t jarbas -m ' + str(comando1) + '_' + str(comando2)
 						comando = f"{comando1} + {comando2}"
 						print(comando)
-						#os.system(comando)
+						os.system(comando)
 						#time.sleep(1)
 						wav.write(f"{comando2} {cont_gravacao}.wav", 16000, xi)
 						cont_gravacao += 1
