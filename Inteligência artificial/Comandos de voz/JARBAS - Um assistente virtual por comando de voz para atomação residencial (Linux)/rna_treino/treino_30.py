@@ -8,7 +8,7 @@ from pybrain3.structure.modules import TanhLayer
 from pybrain3.structure.modules import BiasUnit
 from pybrain.tools.customxml import NetworkWriter	#necessário pybrain v0.3.3
 
-#import pybrain3
+import pybrain
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -88,7 +88,7 @@ plt.show()
 
 # gera um arquivo XML
 #class pybrain.tools.neuralnets.saveNetwork('teste.csv')
-NetworkWriter.writeToFile(rede, 'model.xml')
+pybrain.tools.customxml.NetworkWriter.writeToFile(rede, 'model.xml')
 #https://stackoverflow.com/questions/12050460/neural-network-training-with-pybrain-wont-converge
 
 '''

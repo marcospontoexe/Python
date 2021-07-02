@@ -9,16 +9,13 @@ import sys
 #import matplotlib.ticker as mticker
 #import time
 import alsaaudio
+
 from python_speech_features import mfcc, delta, logfbank
-from pybrain3.tools.shortcuts import buildNetwork  
-from pybrain3.datasets import SupervisedDataSet
-from pybrain3.supervised.trainers import BackpropTrainer
-from pybrain3.structure.modules import SoftmaxLayer
-from pybrain3.structure.modules import SigmoidLayer
-from pybrain3.structure.modules import TanhLayer
-from pybrain3.structure.modules import BiasUnit
-from pybrain.tools.customxml import NetworkWriter
+#from pybrain3.tools.xml import networkreader
+#from pybrain.tools.customxml import networkreader
 from pybrain.tools.customxml import NetworkReader
+#import pybrain.tools.customxml.networkreader as reader
+
 #from functools import partial
 from random import randrange, uniform,randint
 #from subprocess import call
