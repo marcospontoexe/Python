@@ -7,6 +7,7 @@ from pybrain.structure.modules import SigmoidLayer
 from pybrain.structure.modules import TanhLayer
 from pybrain.structure.modules import BiasUnit
 from pybrain.tools.customxml import NetworkWriter	#necessário pybrain v0.3.3
+from pybrain.tools.customxml import networkreader
 
 import pybrain
 import numpy as np

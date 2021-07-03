@@ -13,3 +13,8 @@ para que as alterações sejam salvas após fechar o alsamixer. Se mesmo assim
 o alsamixer não estiver salvando as alterações após o sistema ser reiniciado, 
 use o comando "sudo alsactl store" para gravar as alterações.
 
+Caso esteja utilizando uma máquina virtual, certifique-se de que as entradas de
+áudio estejam habilitadas e configuradas corretamente, de acordo com seu hardware.
+Para teste de entrada de áudio, pode ser usado o audacity para realizar gravações
+de teste.
+

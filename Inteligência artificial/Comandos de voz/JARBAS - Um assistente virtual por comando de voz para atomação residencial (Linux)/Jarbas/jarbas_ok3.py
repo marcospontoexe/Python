@@ -7,7 +7,7 @@ import sys
 import os
 #import math
 #import matplotlib.ticker as mticker
-#import time
+import time
 import alsaaudio
 import pybrain
 from python_speech_features import mfcc, delta, logfbank
@@ -24,7 +24,7 @@ nInputs = 130
 hidden_layers = 36
 nOutputs = 10
 net = NetworkReader.readFrom('model.xml')
-limiar = 0.05
+limiar = 0.00005
 periodo = 70
 fs = 16000
 grava = 0
@@ -52,7 +52,7 @@ while(True):
 	# abre a interface de audio para leitura (1 canal, fs: 16KHz, 32 bits em float)
 	inp = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK)
 	inp.setchannels(2)
-	inp.setrate(16000)
+	inp.setrate(fs)
 	inp.setformat(alsaaudio.PCM_FORMAT_FLOAT_LE)
 	inp.setperiodsize(periodo)	
 	#faz um loop ate gravar, pelo menos, 32000 amostras (2 seg @ 16KHz)
@@ -88,15 +88,21 @@ while(True):
 			'''
 	print(aux)
 	# abre um arquivo temporario para salvar as amostras do audio captado
-	while total_size > 0:		
+	while total_size > 0:	
+		#print(f"total_size: {total_size}")	
 		# efetua uma leitura da porta de audio
 		length, data = inp.read()
 		# se a leitura trouxer dados, isto eh, l > 0, salva estas amostras no arquivo tmp.bin
 		if(length > 0):
+			#print('teste')
+			#print(f"length: {length}")
 			# converte data para float32
 			v = np.frombuffer(data, dtype=np.float32)
 			# calcula a energia do quadro e, se for maior que o limiar, seta a flag para gravar
 			energy = np.dot(v,v) / float(len(v))
+			#print(f"energy: {energy}")
+			#print(f"grava: {grava}")
+			#time.sleep(.5)
 			if(energy > limiar and grava == 0):
 				grava = 1
 			if(grava == 1):
@@ -124,12 +130,18 @@ while(True):
 			# carrega as amostras do audio (direto em float) para o vetor xi
 			xi = np.fromfile(f, dtype=np.float32)
 			# fecha o arquivo
+			
 			f.close()
 			
 			x = []
 			x = np.append(xi[0], xi[1:] - 0.97 * xi[:-1])   #filtro de pre-enfase
 			#python_speech_features.sigproc.preemphasis(xi, coeff=0.97)	#filtro de pre-enfase
 			n = np.arange(0, len(x))
+
+			plt.plot(x)
+			plt.show()
+			wav.write(f'audio_{str(cont_gravacao)}.wav', 16000, xi)
+			cont_gravacao += 1
 		
 			chunks = 10
 			tempo_total = (float)(len(x))/fs			
@@ -146,8 +158,8 @@ while(True):
 			if(jarbas == False):
 				if(indice == 0):		
 					jarbas = True	
-					wav.write(f'Jarbas_{str(cont_gravacao)}.wav', 16000, xi)
-					cont_gravacao += 1					
+					#wav.write(f'Jarbas_{str(cont_gravacao)}.wav', 16000, xi)
+					#cont_gravacao += 1					
 				else:
 					'''	
 					os.system('echo 0 > /sys/class/gpio/gpio9/value')
@@ -187,7 +199,7 @@ while(True):
 						#comandinho = 'mosquitto_pub -h 192.168.43.142 -t jarbas -m ' + str(comando1) + '_' + str(comando2)
 						comando = f"{comando1} + {comando2}"
 						print(comando)
-						os.system(comando)
+						#os.system(comando)
 						#time.sleep(1)
 						wav.write(f"{comando2} {cont_gravacao}.wav", 16000, xi)
 						cont_gravacao += 1
