@@ -15,7 +15,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 seed = 176
-np.random.seed(seed)
+np.random.seed(0) 
+np.random.permutation(seed)
+#np.random.seed(seed)
 
 nInputs = 130
 hidden_layers = 36
@@ -38,9 +40,9 @@ for i in range(len(X_train)):
 	base.addSample(X_train_norm[i],y_train[i])
 
 # treinamento da rede neural pelo metodo back propagation
-treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.2, momentum = 0.01, batchlearning=False)
+treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.1, momentum = 0.01, batchlearning=False)
 #treinamento.trainUntilConvergence(maxEpochs=250, verbose=None, continueEpochs=30, validationProportion=0.25)
-epocas = 30
+epocas = 50
 
 learning_rate = np.zeros(epocas)
 for i in range(1, epocas):

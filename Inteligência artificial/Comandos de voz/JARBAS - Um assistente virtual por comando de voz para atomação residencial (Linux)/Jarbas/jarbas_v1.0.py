@@ -1,3 +1,4 @@
+
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
@@ -18,7 +19,9 @@ from random import randrange, uniform,randint
 #from subprocess import call
 
 seed = 176
-np.random.seed(seed)
+np.random.seed(0) 
+np.random.permutation(seed)
+#np.random.seed(seed)
 
 nInputs = 130
 hidden_layers = 36
@@ -26,7 +29,7 @@ nOutputs = 10
 net = NetworkReader.readFrom('model.xml')
 limiar = 0.00005
 periodo = 70
-fs = 16000
+fs = 8000
 grava = 0
 jarbas = False
 flag_comando = False
@@ -47,7 +50,7 @@ os.system('echo 0 > /sys/class/gpio/gpio9/value')
 os.system('echo 0 > /sys/class/gpio/gpio10/value')
 os.system('echo 0 > /sys/class/gpio/gpio20/value')
 '''
-
+#print(f"fs: {fs}")
 while(True):
 	# abre a interface de audio para leitura (1 canal, fs: 16KHz, 32 bits em float)
 	inp = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK)
@@ -89,13 +92,14 @@ while(True):
 	print(aux)
 	# abre um arquivo temporario para salvar as amostras do audio captado
 	while total_size > 0:	
-		#print(f"total_size: {total_size}")	
-		# efetua uma leitura da porta de audio
+		#print(f"total_size: {total_size}")			
+		#efetua uma leitura da porta de audio
 		length, data = inp.read()
+		#print(f"length: {length}")
+		#print(f"data: {data}")
+		#time.sleep(.5)
 		# se a leitura trouxer dados, isto eh, l > 0, salva estas amostras no arquivo tmp.bin
 		if(length > 0):
-			#print('teste')
-			#print(f"length: {length}")
 			# converte data para float32
 			v = np.frombuffer(data, dtype=np.float32)
 			# calcula a energia do quadro e, se for maior que o limiar, seta a flag para gravar
@@ -106,7 +110,7 @@ while(True):
 			if(energy > limiar and grava == 0):
 				grava = 1
 			if(grava == 1):
-				f.write(data)
+				f.write(data)	#armazena no temp a cada 70 amostras
 				total_size = total_size - length	
 	#os.system('clear')
 	f.close()	
@@ -137,9 +141,14 @@ while(True):
 			x = np.append(xi[0], xi[1:] - 0.97 * xi[:-1])   #filtro de pre-enfase
 			#python_speech_features.sigproc.preemphasis(xi, coeff=0.97)	#filtro de pre-enfase
 			n = np.arange(0, len(x))
-
+			'''
+			plt.subplot(2,1,1)
+			plt.plot(xi)
+			plt.subplot(2,1,2)
 			plt.plot(x)
 			plt.show()
+			'''
+	
 			wav.write(f'audio_{str(cont_gravacao)}.wav', 16000, xi)
 			cont_gravacao += 1
 		
@@ -158,8 +167,8 @@ while(True):
 			if(jarbas == False):
 				if(indice == 0):		
 					jarbas = True	
-					#wav.write(f'Jarbas_{str(cont_gravacao)}.wav', 16000, xi)
-					#cont_gravacao += 1					
+					wav.write(f'Jarbas_{str(cont_gravacao)}.wav', 16000, xi)
+					cont_gravacao += 1					
 				else:
 					'''	
 					os.system('echo 0 > /sys/class/gpio/gpio9/value')

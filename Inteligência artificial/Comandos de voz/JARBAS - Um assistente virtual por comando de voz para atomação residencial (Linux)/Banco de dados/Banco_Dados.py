@@ -8,4 +8,4 @@ repeticoes = 3
 for i in range(0, len(comandos)):
     for rodada in range (0, repeticoes):    #grava os comandos têrs vezes
         print(f"\nDIGA {comandos[i]}...\n")
-        os.system(f"arecord -D hw:0,1 -f dat -d 2 -c 1 -r 16000 {speaker}-{comandos[i]}-{rodada}.wav")
+        os.system(f"arecord -D hw:0,1 -f dat -d 2 -c 2 -r 16000 {speaker}-{comandos[i]}-{rodada}.wav")

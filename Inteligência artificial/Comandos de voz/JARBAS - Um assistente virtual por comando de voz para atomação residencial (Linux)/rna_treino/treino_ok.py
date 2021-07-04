@@ -14,7 +14,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 seed = 176
-np.random.seed(seed)
+np.random.seed(0) 
+np.random.permutation(seed)
+#np.random.seed(seed)
 
 nInputs = 130
 hidden_layers = 36
