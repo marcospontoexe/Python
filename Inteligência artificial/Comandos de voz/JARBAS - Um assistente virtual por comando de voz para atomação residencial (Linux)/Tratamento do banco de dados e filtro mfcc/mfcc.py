@@ -29,8 +29,8 @@ for comando in range(10):
 		comando_aux = f"{pasta}/18-TV"
 	if (comando == 9):
 		comando_aux = f"{pasta}/19-Café"
-
-	for speaker in range(65, 76):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
+	#10, 76
+	for speaker in range(11, 76):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
 		audio = f'{comando_aux}/{speaker}.wav'
 		[fs,xi] = wav.read(audio)
 		#normalização do amplitude de 15 bits. Isso deixa a amplitude entre um intervalo de 1 e -1
@@ -54,10 +54,18 @@ for comando in range(10):
 
 		iMax = np.argmax(energy)	#indice  onde foi encontrado o maior valor da amostra energy
 		vMax = energy[iMax]			#o maior valor da amostra energy
+		iMin = np.argmin(energy)	#índice com o menor valor de energy
+		vMin = energy[iMin]			#Menor valor de energia, usado para achar o limiar entre região de fala e de  silencio
+		
 		#calcula o limiar inferior de energia
-		A = 0.05
+		A = 0.03
+		B = 0.09
 		lim_inferior = A*vMax
-
+		
+		if vMin > lim_inferior:		#caso tenha muito ruido de fundo	
+			lim_inferior = vMin + ((vMax - vMin) * B) 
+			#print(f"lim_inferior_2 {lim_inferior}")
+		
 		#a variável silencio verefica se a veriável energy é menor que o lim_inferior 
 		silencio = 0
 		#para garantir que os vales contidos na regiao falada nao sejam considerados como regiao de silêncio, 
@@ -92,14 +100,21 @@ for comando in range(10):
 			y[i] = x[i]
 			
 		#vetor com o audio segmentado, comtém apenas a região falada
-		z = np.zeros(stop-start)		
-		for i in range(0,len(z)):
+		#z = np.zeros(stop-start)	
+		z = np.zeros(17600)
+		#for i in range(0,len(z)):
+		for i in range(0, (stop-start)):
 			z[i] = y[i+start]
 
 
 		# tratamento do sinal pos segmentacao
 		# normalizacao de amplitude do áudio segmentado, entre -1 e 1
-		z_norm = z / np.max(np.abs(z))
+		z_norm = z / np.max(np.abs(z))	
+		zMax = np.max(np.abs(z_norm))
+		#print(f"z_norm maior: {zMax}")
+		#print(f"z_norm len: {len(z_norm)}")
+		#print(f"z_norm tipo: {type(z_norm)}")
+		
 
 		#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 		# extracao de caracteristicas cepstrais de cada audio
@@ -113,11 +128,24 @@ for comando in range(10):
 	
 		#mfcc_feat = mfcc(z_norm,fs,winlen=tempo_total/chunks,winstep=tempo_total/#chunks,numcep=13,nfilt=40,nfft=16384,lowfreq=50,preemph=0,appendEnergy=True)
 		mfcc_feat = mfcc(z_norm,fs,winlen=tempo_total/chunks,winstep=tempo_total/chunks,numcep=13,nfilt=26,nfft=16384,lowfreq=50,preemph=0,appendEnergy=True,winfunc=np.hamming)	
+		#mfccMax = np.max(np.abs(mfcc_feat))
+		#print(f"mfcc_feat max: {mfccMax}")
+		#print(f"mfcc_feat : {mfcc_feat}")
+		#print(f"mfcc_feat len: {len(mfcc_feat)}")
+		#print(f"mfcc_feat tipo: {type(mfcc_feat)}")
+
+		#normaliza os valores cepstrais entre 1 e -1
+		mfcc_norm = mfcc_feat / np.max(np.abs(mfcc_feat))
+		#mfccMax_norm = np.max(np.abs(mfcc_norm))
+		#print(f"mfcc_norm : {mfcc_norm}")
+		#print(f"mfcc_norm maior: {mfccMax_norm}")
+		#print(f"mfcc_norm len: {len(mfcc_norm)}")
+		#print(f"mfcc_norm tipo: {type(mfcc_norm)}")
 
 		#transformando a matriz de 13x10 amostras, em um vetor de uma dimensão apenas, com 130 amostras.
 		for i in range(0, chunks):
 			for j in range(0,13):					
-				sys.stdout.write(str(mfcc_feat[i][j]))
+				sys.stdout.write(str(mfcc_norm[i][j]))
 				sys.stdout.write(';')
 
 		if(comando == 0):

@@ -27,7 +27,7 @@ for comando in range(10):
 	if (comando == 9):
 		comando_aux = f"{pasta}/19-Café"
 
-	for speaker in range(1, 3):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
+	for speaker in range(1, 20):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
 		audio = f'{comando_aux}/{speaker}.wav'
 		[fs,xi] = wav.read(audio)
 		#normalização do amplitude de 15 bits. Isso deixa a amplitude entre um intervalo de 1 e -1
@@ -55,11 +55,25 @@ for comando in range(10):
 
 		iMax = np.argmax(energy)	#indice  onde foi encontrado o maior valor da amostra energy
 		vMax = energy[iMax]			#o maior valor da amostra energy
-
+		iMin = np.argmin(energy)	#índice com o menor valor de energy
+		vMin = energy[iMin]			#Menor valor de energia, usado para achar o limiar entre região de fala e de  silencio
+		print(f"iMin; {iMin}")
 
 		#calcula o limiar inferior de energia
-		A = 0.01
+		A = 0.03
+		B = 0.09
 		lim_inferior = A*vMax
+		
+		print('indice da energia maxima: '+ str(iMax))
+		print('ENERGIA MÁXIMA: '+ str(vMax))
+		print('indice da energia minima: '+ str(iMin))
+		print('ENERGIA minima: '+ str(vMin))
+		print('limiar inferior de energia: '+str(lim_inferior))
+		
+		if vMin > lim_inferior:		#caso tenha muito ruido de fundo	
+			lim_inferior = vMin + ((vMax - vMin) * B) 
+			print(f"lim_inferior_2 {lim_inferior}")
+		
 
 		#a variável silencio verefica se a veriável energy é menor que o lim_inferior 
 		silencio = 0
@@ -95,19 +109,21 @@ for comando in range(10):
 			y[i] = x[i]
 			
 
-		z = np.zeros(stop-start)
-		
-		for i in range(0,len(z)):
+		#vetor com o audio segmentado, comtém apenas a região falada
+		#z = np.zeros(stop-start)	
+		z = np.zeros(17600)
+		#for i in range(0,len(z)):
+		for i in range(0, (stop-start)):
 			z[i] = y[i+start]
+		print(f"len(z): {len(z)}")
+			
 
 		som = f'aplay {audio}'
 		os.system(som)
 
-		print('indice da energia maxima: '+ str(iMax))
+	
 		print('start: '+str(start))
-		print('stop: '+str(stop))
-		print('limiar inferior de energia: '+str(lim_inferior))
-		print('ENERGIA MÁXIMA: '+ str(vMax))
+		print('stop: '+str(stop))		
 		print('\n')
 		
 
