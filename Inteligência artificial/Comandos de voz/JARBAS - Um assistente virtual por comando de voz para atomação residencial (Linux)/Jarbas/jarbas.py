@@ -50,25 +50,29 @@ os.system('echo 0 > /sys/class/gpio/gpio9/value')
 os.system('echo 0 > /sys/class/gpio/gpio10/value')
 os.system('echo 0 > /sys/class/gpio/gpio20/value')
 '''
+print("iniciando...")
+inp = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK)
+inp.setchannels(2)
+inp.setrate(fs)
+inp.setformat(alsaaudio.PCM_FORMAT_FLOAT_LE)
+inp.setperiodsize(periodo)	
+#faz um loop ate gravar, pelo menos, 32000 amostras (2 seg @ 16KHz)
+#os.system('clear')
+print("audio configurado!")
 
+#print(f"fs: {fs}")
 while(True):
 	# abre a interface de audio para leitura (1 canal, fs: 16KHz, 32 bits em float)
-	inp = alsaaudio.PCM(alsaaudio.PCM_CAPTURE, alsaaudio.PCM_NONBLOCK)
-	inp.setchannels(2)
-	inp.setrate(fs)
-	inp.setformat(alsaaudio.PCM_FORMAT_FLOAT_LE)
-	inp.setperiodsize(periodo)	
-	#faz um loop ate gravar, pelo menos, 32000 amostras (2 seg @ 16KHz)
-	#os.system('clear')
+
 	if(jarbas == False):
-		total_size = fs*0.8
+		total_size = (fs * 1.1)	#equivale a 1,1 segundo (ou 17600 amostras em um freq de amostragem de 16000Hz)
 		f = open('tmp.bin', 'wb')
 		#os.system('echo 0 > /sys/class/gpio/gpio10/value')
 		#os.system('echo 0 > /sys/class/gpio/gpio20/value')
 		#os.system('echo 1 > /sys/class/gpio/gpio9/value')
 		aux = '****** HIBERNANDO *******'
 	else:	
-		total_size = fs		
+		total_size = (fs * 1.1)	
 		if(flag_comando == False):
 			#os.system('echo 0 > /sys/class/gpio/gpio10/value')
 			#os.system('echo 0 > /sys/class/gpio/gpio9/value')	
@@ -92,24 +96,25 @@ while(True):
 	print(aux)
 	# abre um arquivo temporario para salvar as amostras do audio captado
 	while total_size > 0:	
-		#print(f"total_size: {total_size}")	
-		# efetua uma leitura da porta de audio
+		#print(f"total_size: {total_size}")			
+		#efetua uma leitura da porta de audio
 		length, data = inp.read()
+		#print(f"length: {length}")
+		#print(f"data: {data}")
+		#time.sleep(.5)
 		# se a leitura trouxer dados, isto eh, l > 0, salva estas amostras no arquivo tmp.bin
 		if(length > 0):
-			print('teste')
-			print(f"length: {length}")
 			# converte data para float32
 			v = np.frombuffer(data, dtype=np.float32)
 			# calcula a energia do quadro e, se for maior que o limiar, seta a flag para gravar
 			energy = np.dot(v,v) / float(len(v))
-			print(f"energy: {energy}")
-			print(f"grava: {grava}")
+			#print(f"energy: {energy}")
+			#print(f"grava: {grava}")
 			#time.sleep(.5)
 			if(energy > limiar and grava == 0):
 				grava = 1
 			if(grava == 1):
-				f.write(data)
+				f.write(data)	#armazena no temp a cada 70 amostras
 				total_size = total_size - length	
 	#os.system('clear')
 	f.close()	
@@ -131,38 +136,75 @@ while(True):
 			if(k == 1):
 				f = open('tmp2.bin', 'rb')
 			# carrega as amostras do audio (direto em float) para o vetor xi
-			xi = np.fromfile(f, dtype=np.float32)
-			# fecha o arquivo
-			
+			audio = np.fromfile(f, dtype=np.float32)
+			# fecha o arquivo			
 			f.close()
-			
-			x = []
-			x = np.append(xi[0], xi[1:] - 0.97 * xi[:-1])   #filtro de pre-enfase
+
+			#vetor com o audio segmentado, comtém apenas a região falada
+			#z = np.zeros(stop-start)	
+			xi = np.zeros(17600)
+			#for i in range(0,len(z)):
+			for i in range(0, len(xi)):
+				xi[i] = audio[i]
+
+
+
+
+			print(f"len(audio): {len(audio)}")
+			x_enf = []
+			x_enf = np.append(xi[0], xi[1:] - 0.97 * xi[:-1])   #filtro de pre-enfase
+
+			# normalizacao de amplitude do áudio, entre -1 e 1
+			x = x_enf / np.max(np.abs(x_enf))
+			print(f"x_max: {np.max(np.abs(x))}")
+
 			#python_speech_features.sigproc.preemphasis(xi, coeff=0.97)	#filtro de pre-enfase
 			n = np.arange(0, len(x))
-
+			
+			plt.subplot(2,1,1)
+			plt.plot(audio)
+			plt.subplot(2,1,2)
 			plt.plot(x)
 			plt.show()
-			wav.write(f'audio_{str(cont_gravacao)}.wav', 16000, xi)
+			
+	
+			wav.write(f'audio_{str(cont_gravacao)}.wav', fs*2, xi)
 			cont_gravacao += 1
 		
 			chunks = 10
-			tempo_total = (float)(len(x))/fs			
+			tempo_total = float(len(x) / fs)	
+			#print(f"x: {x}")
+			print(f"x len: {len(x)}")
+			print(f"x tipo: {type(x)}")
 			mfcc_feat = mfcc(x,fs,winlen=tempo_total/chunks,winstep=tempo_total/chunks,numcep=13,nfilt=26,nfft=16384,lowfreq=50,preemph=0,appendEnergy=True,winfunc=np.hamming)	
 			X_train = []
+
+			#normaliza os valores cepstrais entre 1 e -1
+			mfcc_norm = mfcc_feat / np.max(np.abs(mfcc_feat))
+			print(f"mfcc_feat max: {np.max(np.abs(mfcc_feat))}")
+			print(f"mfcc_feat len: {len(mfcc_feat)}")
+			print(f"mfcc_feat tipo: {type(mfcc_feat)}")
+			print(f"mfcc_feat: {mfcc_feat}")
+			print(f"mfcc_norm max: {np.max(np.abs(mfcc_norm))}")
+			print(f"mfcc_norm len: {len(mfcc_norm)}")
+			print(f"mfcc_norm tipo: {type(mfcc_norm)}")
+			print(f"mfcc_norm: {mfcc_norm}")
 						
 			for i in range(0, chunks):
 				for j in range(0,13):					
-					X_train.append(mfcc_feat[i][j])
+					X_train.append(mfcc_norm[i][j])
 			X_train = np.reshape(X_train, nInputs).astype('float32')
+			#print(f"X_train: {X_train}")
+			#print(f"X_train len: {len(X_train)}")
+			#print(f"X_train tipo: {type(X_train)}")
 			indice = np.argmax(net.activate(X_train))
 			activate = net.activate(X_train)
 			#os.system('clear')
 			if(jarbas == False):
 				if(indice == 0):		
 					jarbas = True	
-					#wav.write(f'Jarbas_{str(cont_gravacao)}.wav', 16000, xi)
-					#cont_gravacao += 1					
+					wav.write(f'Jarbas_{str(cont_gravacao)}.wav', fs*2, xi)
+					cont_gravacao += 1					
 				else:
 					'''	
 					os.system('echo 0 > /sys/class/gpio/gpio9/value')
@@ -176,7 +218,8 @@ while(True):
 					'''
 					print('ops!')
 					print('nao entendi, repita por favor!')
-					#time.sleep(1)
+					print(f"indice: {indice}")
+					time.sleep(1)
 							
 			else:
 				#os.system('echo 0 > /sys/class/gpio/gpio9/value')
@@ -188,7 +231,7 @@ while(True):
 					barra = range(N)
 					plt.xticks(barra, labels, rotation='horizontal')
 					comando1 = str(labels[np.argmax(activate)])
-					wav.write(f"{str(comando1)} {str(cont_gravacao)}.wav", 16000, xi)
+					wav.write(f"{str(comando1)} {str(cont_gravacao)}.wav", fs*2, xi)
 					cont_gravacao += 1
 				if(k == 1):
 					jarbas = False
@@ -202,9 +245,9 @@ while(True):
 						#comandinho = 'mosquitto_pub -h 192.168.43.142 -t jarbas -m ' + str(comando1) + '_' + str(comando2)
 						comando = f"{comando1} + {comando2}"
 						print(comando)
-						#os.system(comando)
+						os.system(comando)
 						#time.sleep(1)
-						wav.write(f"{comando2} {cont_gravacao}.wav", 16000, xi)
+						wav.write(f"{comando2} {cont_gravacao}.wav", fs*2, xi)
 						cont_gravacao += 1
 					else:
 						'''
@@ -219,6 +262,7 @@ while(True):
 						'''
 						print('ops!')
 						print('nao entendi, repita por favor!')
+						print("comando 2")
 			
 	else:
 		flag_comando = True

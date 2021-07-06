@@ -30,6 +30,8 @@ for comando in range(10):
 	for speaker in range(1, 20):		#número de amostras de áudio contida em cada pasta de comando (Ligue, Desligue, Jarbas...)
 		audio = f'{comando_aux}/{speaker}.wav'
 		[fs,xi] = wav.read(audio)
+		print(f"fs: {fs}")
+		print(f"type(xi): {type(xi)}")
 		#normalização do amplitude de 15 bits. Isso deixa a amplitude entre um intervalo de 1 e -1
 		xi = xi / 32768.0
 		#Muitos microprocessadores causam um estalo no início da gravação, atingindo a máxima amplitude
