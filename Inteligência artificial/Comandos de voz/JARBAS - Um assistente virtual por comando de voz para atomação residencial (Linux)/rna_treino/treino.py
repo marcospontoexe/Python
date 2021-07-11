@@ -33,7 +33,7 @@ y_train = df.iloc[:, nInputs:(nInputs+nOutputs)].values
 
 # Construcao da rede neural
 #rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, hiddenclass=TanhLayer ou LSTMLayer, outclass=SoftmaxLayer)
-rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, hiddenclass=LSTMLayer, outclass=SoftmaxLayer)
+rede = buildNetwork(nInputs, hidden_layers, nOutputs, bias=True, outclass=SoftmaxLayer)
 base = SupervisedDataSet(nInputs, nOutputs)
 
 # insere os dados na rede neuraloftmax
@@ -41,9 +41,9 @@ for i in range(len(X_train)):
 	base.addSample(X_train[i],y_train[i])
 
 # treinamento da rede neural pelo metodo back propagation
-treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.065, momentum = 0.005, batchlearning=False)
+treinamento = BackpropTrainer(rede, dataset = base, learningrate = 0.06, momentum = 0.005, batchlearning=False)
 #treinamento.trainUntilConvergence(maxEpochs=250, verbose=None, continueEpochs=30, validationProportion=0.25)
-epocas = 40
+epocas = 30
 
 learning_rate = np.zeros(epocas)
 for i in range(1, epocas):
