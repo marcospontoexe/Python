@@ -1,4 +1,0 @@
-O código "segmentador.py" segmenta o audio original.
-o código "mfcc.py" usa o audio segmentado para alimentar
-o filtro mfcc e gerar os arquivos "treino.csv" e "teste.csv"
-com os valores de entrada e saida da RNA, afim de trinar a RNA.

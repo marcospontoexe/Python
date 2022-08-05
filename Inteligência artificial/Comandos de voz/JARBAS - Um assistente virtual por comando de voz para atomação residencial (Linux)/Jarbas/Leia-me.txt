@@ -1,4 +1,0 @@
-O código "jarbas.py" captura a entrada de audio em tempo real, e inicia uma
-gravação de audio apenas se a energia naquele momento for maior que o limiar definido.
-O audio capturado é filtrado pelo filtro mfcc e, suas componentes cepstrais são enviadas
-à RNA.

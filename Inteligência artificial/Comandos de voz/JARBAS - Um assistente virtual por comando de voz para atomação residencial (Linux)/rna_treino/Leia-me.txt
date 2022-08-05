@@ -1,3 +1,0 @@
-O código "treino.py", usa os arquivos "treino.csv" e "teste.csv" para 
-treinar a RNA, criando um arquivo "model.xml" com os valores dos pesos 
-sinápticos, que é usado para no código "jarbas.py" 
