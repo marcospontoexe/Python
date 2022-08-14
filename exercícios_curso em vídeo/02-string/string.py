@@ -20,6 +20,18 @@ elif sex in "Ff" or sex in "feminino":
 else:
     print("Sexo inválido!")
 
+
+print('{:-^40}'.format('Ex01'))
+sexo = input("Digite seu sexo: ").strip().upper()[
+    0]  # retira o espaço antes e depois da frase, e pega apenas o primeiro caractere digitado em maiúsculo
+while sexo not in 'MF':
+    sexo = input("Dados inválidos, digite seu sexo: ").strip().upper()[0]
+    print(sexo)
+if sexo == "M":
+    print("Masculino!")
+else:
+    print("Feminino!")
+
 #Crie um programa que leia o nome completo de uma pessoa e mostre:
 #1 - QUantas letras tem, sem considerar os espaçoes;
 #2 - quantas vezes aparece a letra 'a';

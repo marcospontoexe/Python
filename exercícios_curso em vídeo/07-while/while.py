@@ -12,15 +12,19 @@ número escolhido pela computador;
 o programa deverá realizar a ação solicitada;
 
 04 - Mostre o fatorial de um número lido pelo usuário;
-
+'''
 
 #------------------Ex01------------------
 print('{:-^40}' .format('Ex01'))
-sexo = input("Digite seu sexo: ").strip().upper()[0]
-while sexo not in 'MmFf':
+sexo = input("Digite seu sexo: ").strip().upper()[0]    #retira o espaço antes e depois da frase, e pega apenas o primeiro caractere digitado em maiúsculo
+while sexo not in 'MF':
     sexo = input("Dados inválidos, digite seu sexo: ").strip().upper()[0]
     print(sexo)
-'''
+if sexo == "M":
+    print("Masculino!")
+else:
+    print("Feminino!")
+
 #------------------Ex02------------------
 print('{:-^40}' .format('Ex02'))
 from random import randint
@@ -41,7 +45,7 @@ while comp != user:
 print('Ufa finalmente acertou né!')
 print('Você \033[33merrou\033[m {} vezes!' .format(cont))
 
-'''
+
 #------------------Ex03------------------
 print('{:-^40}' .format('Ex03'))
 import math
@@ -92,4 +96,3 @@ while cont != 0:
     fat = fat * cont
     cont = cont - 1
 print('O fatorial de {} é {}!' .format(valor, fat))
-'''
