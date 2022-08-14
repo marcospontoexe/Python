@@ -6,7 +6,7 @@ num intervalo de 1 até 500
 04 - Mostre a tabuada de um número escolhido pelo usuário:
 05- Leia uma frase qualquer e diga se é um palíndromo:
 06 - Leia o peso de cinco pessoas e diga qual é o maior e o menor peso:
-
+'''
 #=============Ex01=============
 from time import sleep
 print('{:=^30}' .format('Ex01'))
@@ -60,7 +60,7 @@ if juntar == inverso:
     print('A frase {} é um palíndromo!' .format(frase))
 else:
     print('A frase {} não é um palíndromo!'.format(frase))
-'''
+
 
 #=============Ex06=============
 print('{:=^30}' .format('Ex06'))

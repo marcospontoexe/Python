@@ -13,9 +13,18 @@ nasc = int(input("Digite sua data de nascimento: "))
 idade = atual - nasc
 print('ano atual:', atual)
 print('idade:', idade)
-if idade < 18:
-    print('você ainda não tem idade para se alistar. Ainda faltam {} anos' .format(18-idade))
-elif idade == 18:
-    print('você tem {} anos e ja pode se alistar!'.format(idade))
+
+
+from random import randint
+from time import sleep
+#-------------Ex01-------------
+print('{:-^30}' .format('Ex01'))
+numero = int(input('Digite um numero inteiro de 1 a 5: '))
+print('Processando...')
+sleep(3)
+comp = randint(1, 6)
+print('O computador pensou no número {}.' .format(comp))
+if numero == comp:
+    print('Parabéns, vc é foda e acertou o número!')
 else:
-    print('seu prazo de alistamento já passou de {} anos!'.format(idade-18))
+    print('Otário vc perdeu!')

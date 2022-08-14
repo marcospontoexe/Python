@@ -2,7 +2,7 @@
 # se vc acertou o numero que o comp. pensou ou não;
 #02 - Se o carro ultrapassar 80 km/h. mostre o valor da multa, q custa 7r$ a mais
 # para cada 1 km/h maior de 80 km/h;
-#03 - programa q digase o numero é par ou impar;
+#03 - programa q diga se o numero é par ou impar;
 #04 - calcule o valor da viagem, se a distancia for menor q 200 km o preço é R$ 0,50 por km,
 # se for mair q 200 km o valor é de R$0,45 por km;
 #05 - leia um ano qualquer e diga se ele é bissexto;
