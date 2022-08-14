@@ -14,7 +14,7 @@ proutooooooo 02............R$  2.00
 protuno n..................R$ 15.20
 
 05 - Crie uma tupla com várias palavras (não usar acentos), e mostre todas vogais contidas em cada palavra da tupla
-
+'''
 #------------------Ex01------------------
 print(f"{'Ex01':-^40}")
 numeros = ('Zero', 'Um', 'Dois', 'Três', 'Quatro', 'Cinto', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez',
@@ -81,7 +81,7 @@ for i in range(0, len(lista)):
     else:
         print(f'{lista[i]:>7.2f}')
 print("*" * 50)
-'''
+
 #------------------Ex05------------------
 print(f"{'Ex05':-^40}")
 palavras = (input('Digite uma palavra: '),
