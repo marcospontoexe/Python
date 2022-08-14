@@ -10,10 +10,12 @@
 
 
 from random import randint
-
+from time import sleep
 #-------------Ex01-------------
 print('{:-^30}' .format('Ex01'))
 numero = int(input('Digite um numero inteiro de 1 a 5: '))
+print('Processando...')
+sleep(3)
 comp = randint(1, 6)
 print('O computador pensou no número {}.' .format(comp))
 if numero == comp:

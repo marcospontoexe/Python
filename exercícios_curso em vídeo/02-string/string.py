@@ -1,3 +1,15 @@
+valor = input('Digite um valor: ').strip()
+print('O tipo primitivo da variável é:',type(valor))    #mostra o tipo de variável
+print("É isnumeric()?", valor.isnumeric())
+print("É alfabético?", valor.isalpha())
+print("É alfanumérico?", valor.isalnum())
+print("É isalnum()?", valor.isalnum())
+print("É isdigit()?", valor.isdigit())              #numero inteiro
+print("É isdecimal()?", valor.isdecimal())           #numero inteiro
+print("É isidentifier()?", valor.isidentifier())
+print("É istitle()?", valor.istitle())              #Primeira letra maiúscula
+
+
 #Crie um programa que leia o nome completo de uma pessoa e mostre:
 #1 - QUantas letras tem, sem considerar os espaçoes;
 #2 - quantas vezes aparece a letra 'a';
@@ -10,14 +22,15 @@ print('{:-^30}' .format('Ex 01'))
 frase = input('Digite seu nome completo! ').strip()
 #frase = 'marcos daniel santana'
 print(frase)
-nome1 = frase.split()
+nome1 = frase.split()                   #cria um vetor com as frases, sem o espaço.
+print('nome.split(): {}'. format(nome1))
 len1 = int(len(nome1))
 
 print('Seu nome completo, sem contar o espaçamento, tem {} caracteres!\n' .format(len(frase)-frase.count(' ')))
 
 #------------Ex 02-------------
 print('{:-^30}' .format('Ex02'))
-frase = frase.upper()
+frase = frase.upper()               #transforma tudo em maiúsculo
 print("A letra 'a' aparece {} vezes no seu nome completo!" .format(frase.count('A')))
 
 #------------Ex 03-------------
@@ -31,4 +44,3 @@ print("A letra 'a' aparece pela ultima vez na posição {}!" .format(frase.rfind
 #------------Ex 05-------------
 print('{:-^30}' .format('Ex05'))
 print('O primeiro nome é {}, e o ultimo nome é {}:' .format(nome1[0], nome1[len1-1]))
-

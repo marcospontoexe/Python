@@ -22,19 +22,7 @@ else:
     print('opção inválida!')
 
 #-------------Ex02-------------
-from datetime import date
-print('{:-^30}' .format('Ex02'))
-atual = date.today().year
-nasc = int(input("Digite sua data de nascimento: "))
-idade = atual - nasc
-print('ano atual:', atual)
-print('idade:', idade)
-if idade < 18:
-    print('você ainda não tem idade para se alistar. Ainda faltam {} anos' .format(18-idade))
-elif idade == 18:
-    print('você tem {} anos e ja pode se alistar!'.format(idade))
-else:
-    print('seu prazo de alistamento já passou de {} anos!'.format(idade-18))
+
 
 #-------------Ex03-------------
 print('{:-^30}' .format('Ex03'))

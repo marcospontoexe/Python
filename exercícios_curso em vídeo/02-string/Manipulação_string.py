@@ -35,19 +35,19 @@ print('frase.capitalize()=', frase.capitalize())
 print('frase.title()=', frase.title())
 print('\n')
 frase = 'Aula de Python do Youtub'
-print('frase.split()=', frase.split())
-print('frase.split()[1]=', frase.split()[1])
-print('frase.split()[2][1]=', frase.split()[2][1])
+print('frase.split()=', frase.split())          #quebra a frase em palavras
+print('frase.split()[1]=', frase.split()[1])    #mostra a plavra do primeiro índice
+print('frase.split()[2][1]=', frase.split()[2][1])      #mostra a segunda letra do segundo índice
 print("'-'.join(frase.split())=", '-'.join(frase.split()))
 print("'-'.join(frase))=", '-'.join(frase))
 print('\n')
 
 frase = '             Aula de Python do Youtub   '
 print('frase=', frase)
-print('frase.strip()=', frase.strip())
+print('frase.strip()=', frase.strip())          #remove os espaços
 frase = '             Aula de Python do Youtub   '
 print('frase=', frase)
-print('frase.rstrip()=', frase.rstrip())
+print('frase.rstrip()=', frase.rstrip())            #remove os espaços à direita
 frase = '             Aula de Python do Youtub   '
 print('frase=', frase)
 print('frase.lstrip()=', frase.lstrip())
