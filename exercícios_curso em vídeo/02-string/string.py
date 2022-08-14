@@ -10,6 +10,16 @@ print("É isidentifier()?", valor.isidentifier())
 print("É istitle()?", valor.istitle())              #Primeira letra maiúscula
 
 
+sex = input("Digite o sexo [M/F]:")
+print(sex)
+
+if sex in "Mm" or sex in "masculino":       #verifica se contem as letras dentro da string
+    print("É homem!")
+elif sex in "Ff" or sex in "feminino":
+    print("É Mulher!")
+else:
+    print("Sexo inválido!")
+
 #Crie um programa que leia o nome completo de uma pessoa e mostre:
 #1 - QUantas letras tem, sem considerar os espaçoes;
 #2 - quantas vezes aparece a letra 'a';

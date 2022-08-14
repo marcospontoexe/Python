@@ -52,3 +52,7 @@ print('frase.rstrip()=', frase.rstrip())            #remove os espaços à direi
 frase = '             Aula de Python do Youtub   '
 print('frase=', frase)
 print('frase.lstrip()=', frase.lstrip())
+
+
+sex = input("Digite o sexo [M/F]:")
+print(sex)
