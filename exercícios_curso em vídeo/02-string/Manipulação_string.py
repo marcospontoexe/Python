@@ -14,8 +14,9 @@ frase2 = """escrever um texto inteiro de uma só vez
          escrever um texto inteiro de uma só vez 
          escrever um texto inteiro de uma só vez"""
 print('"""escrever um texto inteiro de uma só vez"""=', frase2)
-print('frase[:10]=', frase[:10])
-print('frase[10::2]=', frase[10::2])
+print('frase[:10]=', frase[:10])                #mostra do índice 0 até o 10°
+print('frase[10::2]=', frase[10::2])        #mostra do índice 10 até o último índice, pulando de 2 em 2 índices
+print('frase[::-1]=', frase[::-1])          #mostra do último índice até o 1°
 print("frase.count('a')=", frase.count('a'))
 print("frase.count('o',10:)", frase.count('o',10,))
 print("frase.find('pyt')=", frase.find('pyt'))
@@ -44,7 +45,7 @@ print('\n')
 
 frase = '             Aula de Python do Youtub   '
 print('frase=', frase)
-print('frase.strip()=', frase.strip())          #remove os espaços
+print('frase.strip()=', frase.strip())          #remove os espaços antes e após a frase
 frase = '             Aula de Python do Youtub   '
 print('frase=', frase)
 print('frase.rstrip()=', frase.rstrip())            #remove os espaços à direita

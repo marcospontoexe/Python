@@ -53,7 +53,7 @@ print('{:=^30}' .format('Ex05'))
 frase = str(input('Digite uma frase: ')).strip().upper()
 split = frase.split()
 juntar = ''.join(split)
-inverso = juntar[::-1]
+inverso = juntar[::-1]      #recebe do último índice até o 1°
 
 if juntar == inverso:
     print('A frase {} é um palíndromo!' .format(frase))
