@@ -46,8 +46,8 @@ from random import randint
 tupla = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
 print(tupla)
 
-print(f"O maior númeor é {max(tupla)}!")
-print(f"O menor númeor é {min(tupla)}!")
+print(f"O maior númeor é {max(tupla)}!")    #mostra o maior número  na tupla
+print(f"O menor númeor é {min(tupla)}!")    #mostra o menor número da tupla
 
 
 #------------------Ex03------------------

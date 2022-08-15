@@ -4,6 +4,8 @@ lanche = [] #lista
 lanche = {} #dicionário
 '''
 
+# Tuplas são imutáveis
+
 dados = ('Marcos', 30, 'Masculino', 57.20)  #Diferente de vetores, tuplas aceitam qualquer tipo de variáveia na mesma tupla
 print(dados)
 del(dados)  #apaga a tupla
@@ -34,5 +36,5 @@ print(sorted(lanche))   #mostra em ordem alfabética
 print(lanche.index('Suco')) #mostra em que ´posição se encontra o 'Suco'. Mostra apenas o primeira ocorrência.
 numeros = ('1', '3', '4', '1', '2', '5', '7')
 print(numeros.index('1', 1)) #mostra em que posição se encontra o '1', a partir da primeira posição
-
+print(numeros.count('1'))   #mostra quantas vezes o número '1' aparece na tupla
 
