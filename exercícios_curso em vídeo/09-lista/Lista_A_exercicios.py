@@ -5,10 +5,11 @@ posições;
 Nofinal devera mostrar todos os números unicos em ordem crescente;
 03 - Adicione 5 valores numericos em um lista, e imprima em ordem crescente. sem usar o método sort();
 04 - Leia vários valores inteiros e guarde em uma lista. Mostre quantos números foram armazenados, lista com os valores ordenados
-em ordem decrescente, se o valor 5 esta na lista;
+em ordem decrescente, e se o valor 5 esta na lista;
 05 - Leia vários numeros de uma lista, depois crie mais duas listas para receber os valores pares e outra para receber os
 ímpares, e imprima as três listas;
 06 - Digite uma expressão matemática contendo parenteses. O programa deverá informa se faltou algum parenteses na expressão;
+'''
 #------------------Ex01------------------
 print(f"{'Ex01':-^40}")
 valores = []
@@ -25,7 +26,7 @@ for i in range(0, 5):
 print("-=" * 20)
 print(f"Lista de valores: {valores}")
 print("-=" * 20)
-print(f"O maior valore foi: {maior}")
+print(f"O maior valor foi: {maior}")
 for i in range(0, len(valores)):
     if valores[i] == maior:
         print(f"na posição {i+1}")
@@ -118,7 +119,7 @@ print("=-" * 20)
 print(f"Lista contendo todos os números: {lista}")
 print(f"Lista com os números pares: {pares}")
 print(f"Lista com os números ímpares: {impares}")
-'''
+
 #------------------Ex06------------------
 print(f"{'Ex06':-^40}")
 matem = ""

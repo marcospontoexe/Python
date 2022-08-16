@@ -1,4 +1,4 @@
-'''
+
 dados = ["marcos", 30]
 pessoas = []
 pessoas.append(dados)        #Faz uma ligação entre as duas lista. Alterar uma sublista tb altera a outra
@@ -24,7 +24,7 @@ print(pessoas[0][0])
 galera = [["marcos", 30], ["joana", 50], ["joaquin", 7], ["rosana", 9]]
 for pessoa in galera:
     print(f"{pessoa[0]} tem {pessoa[1]} anos de idade.")
-'''
+
 #------------------------------------------------------------------
 galera = []
 dados = []

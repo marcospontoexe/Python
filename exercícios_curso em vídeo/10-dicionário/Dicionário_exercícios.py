@@ -21,6 +21,7 @@ a) Quantas pessoas foram cadastradas.
 b) a média de idade do grupo.
 c) Uma lista com todas as mulheres
 d) uma lista com todos q tem idade acima da média
+'''
 #------------------Ex01------------------
 print(f"{'Ex01':-^40}")
 info = {}
@@ -80,7 +81,7 @@ if dados["CTPS"] != 0:
         print(f"{k}: {v}")
 else:
     print("Você não tem direito à aposentadoria!")
-'''
+
 #------------------Ex04------------------
 print(f"{'Ex04':-^40}")
 dados = []
@@ -139,7 +140,7 @@ while True:
         print("Valor incorreto!")
 
 
-'''
+
 
 #------------------Ex05------------------
 print(f"{'Ex05':-^40}")
@@ -180,4 +181,3 @@ print(f"Pessoas com idade acima da média:")
 for p in dados:
     if p["Idade"] > media:
         print(f"{p['Nome']} com {p['Idade']} anos")
-'''

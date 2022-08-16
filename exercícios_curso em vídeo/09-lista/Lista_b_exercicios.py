@@ -13,7 +13,7 @@ o maior valor da segunda linha;
 números não repetidos de 1 a 60 para cada jogo, cadastrando tudo em uma lista composta;
 06 - leia o nome e duas notas de vários alunos, e guarde em uma lista composta. Mostre um boletim com a média de cada aluno, e
 permita que usuario consulte as notas de qualquer aluno;
-
+'''
 #------------------Ex01------------------
 print(f"{'Ex01':-^40}")
 pessoas = []
@@ -134,7 +134,7 @@ for i in range(0, jogadas):
     sleep(0.5)
 print("+" * 40)
 print(f"{'BOA SORTE!':^40}")
-'''
+
 #------------------Ex06------------------
 print(f"{'Ex06':-^40}")
 boletim = []
