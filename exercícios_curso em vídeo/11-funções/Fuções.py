@@ -1,8 +1,8 @@
-'''
+
 #-----------interactive help-----------------------
-help(print)
+help(print)         #mostra informações sobre a função "print()"
 print("-"*10)
-print(print.__doc__)
+print(print.__doc__)    #mostra informações sobre a função "print()"
 #---------------------------------------------
 
 #-----------doc string-----------------------
@@ -14,7 +14,7 @@ def area(altura, largura):
     :return: Não retorna nada. A própria função imprime o valor da área
     """
     area = float(altura * largura)
-    print(f"O valor da área é {area} metros quadrado!")
+    print(f"O valor da área é {area} m²!")
 help(area)
 area(5.5, 10.9)
 #---------------------------------------------
@@ -62,19 +62,19 @@ num = soma(2, 2)
 print(num)
 
 #--------------------------------------------------------------------------------
-def contador(* num):        #o parâmetro de entrada vira uma tupla. Empacota o parâmetro
+def contador(* num):     #o parâmetro de entrada é empacotado e vira uma tupla. É possível passar um número indeterminado de variáveis
     tamanho = len(num)
     return tamanho
 print(f"a tupla contém {contador(1, 3, 6, 5)} números")
 
 #--------------------------------------------------------------------------------
 lista = [1, 3, 5, 4, 4]
-def dobra(lst):
+def dobra(lst):     #É possível passar um número indeterminado de variáveis, basta adicionar à lista
     for i in range(0, len(lst)):       #Dobra os elementos da lista
         lst[i] *= 2
 
 print(lista)
-dobra(lista)
+dobra(lista)    # 'lista' está ligada a 'lst', e tudo que for alterado em um, é alterado na outra
 print(lista)
 #--------------------------------------------------------------------------------
 
@@ -100,5 +100,5 @@ if par(numero):
     print(f"o numero {numero} é par!")
 else:
     print(f"o numero {numero} é ímpar!")
-'''
+
 help(str.replace)
