@@ -14,11 +14,8 @@ o Total gasto na compra, quantos produtos custam mais de 100 reais, e qual o nom
 mostrar quantas cédular de 50, 20, 10, 5, 2 e 1 reais seram entregues;
 
 #------------------Ex01------------------
-print(f"{'Ex01':-^40}")
-numero = cont = soma = int(0)
-
 while True:
-    numero = int(input("Digite um número interio: "))
+    numero = int(input("Digite um número interio [999 para sair]: "))
     if numero == 999:
         break
     cont += 1
