@@ -21,9 +21,10 @@ e guardar dentro da lista. A segunda função vai somar os numeros pares;
 e também um parâmetro opcional para mostrar a situação (ruim, razoavel, boa);
 11 - Crie um programa que ultilize o interactive help para imprimir um manual de um comando digitado pelo usuário, 
 quando digitado fim o programa se encerrará;
+'''
 #-------------------Ex01--------------
 def area(a, b):
-    print(f"O valor da área é {a * b} metros quadrado!")
+    print(f"O valor da área é {a * b} m²!")
 
 alt = larg = float(0)
 cabeçalho("CÁLCULO DA ÁREA")
@@ -231,7 +232,7 @@ def notas(*notas, sit=False):
 
 info = notas(5.2, 3, 2, sit=True)
 print(info)
-'''
+
 #-------------------Ex11--------------
 continuar = ""
 while True:
@@ -240,7 +241,7 @@ while True:
         print("Até logo")
         break
     else:
-        cabeçalho(f"\033[34mManual do comando {comando}\033[m")
+        cabeçalho(f"\033[34mManual do comando \n{comando}\033[m")
         print("\033[35m")
         print(help(comando))
         print("\033[m")
