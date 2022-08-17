@@ -6,6 +6,7 @@ print(print.__doc__)    #mostra informações sobre a função "print()"
 #---------------------------------------------
 
 #-----------doc string-----------------------
+#a Docstring tras informações sobre a função
 def area(altura, largura):
     """
     Essa função calcula o valor da área (em m2) de uma parede
@@ -15,7 +16,7 @@ def area(altura, largura):
     """
     area = float(altura * largura)
     print(f"O valor da área é {area} m²!")
-help(area)
+help(area)     #Com a Docstring descrita dentro das aspas triplas, é possível usar o função 'help()'
 area(5.5, 10.9)
 #---------------------------------------------
 
