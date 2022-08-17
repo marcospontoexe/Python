@@ -31,13 +31,13 @@ soma(2, 3)                  #'C' vale zero.
 #-----------escopo de variáveis----------------
 def valor():
     global n3
-    n3 = 0              #ao invéz de criar uma outra variável para receber o valor de n3, é a variável global que é alterada.
-    n1 = 5
+    n3 = 0              #como n3 foi declarada como uma variável global, n3 deixa de valer 8 e passa a valer 0.
+    n1 = 5              #o n1 é uma variável local, e esta alocada apenas dentro da função, apesar de já existir uma variável global n1
     print(f"Variável local n1 vale {n1}")
     print(f"Dentro da função n2 vale {n2}")
     print(f"Variável global n3 vale {n3}")
 
-n1 = 2
+n1 = 2      # o n1 é uma variável global
 n2 = 10
 n3 = 8
 valor()
@@ -62,23 +62,24 @@ def soma (a, b):
 num = soma(2, 2)
 print(num)
 
-#--------------------------------------------------------------------------------
-def contador(* num):     #o parâmetro de entrada é empacotado e vira uma tupla. É possível passar um número indeterminado de variáveis
-    tamanho = len(num)
-    return tamanho
-print(f"a tupla contém {contador(1, 3, 6, 5)} números")
-
-#--------------------------------------------------------------------------------
+#-------------------multiplos parâmetros----------------------------------------------
 lista = [1, 3, 5, 4, 4]
-def dobra(lst):     #É possível passar um número indeterminado de variáveis, basta adicionar à lista
+def dobra(lst):     #Aceita multiplos parâmetros de entrada, basta adicionar à lista
     for i in range(0, len(lst)):       #Dobra os elementos da lista
         lst[i] *= 2
 
 print(lista)
 dobra(lista)    # 'lista' está ligada a 'lst', e tudo que for alterado em um, é alterado na outra
 print(lista)
-#--------------------------------------------------------------------------------
 
+#-------------------------empacotamento da parâmetros--------------------------------------
+def contador(* num):     #o parâmetro de entrada é empacotado e vira uma tupla. Aceita multiplos parâmetros de entrada
+    tamanho = len(num)
+    return tamanho
+print(f"a tupla contém {contador(1, 3, 6, 5)} números")
+
+
+#--------------empacotamento da parâmetros--------------------------------------------------
 def soma(* num):                  #empacota os valores
     soma = int(0)
     for v in num:                   #desempacota os valores
