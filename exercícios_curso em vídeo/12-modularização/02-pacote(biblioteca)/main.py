@@ -1,3 +1,5 @@
+#pacote (biblioteca) é a junção de vários módulos
+
 from biblioteca.interface import *
 from biblioteca.trat_erros import *
 from biblioteca.cadastro import *
