@@ -3,7 +3,13 @@
 def leiaInt(i):
     while True:
         try:
-            temp = int(input(i))
+            while True:
+                temp = int(input(i))
+                if temp >=0:
+                    break
+                else:
+                    print("Digite uma idade maior doque zero!")
+
         except (TypeError, ValueError):
             print("\033[34mERRO. Apenas número inteiro!\033[m")
             continue

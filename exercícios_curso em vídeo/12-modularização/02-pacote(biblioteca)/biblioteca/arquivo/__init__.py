@@ -35,7 +35,7 @@ def lerArquivo(nome):
         cabeçalho("Lista de cadastrados")
         for linha in a:
             dados = linha.split(";")
-            dados[1] = dados[1].replace("\n","")
+            dados[1] = dados[1].replace("\n","")        #substitui a quebra de linha por espaço vazio
             print(f"{dados[0]:<30}: {dados[1]:>3} anos")
 
 
