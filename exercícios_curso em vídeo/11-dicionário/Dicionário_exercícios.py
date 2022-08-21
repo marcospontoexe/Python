@@ -35,7 +35,7 @@ else:
     info["Situação"] = str("REPROVADO!")
 print("-"*40)
 for k, v in info.items():
-    print(f"{k}: {v}")
+    print(f"{k}: {v}")      #mostra o nome do aluno e (aprovado, em recuperação ou reprovado)
 
 #------------------Ex02------------------
 print(f"{'Ex02':-^40}")
@@ -50,7 +50,7 @@ for i in range(0, 4):
     trat_erro[jogador] = randint(1, 6)
 
 for k, v in trat_erro.items():
-    print(f"{k} tirou {v}")
+    print(f"{k} tirou {v}")     # mostra a ordenação do jogador e o número sorteado
     sleep(0.3)
 ranking = sorted(trat_erro.items(), key=itemgetter(1), reverse=True)       #itemgetter=0 organiza pela KEY, itemgetter=1 organiza pelo Value
 print("-" *40)
