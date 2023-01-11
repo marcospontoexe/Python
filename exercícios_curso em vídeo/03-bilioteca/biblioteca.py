@@ -9,7 +9,7 @@ print('e a raiz arredondada para baixo é {:.3f}' .format(math.floor(raiz)))
 from datetime import date
 print('{:-^30}' .format('Ex02'))
 atual = date.today().year
-nasc = int(input("Digite sua data de nascimento: "))
+nasc = int(input("Digite seu ano de nascimento: "))
 idade = atual - nasc
 print('ano atual:', atual)
 print('idade:', idade)

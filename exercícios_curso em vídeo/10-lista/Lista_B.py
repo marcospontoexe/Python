@@ -5,7 +5,7 @@ pessoas.append(dados)        #Faz uma ligação entre as duas lista. Alterar uma
 dados[0] = "maria"
 dados[1] = 18
 pessoas.append(dados)
-print(pessoas)          #as duas listas "pessoas", que estão condidas na lista ""dados, serão identicas
+print(pessoas)          #as duas listas "pessoas", que estão contidas na lista ""dados, serão identicas
 #------------------------------------------------------------------
 dados = ["marcos", 30]
 pessoas = []

@@ -13,7 +13,7 @@ tabuada = int(input('Digite a tabuada desejada: '))
 for i in range (0, 11):                                 #repete de 0 até 10, incrementando de 1 em 1
     print("{} X {} = {}" .format(tabuada, i, tabuada*i))
 
-print('O \033[35mTiago\033[m da o boga!!!')
+
 
 #=============Ex02=============
 from time import sleep

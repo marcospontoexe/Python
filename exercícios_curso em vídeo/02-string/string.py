@@ -22,8 +22,7 @@ else:
 
 
 print('{:-^40}'.format('Ex01'))
-sexo = input("Digite seu sexo: ").strip().upper()[
-    0]  # retira o espaço antes e depois da frase, e pega apenas o primeiro caractere digitado em maiúsculo
+sexo = input("Digite seu sexo: ").strip().upper()[0]  # retira o espaço antes e depois da frase, e pega apenas o primeiro caractere digitado em maiúsculo
 while sexo not in 'MF':
     sexo = input("Dados inválidos, digite seu sexo: ").strip().upper()[0]
     print(sexo)
