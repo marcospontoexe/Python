@@ -1,11 +1,25 @@
 from tkinter import *
-import tkinter as tk
 
-janela = tk.Tk()    # instancia um objeto da classe Tk()
+def clique():
+    lb["text"] = "BOTÃO CLICADO!"   # altera o valor da chave "text" do dicionário "lb"
 
+
+janela = Tk()    # instancia um objeto da classe Tk()
+
+#-----CRIANDO UM LABEL NA JANELA-----
 lb = Label(janela, text="teste!")     # cria um widget do tipo Label atribuido ao container pai "janela"
-lb.place(x=100, y=100)        # atribui o gerenciador de layout "place" ao widget "lb", posicionando o widget dentro do container pai
+lb.place(x=100, y=200)        # atribui o gerenciador de layout "place" ao widget "lb", posicionando o widget dentro do container pai
+#-----------------------------------
 
+#-----CRIANDO UM BOTÃO NA JANELA-----
+bt = Button(janela, width=10, text="ok")        # cria um widget "Button"
+bt.place(x=100, y=10)                      # posiciona o widget com o gerenciador de layout
+#-----------------------------------
+
+#-------VINCULANDO UM BOTÃO À UMA FUNÇÃO----
+bt1 = Button(janela, width=20, text="CLIQUE AQUI!", command=clique)        # o "command" cria um evento vinculado à uma função
+bt1.place(x=100, y=50)
+#------------------------------------------
 janela.title("Janela principal")    # título da janela
 
 janela["bg"] = "grey"      # altera o valor do índice do dicionário "janela"
