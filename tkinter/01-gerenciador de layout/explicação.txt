@@ -1,0 +1,5 @@
+O gerenciador de layout é um widget responsável por gerenciar o posicionamento de outros widget dentro de um container.
+
+É recomendado usar apenas um único gerenciador de layout em cada container, porém podemos usar um container dentro de outro container.
+
+No pacote tkinter existem três gerenciadores de layouts distintos (place, pack, grid) 
