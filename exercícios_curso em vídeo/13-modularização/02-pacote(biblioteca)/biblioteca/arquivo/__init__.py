@@ -1,6 +1,18 @@
 from biblioteca.interface import *
 from biblioteca.trat_erros import *
 
+'''
+OPÇÕES PARA A FUNÇÃO open():
+r - Leitura do arquivo
+w - Escrita no arquivo (apaga o conteúdo existente)
+a - Escrita no arquivo (sem apagar o conteúdo existente)
+x - Cria o arquivo, também pode usar o sinal + para criar arquivo
+t - Arquivo de texto (por padrão é o tipo de arquivo criado)
+b - Arquivo binário
+---------------------------------------------------------------
+write() 
+writelines()
+'''
 def arquivoExiste(nome):
     '''
     A função retorna True caso o arquivo exista, False caso não exista.
