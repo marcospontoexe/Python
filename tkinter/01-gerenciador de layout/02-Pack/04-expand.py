@@ -8,10 +8,10 @@ lb2 = Label(janela, text="Label 2", bg="green")
 lb3 = Label(janela, text="Label 3", bg="blue")
 lb4 = Label(janela, text="Label 4", bg="red")
 
-lb1.pack(fill=BOTH)        # o atributo "fill" é aplicado ao atributo "side"
-lb2.pack(side=BOTTOM, fill=X)
-lb3.pack(side=LEFT, fill=Y)
-lb4.pack(side=RIGHT, fill=Y)
+lb1.pack(fill=BOTH, expand=True)        # a propriedade "expand" deixa todos os widgets com o mesmo tamanho
+lb2.pack(fill=BOTH, expand=True)
+lb3.pack(fill=BOTH, expand=True)
+lb4.pack(fill=BOTH, expand=True)
 
 
 # ----------CONFIGURAÇÕES DA JANELA-------------------
