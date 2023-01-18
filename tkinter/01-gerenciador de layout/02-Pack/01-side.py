@@ -9,10 +9,10 @@ lb3 = Label(janela, text="Label 3", bg="blue")
 lb4 = Label(janela, text="Label 4", bg="red")
 
 lb2.pack()        # atribui o gerenciador de layout "pack" ao widget "lb", posicionando o widget dentro do container pai
-lb1.pack()
+lb1.pack()      # por padão "side"=TOP
 lb3.pack()
-lb4.pack(side=RIGHT)
-#-----------------------------------
+lb4.pack(side=RIGHT)    # o atributo "side" vincula uma extremidade a um widget
+
 
 # ----------CONFIGURAÇÕES DA JANELA-------------------
 janela.title("Janela principal")  # título da janela

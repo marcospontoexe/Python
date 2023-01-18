@@ -2,4 +2,7 @@ O gerenciador de layout é um widget responsável por gerenciar o posicionamento
 
 É recomendado usar apenas um único gerenciador de layout em cada container, porém podemos usar um container dentro de outro container.
 
-No pacote tkinter existem três gerenciadores de layouts distintos (place, pack, grid) 
+No pacote tkinter existem três gerenciadores de layouts distintos (place, pack, grid).
+
+O PLACE posiciona os widgets no plano cartesiano (x, y).
+O PACK empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
