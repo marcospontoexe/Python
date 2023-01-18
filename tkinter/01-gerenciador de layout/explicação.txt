@@ -6,3 +6,4 @@ No pacote tkinter existem três gerenciadores de layouts distintos (place, pack,
 
 O PLACE posiciona os widgets no plano cartesiano (x, y).
 O PACK empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
+O GRID usa linhas e colunas para posicionar os widgets, como uma planilha
