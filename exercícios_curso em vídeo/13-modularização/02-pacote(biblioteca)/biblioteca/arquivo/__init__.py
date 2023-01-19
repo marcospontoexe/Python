@@ -10,8 +10,8 @@ x - Cria o arquivo, também pode usar o sinal + para criar arquivo
 t - Arquivo de texto (por padrão é o tipo de arquivo criado)
 b - Arquivo binário
 ---------------------------------------------------------------
-write() 
-writelines()
+write() - para escreveer uma string no documento
+writelines() - para escrever uma lista no documento
 '''
 def arquivoExiste(nome):
     '''
