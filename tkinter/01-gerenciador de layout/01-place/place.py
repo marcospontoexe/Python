@@ -40,12 +40,14 @@ bt3.place(x=10, y=100)
 #----------------------------------------------------------------
 
 #-----------ENTRADA DE DADOS---------------------
-dt = Entry(janela)
+dt = Entry(janela)  # entrada de texto para apenas um linha
 dt.place(x=200, y=10)
 bt4 = Button(janela, width=20, text="Copiar", command=btCopiar)
 bt4.place(x=200, y=40)
 lb2 = Label(janela, text="              ")
 lb2.place(x=200, y=70)
+dt1 = Text(janela)  # entrada de texto para multiplas um linhas
+dt1.place(x=200, y=100, width=100, height=50)
 #------------------------------------------------
 
 # ----------CONFIGURAÇÕES DA JANELA-------------------
