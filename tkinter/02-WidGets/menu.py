@@ -1,25 +1,40 @@
 from tkinter import *
+import os
 
-def semComando():
+def novoContato():
     print("contato adicionado!")
 
 janela = Tk()  # instancia um objeto da classe Tk()
 # ----------CONFIGURAÇÕES DA JANELA-------------------
 janela.title("Janela principal")  # título da janela
 janela.geometry("500x300+200+100")  # define o posicionamento e tamanho da tela (largura X altura + distância à esqueda + dist topo) em pixel
+janela.configure(background='#dde')
 # ----------------------------------------------------
 
 barraMenu = Menu(janela)    #widget menu
-menuContato = Menu(barraMenu, tearoff=0)    #Cria um item da barra de menu
-#opções do item "menuContato"
-menuContato.add_command(label="novo", command=semComando)
+
+#---------------- menu de contatos------------------
+menuContato = Menu(barraMenu, tearoff=0)    #Cria um menu que fica dentro da barra de menu
+#itens do menu "menuContato"
+menuContato.add_command(label="novo", command=novoContato)
 menuContato.add_command(label="pesquisar")
 menuContato.add_command(label="apagar")
 menuContato.add_separator()     #adiciona uma barra horizontal
 menuContato.add_command(label="fechar", command=janela.quit)
-menuContato.add_cascade(label="contatos", menu=menuContato)
+barraMenu.add_cascade(label="CONTATOS", menu=menuContato)       # nome do menu visível na barra de menu, que herda os itens do "menuContato"
+#--------------------------------------------------
 
-janela.config(menu=barraMenu)
+#---------------- menu de edição------------------
+menuEditar = Menu(barraMenu, tearoff=0)    #Cria outro menu que ficara dentro da barra de menu
+#itens do menu
+menuEditar.add_command(label="copiar")
+menuEditar.add_command(label="recortar")
+menuEditar.add_command(label="colar")
+menuEditar.add_command(label="desfazer")
+barraMenu.add_cascade(label="EDITAR", menu=menuEditar)
+#--------------------------------------------------
+
+janela.config(menu=barraMenu)   #adiciona a barra de menu
 
 janela.mainloop()  # cria um laço de repetição enquanto a janela estiver aberta
 
