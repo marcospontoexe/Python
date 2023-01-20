@@ -10,7 +10,7 @@ lb4 = Label(janela, text="Label 4", bg="red")
 
 lb2.pack()        # atribui o gerenciador de layout "pack" ao widget "lb", posicionando o widget dentro do container pai
 lb1.pack(ipady=15)      # "ipady" é o padding interno no eixo y
-lb3.pack()      #por padão "side"=TOP
+lb3.pack(side=TOP)      #por padão "side"=TOP
 lb4.pack(side=RIGHT, padx=10)    # o atributo "side" vincula uma extremidade a um widget
 # "padx" é o padding externo no eixo x
 
