@@ -4,6 +4,9 @@ janela = Tk()  # instancia um objeto da classe Tk()
 
 #-------------cria o frame----------------------------
 fr = Frame(janela, borderwidth=1, relief="solid", width=200, height=200)
+''' outras opções para relief:
+flat, raised, sunken, solid
+'''
 fr.pack()
 #-------------------------------------------------------
 
