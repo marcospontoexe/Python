@@ -1,6 +1,5 @@
 from tkinter import *
 
-
 def cadastrar():
     exec(open("cadastar.py").read())
 
