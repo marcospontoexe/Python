@@ -6,6 +6,9 @@ def clique():
 def clique2(botao):
     lb["text"] = f"BOTÃO {botao['text']} CLICADO!"   # altera o valor da chave "text" do dicionário "lb"
 
+def clique3(msg):
+    lb["text"] = f"BOTÃO {msg} CLICADO!"   # altera o valor da chave "text" do dicionário "lb"
+
 def btCopiar():
     lb2["text"] = dt.get()
 
@@ -15,7 +18,7 @@ janela = Tk()  # instancia um objeto da classe Tk()
 
 #-----CRIANDO UM LABEL NA JANELA-----
 lb = Label(janela, text="teste!")     # cria um widget do tipo Label atribuido ao container pai "janela"
-lb.place(x=10, y=180)        # atribui o gerenciador de layout "place" ao widget "lb", posicionando o widget dentro do container pai
+lb.place(x=10, y=190)        # atribui o gerenciador de layout "place" ao widget "lb", posicionando o widget dentro do container pai
 #-----------------------------------
 
 #-----CRIANDO UM BOTÃO NA JANELA-----
@@ -37,6 +40,14 @@ bt2.place(x=10, y=70)
 bt3 = Button(janela, width=20, text="bt3")
 bt3["command"] = partial(clique2, bt3)
 bt3.place(x=10, y=100)
+#----------------------------------------------------------------
+
+#------USANDO VÁRIOS BOTÕES PARA INVOCAR A MESMA FUNÇÃO (usando função lambda)----------
+bt5 = Button(janela, width=20, text="bt5", command=lambda:clique3("bt5"))
+bt5.place(x=10, y=130)
+
+bt6 = Button(janela, width=20, text="bt6", command=lambda:clique3("bt6"))
+bt6.place(x=10, y=160)
 #----------------------------------------------------------------
 
 #-----------ENTRADA DE DADOS---------------------
