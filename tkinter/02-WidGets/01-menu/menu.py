@@ -1,8 +1,9 @@
 from tkinter import *
 import os
 
-def novoContato():
-    print("contato adicionado!")
+def cadastrar():
+    exec(open("cadastar.py").read())
+
 
 janela = Tk()  # instancia um objeto da classe Tk()
 # ----------CONFIGURAÇÕES DA JANELA-------------------
@@ -16,7 +17,7 @@ barraMenu = Menu(janela)    #widget menu
 #---------------- menu de contatos------------------
 menuContato = Menu(barraMenu, tearoff=0)    #Cria um menu que fica dentro da barra de menu
 #itens do menu "menuContato"
-menuContato.add_command(label="novo", command=novoContato)
+menuContato.add_command(label="novo", command=cadastrar)
 menuContato.add_command(label="pesquisar")
 menuContato.add_command(label="apagar")
 menuContato.add_separator()     #adiciona uma barra horizontal
