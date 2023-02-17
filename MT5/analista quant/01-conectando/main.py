@@ -11,4 +11,5 @@ d = d._asdict()         #transforma a classe em dicionário
 for k in d.keys():
     print(f"{k} -> {d[k]}")
 
+
 mt5.shutdown()      #encerra o metatrader

@@ -18,9 +18,9 @@ ativo = "WINJ23"        # nome do ativo a ser pesquisado
 flag= mt5.COPY_TICKS_ALL   # flag para selecionar
 dia = datetime(2022,12,14)      # data inicial da pesquisa
 
-dados = mt5.copy_ticks_from(ativo, dia, 10, flag)       # a Array "dados" recebe as informações do "ativo"
+dados = mt5.copy_ticks_from(ativo, dia, 30, flag)       # a Array "dados" recebe as informações do "ativo"
 
-arq = pd.DataFrame(dados, columns=["time","bid","ask","last","volume","time_msc","volume_real"])
+arq = pd.DataFrame(dados)
 print(arq)
 
 print(type(arq))
