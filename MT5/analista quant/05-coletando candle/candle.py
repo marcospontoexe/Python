@@ -20,7 +20,7 @@ arq = pd.DataFrame(dados)
 arq["time"] = pd.to_datetime(arq["time"], unit="s") # transforma a coluna de data, de horário GMT para horário UTC
 print(arq)
 
-arq.to_csv("dados.csv")
+arq.to_csv("dados.csv", index=False)
 
 mt5.shutdown()      #encerra o metatrader
 
