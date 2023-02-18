@@ -4,26 +4,21 @@ import pandas as pd
 
 mt5.initialize()        #inicia o metatrader 5
 
-'''
-d = mt5.terminal_info()     #a classe 'd' recebe as informações do mt5
-
-d = d._asdict()         #transforma a classe em dicionário
-
-for k in d.keys():
-    print(f"{k} -> {d[k]}")
-'''
-
 #----------COLETANDO PREÇO-------------
 ativo = "WINJ23"        # nome do ativo a ser pesquisado
-flag= mt5.COPY_TICKS_ALL   # flag para selecionar
-dia = datetime(2022,12,14)      # data inicial da pesquisa
+flag = mt5.COPY_TICKS_ALL   # combinação de sinalizadores que definem o tipo de ticks solicitados
+qntd = 50         # número de ticks solicitados
+dia = datetime(2022,12,14)      # data a partir da qual são solicitados os ticks
 
-dados = mt5.copy_ticks_from(ativo, dia, 30, flag)       # a Array "dados" recebe as informações do "ativo"
+dados = mt5.copy_ticks_from(ativo, dia, qntd, flag)       # a Array "dados" recebe as informações do "ativo"
+
 
 arq = pd.DataFrame(dados)
 print(arq)
 
-print(type(arq))
+
+
+
 
 mt5.shutdown()      #encerra o metatrader
 
