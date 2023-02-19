@@ -24,7 +24,8 @@ arq = pd.DataFrame(dados)   # transforma em dataframe
 arq["time"] = pd.to_datetime(arq["time"], unit="s") # transforma a coluna de data, de horário GMT para horário UTC
 
 #print(arq.describe())       # mostra a média, valor mínimo, percentil.... do dataframe
-#arq.set_index("time", implace=True)
-arq.iplot(figure="candle")
+arq.set_index('time', inplace=True)
+print(arq)
+arq.iplot(kind="candle")
 
 mt5.shutdown()      #encerra o metatrader
