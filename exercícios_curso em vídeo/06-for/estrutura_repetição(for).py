@@ -75,3 +75,15 @@ for i in range (1, 6):
             menor = peso
 print('O \033[34mmenor\033[m peso é {:.2f}!' .format(menor))
 print('O \033[34mmaior\033[m peso é {:.2f}!' .format(maior))
+
+#--------OUTROS TIPOS DE USAR O FOR
+lanche = ('Hamburguer', 'Suco', 'Pizza', 'Pudim')
+for comida in lanche:
+    print(f'Eu vou comer {comida}')     #imprime os índices da tupla 'lanche'
+print(f"{'-'*20}")
+for i in range(0, len(lanche)):
+    print(f'Eu vou comer {lanche[i]}, na posição {i}')
+print(f"{'-'*20}")
+for pos, comida in enumerate(lanche):
+    print(f'Eu vou comer {comida}, na posição {pos}')   #mostra o valor do índice e o índice
+print(f"{'-' * 20}")
