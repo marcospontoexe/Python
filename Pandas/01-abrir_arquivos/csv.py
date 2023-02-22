@@ -10,3 +10,4 @@ numLinhas = 50      # seleciona quantas linhas o dataframe deve possuir
 dadosCSV = pd.read_csv(arquivo, encoding=codificacao, sep=separador, header=cabecalho, usecols=selecionarCol, nrows=numLinhas)        # abre um arquivo CSV
 
 print(dadosCSV)
+
