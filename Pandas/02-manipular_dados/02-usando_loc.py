@@ -7,6 +7,6 @@ dados = pd.read_excel(arquivo, sheet_name=pagina)        # abre um arquivo EXCEL
 
 # o "loc" permite usar string para filtrar linhas e colunas
 print(dados.loc[[1,5,6]]) # mostra apenas as linhas 1, 5 e 10
-print(dados.loc[0:5, ["open", "close"]]) # mostra apenas as linhas do índice 0 ao 5, das colunas selecionadas
+print(dados.loc[:, ["open", "close"]]) # mostra todas as linhas das colunas selecionadas
 print(dados.loc[[1,3], "time": "low"]) # mostra apenas a linhas 1 e 3, das coluna "time", até "low"
 print(dados.loc[1:3, "time": "low"]) # mostra apenas a linhas 1 ate 3, das coluna "time", até "low"

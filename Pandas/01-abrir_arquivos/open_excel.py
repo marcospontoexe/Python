@@ -1,5 +1,6 @@
 import pandas as pd
 
+# Para abrir excel é necessário instalar a biblioteca openpyxl
 #----------------ABRINDO ARQUIVO EXCEL-----------------------------
 arquivo = "dadosEXCEL.xlsx"   # nome do arquivo
 pagina = 1      # escolhe a página do excel. (tb pode usar o nome da página como índice)
