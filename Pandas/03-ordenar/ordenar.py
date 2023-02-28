@@ -1,7 +1,7 @@
 import pandas as pd
 
 #----------------ABRINDO ARQUIVO EXCEL-----------------------------
-arquivo = "dados.xlsx"   # nome do arquivo
+arquivo = "nomes.xlsx"   # nome do arquivo
 arq = pd.read_excel(arquivo)        # abre um arquivo EXCEL
 
 dados = arq.loc[:30,["FirstName", "LastName"]]  # recebe apenas as colunas e linhas filtradas
