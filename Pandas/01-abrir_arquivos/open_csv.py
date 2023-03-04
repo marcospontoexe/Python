@@ -10,4 +10,9 @@ numLinhas = 50      # seleciona quantas linhas o dataframe deve possuir
 dadosCSV = pd.read_csv(arquivo, encoding=codificacao, sep=separador, header=cabecalho, usecols=selecionarCol, nrows=numLinhas)        # abre um arquivo CSV
 
 print(dadosCSV)
+print(f"SHAPE: {dadosCSV.shape}")              # mostra a quantidade de linhas e colunas
+print(f"SIZE: {dadosCSV.size}")             # mostra a quantidade de dados do Dataframe (linhas X colunas)
+print(f"HEAD: {dadosCSV.head()}")              # mostra apenas as primeiras linhas do dataframe
+print(f"INFORMAÇÕES DO DATAFRAME: \n{dadosCSV.info()}")        # mostra informações sobre o dataframe
+
 

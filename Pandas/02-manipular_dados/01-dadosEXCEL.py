@@ -6,3 +6,4 @@ pagina = 0      # escolhe a página do excel. (tb pode usar o nome da página co
 dados = pd.read_excel(arquivo, sheet_name=pagina)        # abre um arquivo EXCEL
 
 print(dados[["open", "close"]]) # mostra apenas as colunas selecionadas
+print(dados["open"][3])     # mostra o valor da coluna X linha
