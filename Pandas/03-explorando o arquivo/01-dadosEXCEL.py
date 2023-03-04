@@ -11,6 +11,13 @@ print('----------------------------------------------------------')
 
 arquivo = "nomes.xlsx"   # nome do arquivo
 arq = pd.read_excel(arquivo)        # abre um arquivo EXCEL
-filtro = arq.FirstName == "James"   # recebe uma série contendo, "True" quando os valores da coluna "FirstName" é "James", e "False" caso contrário
-print(f"soma: {sum(filtro * 1)}")    # mostra quantas linhas que contém o valor "James"
-print(arq.FirstName[filtro])         # mostra apenas as linhas que contém o valor "James"
+qntd = arq["FirstName"].value_counts()        #retorna a quantidades de linhas com o mesmo "FirstName"
+print(f"quantidade de nomes iguais: \n{qntd}")
+print('----------------------------------------------------------')
+filtro = arq.FirstName == "John"   # recebe uma série contendo, "True" quando os valores da coluna "FirstName" é "John", e "False" caso contrário
+print(f"soma: {sum(filtro * 1)}")    # mostra quantas linhas que contém o valor "John"
+print(arq.FirstName[filtro])         # mostra apenas as linhas que contém o valor "John"
+
+
+
+
