@@ -1,5 +1,5 @@
-NOME,IDADE,PESO,VIVO
-marcos,32,60.3,True
-edivânia,56,49.2,True
-leonide,78,80.4,True
-josivaldo,92,72.4,False
+NOME,IDADE,PESO,VIVO,FILHOS,AUTO MÓVEL
+marcos,32,60.3,True,0,True
+edivânia,56,49.2,True,1,True
+leonide,78,80.4,True,2,True
+josivaldo,92,72.4,False,3,True

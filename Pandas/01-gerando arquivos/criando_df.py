@@ -30,6 +30,8 @@ print("------------------------------------")
 #-------INSERINDO COLUNAS NO DATAFRAME----------
 print('INSERINDO COLUNAS NO DATAFRAME')
 df.insert(1, "SOBRENOME",["Santana", "Santos", "Silva","Bento"])    # insere uma coluna no índice 1
+df["FILHOS"] = [0, 1, 2, 3]             # adiciona uma coluna ao final do dicionario
+df["AUTO MÓVEL"] = True     # adiciona uma coluna ao final do dicionario, com todas as linhas igual a 'True'
 print(f"df: \n{df}")
 print("------------------------------------")
 
