@@ -43,4 +43,5 @@ print(f"df: \n{df}")
 print("------------------------------------")
 
 #-------salvando em um csv---------------
-df.to_csv("dados.csv", index=False)         # salva sem o índice
+df.to_csv("dados.csv", index=False, encoding="UTF-32")         # salva em CSV sem o índice, e UTF-32 para salvar os caracteres especiais
+df.to_excel("dadosExcel.xlsx", index=False)
