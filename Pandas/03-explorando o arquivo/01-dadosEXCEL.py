@@ -25,7 +25,12 @@ print(f"linhas vazias: \n{(arq[arq['NameStyle'].isnull()])}")  #mostra os valore
 print('------------------------------------------------------')
 
 #---------RENOMEANDO VALORES----------------
+print("--------arq------")
 print(arq.info())
-arqRenomeado = arq.rename(columns={"FirstName":"Primeiro Nome" , "LastName":"Sobrenome"})
+print("-----arqRenomeado------")
+arqRenomeado = arq.rename(columns={"FirstName":"Primeiro Nome" , "LastName":"Sobrenome"}) # "arqRenomeado" recebe um dataframe com as aletrações solicitadas
 print(arqRenomeado.info())
+print("--------arq após 'inplace'------")
+arq.rename(columns={"FirstName":"Primeiro Nome" , "LastName":"Sobrenome"}, inplace=True)    # faz a alteração no próprio dataframe
+print(arq.info())
 
