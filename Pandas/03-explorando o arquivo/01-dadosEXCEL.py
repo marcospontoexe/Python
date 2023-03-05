@@ -13,11 +13,15 @@ arquivo = "nomes.xlsx"   # nome do arquivo
 arq = pd.read_excel(arquivo)        # abre um arquivo EXCEL
 qntd = arq["FirstName"].value_counts()        #retorna a quantidades de linhas com o mesmo "FirstName"
 print(f"quantidade de nomes iguais: \n{qntd}")
+print(f"unique(): \n{arq['FirstName'].unique()}")   #mostra os valores da coluna, sem repetir o mesmo nome
 print('----------------------------------------------------------')
+
 filtro = arq.FirstName == "John"   # recebe uma série contendo, "True" quando os valores da coluna "FirstName" é "John", e "False" caso contrário
 print(f"soma: {sum(filtro * 1)}")    # mostra quantas linhas que contém o valor "John"
 print(arq.FirstName[filtro])         # mostra apenas as linhas que contém o valor "John"
+print('------------------------------------------------------')
 
+print(f"linhas vazias: \n{(arq[arq['NameStyle'].isnull()])}")  #mostra os valores do objeto "dados" em que os índices da coluna "Tipo_Anuncio" estão vazios
 
 
 
