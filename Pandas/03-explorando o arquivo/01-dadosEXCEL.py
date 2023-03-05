@@ -22,6 +22,10 @@ print(arq.FirstName[filtro])         # mostra apenas as linhas que contém o val
 print('------------------------------------------------------')
 
 print(f"linhas vazias: \n{(arq[arq['NameStyle'].isnull()])}")  #mostra os valores do objeto "dados" em que os índices da coluna "Tipo_Anuncio" estão vazios
+print('------------------------------------------------------')
 
-
+#---------RENOMEANDO VALORES----------------
+print(arq.info())
+arqRenomeado = arq.rename(columns={"FirstName":"Primeiro Nome" , "LastName":"Sobrenome"})
+print(arqRenomeado.info())
 
