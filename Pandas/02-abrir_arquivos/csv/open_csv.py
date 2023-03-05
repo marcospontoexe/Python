@@ -1,7 +1,7 @@
 import pandas as pd
 
 #----------------ABRINDO ARQUIVO CSV-----------------------------
-arquivo = "dadosCSV.csv"   # nome do arquivo
+arquivo = "..\outra pasta\dadosCSV.csv"   # caminho e nome do arquivo
 codificacao = "UTF-8"   # tipo de codificaçao do arquivo
 separador = ","         # separador usado na separação  dos dados CSV
 cabecalho = 0           # define qual linha será o cabeçalho
