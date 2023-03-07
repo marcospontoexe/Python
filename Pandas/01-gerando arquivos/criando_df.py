@@ -18,6 +18,12 @@ print(f"df.info: \n{df.info()}")
 print(f"df: \n{df}")
 print("------------------------------------")
 
+#-----ALTERANDO o ÍNDICE-----------------
+print("ALTERANDO o ÍNDICE")
+df.index=df.NOME
+print(f"df: \n{df}")
+print("------------------------------------")
+
 #--------CRIANDO SÉRIES DO TIPO COLUNA------------------
 print('CRIANDO SÉRIES DO TIPO COLUNA')
 #df.Series({"NOME": "Juvenal", "IDADE":26, "PESO": 96.8, "VIVO":False})
@@ -37,11 +43,12 @@ print("------------------------------------")
 
 #----------APAGANDO UM COLUNA DO DATAFRAME -----
 print('APAGANDO UM COLUNA DO DATAFRAME')
+#del df["SOBRENOME"]        # apaga a coluna in-place(no próprio dataframe)
 new = df.pop("SOBRENOME")    # apaga a coluna 'sobrenome' do dataframe 'df', e passa para o dateframe 'new'
 print(f"new: \n{new}")
 print(f"df: \n{df}")
 print("------------------------------------")
 
 #-------salvando em um csv---------------
-df.to_csv("dados.csv", index=False, encoding="UTF-32")         # salva em CSV sem o índice, e UTF-32 para salvar os caracteres especiais
-df.to_excel("dadosExcel.xlsx", index=False)
+df.to_csv("dados.csv", index=False, encoding="UTF-32", sep=";")         # salva em CSV sem o índice, e UTF-32 para salvar os caracteres especiais
+df.to_excel("dadosExcel.xlsx", index=False)         # salva em excel
