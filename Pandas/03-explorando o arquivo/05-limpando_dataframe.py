@@ -19,8 +19,19 @@ errors: {‘ignore’, ‘raise’, ‘coerce’}, default ‘raise’
     *coerce -> Conversão inválida será definida como NaN.
     *ignore -> não realiza a conversão.
 '''
-print('----------------------------------------------')
 #------------------------------------------------------------
 
+#----Verificando quais valores são NaN-----------------------
+eh_NaN = arqCopia["PREÇO MÉDIO DISTRIBUIÇÃO"].isnull()  # retorna "True" caso o valor seja NaN
+print('Linhas que não foram convertidas de "object" para "numeric":\n')
+print(arq[eh_NaN]["PREÇO MÉDIO DISTRIBUIÇÃO"])        # mostra no dataframe original quais linhas não foram convertidas de 'object' para 'numeric'
+print('----------------------------------------------------')
+print('Valores que não foram convertidas de "object" para "numeric":\n')
+print(arq[eh_NaN]["PREÇO MÉDIO DISTRIBUIÇÃO"].unique())        # mostra no dataframe original quais valores não foram convertidas de 'object' para 'numeric'
+print('----------------------------------------------------')
+#------------------------------------------------------------
+
+#-----removendo linhas do dataframe que possuem valor NaN
+arqCopia.dropna(inplace=True)
 
 print(arqCopia.info())
