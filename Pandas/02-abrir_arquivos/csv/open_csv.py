@@ -15,4 +15,7 @@ print(f"SIZE: {dadosCSV.size}")             # mostra a quantidade de dados do Da
 print(f"HEAD: {dadosCSV.head()}")              # mostra apenas as primeiras linhas do dataframe
 print(f"INFORMAÇÕES DO DATAFRAME: \n{dadosCSV.info()}")        # mostra informações sobre o dataframe
 
-
+#-------Convertendo uma valor do dataframe--------
+numero = int(dadosCSV.loc[[0],["open"]].values)
+print(f"OPEN: {numero}")
+print(f"tipo do OPEN: {type(numero)}")
