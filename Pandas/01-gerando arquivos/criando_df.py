@@ -47,6 +47,21 @@ print('APAGANDO UM COLUNA DO DATAFRAME')
 new = df.pop("SOBRENOME")    # apaga a coluna 'sobrenome' do dataframe 'df', e passa para o dateframe 'new'
 print(f"new: \n{new}")
 print(f"df: \n{df}")
+new = df.drop(["AUTO MÓVEL","FILHOS"], axis=1)    # 'new' recebe 'df' com aa colunaa 'AUTO MÓVEL' e "FILHOS" apagados (axis 1 para apagar coluna, 0 para apagar linha)
+print(f"new: \n{new}")
+print(f"df: \n{df}")
+df.drop("VIVO", axis=1, inplace=True)    # o 'inplace=True' retorna a alteração para o próprio dataframe
+print(f"df: \n{df}")
+print("------------------------------------")
+
+
+#--------------APAGANDO UMA LINHA------------------
+print("APAGANDO UMA LINHA\n")
+new = df.drop("marcos")        # 'new' recebe 'df' com o índice 'marcos' apagado
+print(f"new: \n{new}")
+print(f"df: \n{df}")
+df.drop(["edivânia","leonide"], inplace=True)        # o 'inplace=True' retorna a alteração para o próprio dataframe
+print(f"df: \n{df}")
 print("------------------------------------")
 
 #-------salvando em um csv---------------
