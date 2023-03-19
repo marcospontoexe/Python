@@ -41,6 +41,12 @@ df["AUTO MÓVEL"] = True     # adiciona uma coluna ao final do dicionario, com t
 print(f"df: \n{df}")
 print("------------------------------------")
 
+#-------INSERINDO LINHAS NO DATAFRAME----------
+print('INSERINDO LINHAS NO DATAFRAME')
+df.loc[4] = ["Jubileu", "Creidson", 65, 80.8, False, 5, False]
+print(df)
+print("------------------------------------")
+
 #----------APAGANDO UM COLUNA DO DATAFRAME -----
 print('APAGANDO UM COLUNA DO DATAFRAME')
 #del df["SOBRENOME"]        # apaga a coluna in-place(no próprio dataframe)
