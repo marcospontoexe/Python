@@ -24,7 +24,7 @@ errors: {‘ignore’, ‘raise’, ‘coerce’}, default ‘raise’
 #----Verificando quais valores são NaN-----------------------
 eh_NaN = arqCopia["PREÇO MÉDIO DISTRIBUIÇÃO"].isnull()  # retorna "True" caso o valor seja NaN
 print('Linhas que não foram convertidas de "object" para "numeric":\n')
-print(arq[eh_NaN]["PREÇO MÉDIO DISTRIBUIÇÃO"])        # mostra no dataframe original quais linhas não foram convertidas de 'object' para 'numeric'
+print(arq[eh_NaN]["PREÇO MÉDIO DISTRIBUIÇÃO"])        # mostra no dataframe original quais linhas não foram convertidas de 'object' para 'numeric' e seu valor
 print('----------------------------------------------------')
 print('Valores que não foram convertidas de "object" para "numeric":\n')
 print(arq[eh_NaN]["PREÇO MÉDIO DISTRIBUIÇÃO"].unique())        # mostra no dataframe original quais valores não foram convertidas de 'object' para 'numeric'
