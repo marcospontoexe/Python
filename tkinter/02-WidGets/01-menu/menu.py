@@ -1,7 +1,14 @@
 from tkinter import *
-
+import Com
 def cadastrar():
     exec(open("cadastar.py").read())
+
+def pesquisar():
+    print(Com.portaCom.get())
+    exec(open("Com.py").read())
+
+def abrir():
+    exec(open("rb.py").read())
 
 
 janela = Tk()  # instancia um objeto da classe Tk()
@@ -17,7 +24,8 @@ barraMenu = Menu(janela)    #widget menu
 menuContato = Menu(barraMenu, tearoff=0)    #Cria um menu que fica dentro da barra de menu
 #itens do menu "menuContato"
 menuContato.add_command(label="novo", command=cadastrar)
-menuContato.add_command(label="pesquisar")
+menuContato.add_command(label="pesquisar", command=pesquisar)
+menuContato.add_command(label="abrir", command=abrir)
 menuContato.add_command(label="apagar")
 menuContato.add_separator()     #adiciona uma barra horizontal
 menuContato.add_command(label="fechar", command=janela.quit)

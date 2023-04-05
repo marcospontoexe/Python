@@ -1,28 +1,21 @@
 from tkinter import *
 
-
-
 janela = Tk()  # instancia um objeto da classe Tk()
 # ----------CONFIGURAÇÕES DA JANELA-------------------
 janela.title("Janela principal")  # título da janela
 janela.geometry("500x300+200+100")  # define o posicionamento e tamanho da tela (largura X altura + distância à esqueda + dist topo) em pixel
 janela.configure(background='#dde')
 # ----------------------------------------------------
-
+vCor = StringVar()
+vEsporte = StringVar()
 def rbEsporte():
     lbResutadoE["text"] = vEsporte.get()
 
 def rbCor():
     lbResutadoC["text"] = vCor.get()
 
-def teste():
-    print('teste')
-
 lbEsportes = Label(janela, text="Esportes: ")
 lbEsportes.pack(anchor=NW)
-
-vCor = StringVar()
-vEsporte = StringVar()
 
 #------criando radio buttons para esporte, associado a StringVar() "vEsporte"----------------------
 rbSkate = Radiobutton(janela, text="Skate", value="sk8", variable=vEsporte)       # "value" é o valor passado para o banco de dados por exemplo
