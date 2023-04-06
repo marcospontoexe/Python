@@ -16,8 +16,8 @@ idade = atual - nasc
 print('ano atual:', atual)
 print('idade:', idade)
 
-diaUtc = '101223'  # recebe uma string com o dia fornecida pelo GNSS (exemplo: ddmmyy)
-horaUtc = '152950'  # rebe uma string com o horário UTC fornecido pelo GNSS (exemplo: hhmmss.ss)
+diaUtc = '010423'  # recebe uma string com o dia fornecida pelo GNSS (exemplo: ddmmyy)
+horaUtc = '012950'  # rebe uma string com o horário UTC fornecido pelo GNSS (exemplo: hhmmss.ss)
 #----- conversão de data e hora UTC para data e hora local-----------------------------
 datetime_obj = datetime.datetime.strptime((f'{diaUtc[:2]}/{diaUtc[2:4]}/20{diaUtc[4:]} {horaUtc[:2]}:{horaUtc[2:4]}:{horaUtc[4:6]}'), '%d/%m/%Y %H:%M:%S')      # converte de string para objeto datetime() (2023-04-05 20:33:51)
 fusoLocal = pytz.timezone('America/Sao_Paulo')       # fuso horário local
