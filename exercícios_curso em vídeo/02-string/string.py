@@ -1,4 +1,4 @@
-valor = input('Digite um valor: ').strip()
+valor = input('Digite um valor: ').strip()      # retira o espaço antes e depois da frase
 print('O tipo primitivo da variável é:',type(valor))    #mostra o tipo de variável
 print("É isnumeric()?", valor.isnumeric())
 print("É alfabético?", valor.isalpha())
