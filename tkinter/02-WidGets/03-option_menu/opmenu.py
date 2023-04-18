@@ -7,7 +7,7 @@ janela.geometry("500x300+200+100")  # define o posicionamento e tamanho da tela 
 janela.configure(background='#dde')
 # ----------------------------------------------------
 
-lsEsporte = ["skate", "basquete", "futebol", "volei"]           # lista
+lsEsporte = ["skate", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei", "basquete", "futebol", "volei"]           # lista
 esporte = StringVar()
 esporte.set(lsEsporte[0])       # define um valor padrão para a string
 
