@@ -33,6 +33,9 @@ rbBasquete = Radiobutton(janela, text="Basquete", value="baskt", variable=vEspor
 rbBasquete.pack(anchor=NW)
 rbVolei = Radiobutton(janela, text="Volei", value="vol", variable=vEsporte)
 rbVolei.pack(anchor=NW)
+
+vEsporte.set("sk8")             # inicia o radiobutton com o valor 'sk8'
+
 #---------------------------------------------------------------------------
 btnE = Button(janela, text="Selecionar Esporte",command=rbEsporte)
 btnE.pack(anchor=NW)

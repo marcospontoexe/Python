@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter as tk
 
 janela = Tk()  # instancia um objeto da classe Tk()
 # ----------CONFIGURAÇÕES DA JANELA-------------------
@@ -14,7 +15,9 @@ esporte.set(lsEsporte[0])       # define um valor padrão para a string
 lbEsporte = Label(janela, text="Esporte:")
 lbEsporte.pack()
 #----------criando option menu----------------------
-opEsporte = OptionMenu(janela, esporte, *lsEsporte)     #
+#opEsporte = tk.OptionMenu(janela, esporte, *lsEsporte, indicatoron=False)     #
+opEsporte = tk.OptionMenu(janela, esporte, *lsEsporte)
+#opEsporte.config(takefocus=0)
 opEsporte.pack()
 #---------------------------------------------------
 
