@@ -87,7 +87,5 @@ print("------------------------------------")
 diretorio_script = os.path.dirname(os.path.realpath(__file__))
 
 # salva em CSV sem o índice, e UTF-32 para salvar os caracteres especiais
-df.to_csv(f"{diretorio_script}/dados.csv",
-          index=False, encoding="UTF-32", sep=";")
-df.to_excel(f"{diretorio_script}/dadosExcel.xlsx",
-            index=False)         # salva em excel
+df.to_csv(f"{diretorio_script}/dados.csv", index=False, encoding="UTF-32", sep=";")
+df.to_excel(f"{diretorio_script}/dadosExcel.xlsx", index=False)         # salva em excel (necessário instalar o pacote "openpyxl")
