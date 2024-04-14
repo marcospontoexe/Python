@@ -22,7 +22,8 @@
 Veja como usar algumas bibliotecas Python
 ### Tk interface
 A biblioteca Tkinter é uma ferramenta comumente usada com interface gráfica para programas em Python, e faz parte do kit de ferramentas Tcl/Tk GUI. Tanto o Tk quanto o tkinter estão disponíveis na maioria das plataformas Unix, incluindo macOS, bem como em sistemas Windows.
-* [Gerenciador de layouts](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout); O gerenciador de layout é um widget responsável por gerenciar o posicionamento de outros widget dentro de um container. É recomendado usar apenas um único gerenciador de layout em cada container, porém podemos usar um container dentro de outro container.
+#### Gerenciador de layouts
+O gerenciador de layout é um widget responsável por gerenciar o posicionamento de outros widget dentro de um container. É recomendado usar apenas um único gerenciador de layout em cada container, porém podemos usar um container dentro de outro container.
 No pacote Tkinter existem três gerenciadores de layouts distintos (place, pack, grid).
   * [Place](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/01-place); O gerenciador de layout Place posiciona os widgets no plano cartesiano (x, y).
 O PACK empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
