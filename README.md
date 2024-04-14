@@ -20,5 +20,6 @@
 
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
+
 ###Tk interface
-A biblioteca tkinter 
+A biblioteca Tkinter é uma ferramenta comumente usada com interface gráfica para programas em Python, e faz parte do kit de ferramentas Tcl/Tk GUI. Tanto o Tk quanto o tkinter estão disponíveis na maioria das plataformas Unix, incluindo macOS, bem como em sistemas Windows.
