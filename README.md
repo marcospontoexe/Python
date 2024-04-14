@@ -28,4 +28,4 @@ O gerenciador de layout é um widget responsável por gerenciar o posicionamento
 No pacote Tkinter existem três gerenciadores de layouts distintos (place, pack, grid).
 * [Place](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/01-place): O gerenciador de layout **Place** posiciona os widgets no plano cartesiano (x, y).
 * [Pack](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/02-Pack): O gerenciador de layout **PACK** empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
-* {GRID}(https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/03-grid): O gerenciador de layoutO **GRID** usa linhas e colunas para posicionar os widgets, usando o conceito de planilha para o posicionamento dos widgets.
+* [GRID](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/03-grid): O gerenciador de layoutO **GRID** usa linhas e colunas para posicionar os widgets, usando o conceito de planilha para o posicionamento dos widgets.
