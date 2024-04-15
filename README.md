@@ -47,13 +47,13 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 * [Note Book](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/14-notebook): O **Notebook** permite criar um Widget semelhante a um gerenciador de Layouts.
 * [Progress Bar](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/15-progressBar): O **Progressbar** imprime uma barra de progresso na GUI.
 #### Eventos
-Eventos podem ser chamados com o método [´bind()´](), atribuido à uma tecla.
+Eventos podem ser chamados com o método [´bind()´](https://github.com/marcospontoexe/Python/tree/main/tkinter/03-eventos/01-bind), atribuido à uma tecla.
 ### Pandas
 Pandas é uma biblioteca para manipulação de dados.
 A biblioteca cria uma data frame, que é uma tabela contendo linhas e colunas.
 As **colunas**, chamadas de *séries*, são do tipo *lista* e pode ter apenas um tipo de variável (float, int, boleana...).
 As **linhas**, chamadas de *registros* ou *amostras*. São do tipo *dicionário* e podem conter vários tipos de variáveis (float, int, boleana...).
 Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
-* [Criando Dataframes](): Veja alguns exemplos para criação de um dataframe. Veja também como inserir e apagar *séries* e *registros*, e salvar o dataframe como um arquivo ".CSV" ou ".XLSX".
-* [Abrindo um dataframe](): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo ´shape´, *registros*, dados contidos no dataframe e seus tipos com os métodos ´size´ e ´info()´, 
+* [Criando Dataframes](https://github.com/marcospontoexe/Python/tree/main/Pandas/01-gerando%20arquivos): Veja alguns exemplos para criação de um dataframe. Veja também como inserir e apagar *séries* e *registros*, e salvar o dataframe como um arquivo ".CSV" ou ".XLSX".
+* [Abrindo um dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/02-abrir_arquivos): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo ´shape´, *registros*, dados contidos no dataframe e seus tipos com os métodos ´size´ e ´info()´, 
 * [Explorando o dataframe](): Veja como usar alguns métodos para análise dos dados, como ´value_counts()´, ´unique()´, ´isnull()´,´loc()´, ´iloc()´
