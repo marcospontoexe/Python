@@ -6,17 +6,17 @@
  1. [Manipulação de entrada e saida de dados](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/01-vari%C3%A1veis): Veja maneiras de manipular entrada e saida de dados usando com o monitor e o teclado, com variáveis int, float e strings.
  2. [Manipulação de strings](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/02-string): Aprenda a manipular variáveis dotipo String.
  3. [Uso de bibliotecas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/03-bilioteca): Veja como usar algumas bibliotecas essenciais.
- 4. [Usando 'if' e 'elif'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/04-if): Veja como usar o comando 'if' e 'elif' para criar blocos condicionais, e também operador ternário
+ 4. [Usando 'if' e 'elif'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/04-if): Veja como usar o comando ´if´ e ´elif´ para criar blocos condicionais, e também operador ternário
  5. [Colorindo saida de dados pelo monitor](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/05-cores): Veja como colorir a saida de dados no monitor.
- 6. [Usando o comando 'for'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/06-for): Veja como usar o comando 'for' para criar estruturas de repetição.
- 7. [Usando o comando 'while'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/07-while): Veja como usar o comando 'while' para criar estruturas de repetição.
- 8. [Usando o comando 'break'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/08-break): Veja como usar o comando 'break' para interromper blocos de repetições e condicionais 
+ 6. [Usando o comando 'for'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/06-for): Veja como usar o comando ´for´ para criar estruturas de repetição.
+ 7. [Usando o comando 'while'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/07-while): Veja como usar o comando ´while´ para criar estruturas de repetição.
+ 8. [Usando o comando 'break'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/08-break): Veja como usar o comando ´break´ para interromper blocos de repetições e condicionais 
  9. [Usando tuplas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/09-tupla): Veja como usar tuplas para manipular dados.
  10. [Usando listas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/10-lista): Veja como usar tuplas para manipular listas.
  11. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
  12. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
  13. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**
- 14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos 'try', 'except', e 'finally'
+ 14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos ´try´, ´except´, e ´finally´.
 
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
@@ -29,7 +29,7 @@ No pacote Tkinter existem três gerenciadores de layouts distintos (place, pack,
 * [Place](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/01-place): O gerenciador de layout **Place** posiciona os widgets no plano cartesiano (x, y).
 * [Pack](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/02-Pack): O gerenciador de layout **PACK** empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
 * [GRID](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/03-grid): O gerenciador de layout **GRID** usa linhas e colunas para posicionar os widgets, usando o conceito de planilha para o posicionamento dos widgets.
-### Widgets
+#### Widgets
 Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter. 
 * [Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/01-menu): O Widget menu disponibiliza opções de menus e submenus na barra superior da GUI.
 * [Radio Button](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/02-radio_button): Esse widget cria radio buttons para selecionar opcões.
@@ -38,4 +38,22 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 * [Frame](): Cria uma janela do tipo **frame**.
 * [Label Frame]():  Cria uma janela do tipo **frame** com um Label de informação relacionado à janela frame.
 * [Image](): Imprima imagens na GUI com este widget.
-* [Check Button](): Diferendo do **Radio Button** e do **Option Menu**, que permitem selecionar apenas uma opção, o **Check Button** permite selecionar várias opções.
+* [Check Button](): Diferendo do **Radiobutton** e do **Optionmenu**, que permitem selecionar apenas uma opção, o **Checkbutton** permite selecionar várias opções.
+* [Entry](): Receba parâmetro de entrada pela GUI com o este widget.
+* [Combo Box](): Este widget permite selecionar opções ja exixtentes ou que o usuário digite novas opções.
+* [List Box](): Semelhante ao **Combobox**, o **Listbox** permite que o usuário inclua uma nova opção a lista de seleção, porém o menu de opções mostra todas as opções possíveis.
+* [Spin Box](): Selecione valores predefinidos.
+* [Scale](): Selecione valores a partir de uma barra de rolagem horizontal. 
+* [Note Book](): O **Notebook** permite criar um Widget semelhante a um gerenciador de Layouts.
+* [Progress Bar](): O **Progressbar** imprime uma barra de progresso na GUI.
+#### Eventos
+Eventos podem ser chamados com o método [´bind()´](), atribuido à uma tecla.
+### Pandas
+Pandas é uma biblioteca para manipulação de dados.
+A biblioteca cria uma data frame, que é uma tabela contendo linhas e colunas.
+As **colunas**, chamadas de *séries*, são do tipo *lista* e pode ter apenas um tipo de variável (float, int, boleana...).
+As **linhas**, chamadas de *registros* ou *amostras*. São do tipo *dicionário* e podem conter vários tipos de variáveis (float, int, boleana...).
+Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
+* [Criando Dataframes](): Veja alguns exemplos para criação de um dataframe. Veja também como inserir e apagar *séries* e *registros*, e salvar o dataframe como um arquivo ".CSV" ou ".XLSX".
+* [Abrindo um dataframe](): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo ´shape´, *registros*, dados contidos no dataframe e seus tipos com os métodos ´size´ e ´info()´, 
+* [Explorando o dataframe](): Veja como usar alguns métodos para análise dos dados, como ´value_counts()´, ´unique()´, ´isnull()´,´loc()´, ´iloc()´
