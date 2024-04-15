@@ -6,17 +6,17 @@
  1. [Manipulação de entrada e saida de dados](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/01-vari%C3%A1veis): Veja maneiras de manipular entrada e saida de dados usando com o monitor e o teclado, com variáveis int, float e strings.
  2. [Manipulação de strings](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/02-string): Aprenda a manipular variáveis dotipo String.
  3. [Uso de bibliotecas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/03-bilioteca): Veja como usar algumas bibliotecas essenciais.
- 4. [Usando 'if' e 'elif'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/04-if): Veja como usar o comando `if` e ´elif´ para criar blocos condicionais, e também operador ternário
+ 4. [Usando `if` e `elif`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/04-if): Veja como usar o comando `if` e `elif` para criar blocos condicionais, e também operador ternário
  5. [Colorindo saida de dados pelo monitor](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/05-cores): Veja como colorir a saida de dados no monitor.
- 6. [Usando o comando 'for'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/06-for): Veja como usar o comando ´for´ para criar estruturas de repetição.
- 7. [Usando o comando 'while'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/07-while): Veja como usar o comando ´while´ para criar estruturas de repetição.
- 8. [Usando o comando 'break'](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/08-break): Veja como usar o comando ´break´ para interromper blocos de repetições e condicionais 
+ 6. [Usando o comando `for`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/06-for): Veja como usar o comando `for` para criar estruturas de repetição.
+ 7. [Usando o comando `while`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/07-while): Veja como usar o comando `while` para criar estruturas de repetição.
+ 8. [Usando o comando `break`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/08-break): Veja como usar o comando `break` para interromper blocos de repetições e condicionais 
  9. [Usando tuplas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/09-tupla): Veja como usar tuplas para manipular dados.
  10. [Usando listas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/10-lista): Veja como usar tuplas para manipular listas.
  11. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
  12. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
  13. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**
- 14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos ´try´, ´except´, e ´finally´.
+ 14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
@@ -47,7 +47,7 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 * [Note Book](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/14-notebook): O **Notebook** permite criar um Widget semelhante a um gerenciador de Layouts.
 * [Progress Bar](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/15-progressBar): O **Progressbar** imprime uma barra de progresso na GUI.
 #### Eventos
-Eventos podem ser chamados com o método [´bind()´](https://github.com/marcospontoexe/Python/tree/main/tkinter/03-eventos/01-bind), atribuido à uma tecla.
+Eventos podem ser chamados com o método [`bind()`](https://github.com/marcospontoexe/Python/tree/main/tkinter/03-eventos/01-bind), atribuido à uma tecla.
 ### Pandas
 Pandas é uma biblioteca para manipulação de dados.
 A biblioteca cria uma data frame, que é uma tabela contendo linhas e colunas.
@@ -55,5 +55,6 @@ As **colunas**, chamadas de *séries*, são do tipo *lista* e pode ter apenas um
 As **linhas**, chamadas de *registros* ou *amostras*. São do tipo *dicionário* e podem conter vários tipos de variáveis (float, int, boleana...).
 Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
 * [Criando Dataframes](https://github.com/marcospontoexe/Python/tree/main/Pandas/01-gerando%20arquivos): Veja alguns exemplos para criação de um dataframe. Veja também como inserir e apagar *séries* e *registros*, e salvar o dataframe como um arquivo ".CSV" ou ".XLSX".
-* [Abrindo um dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/02-abrir_arquivos): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo ´shape´, *registros*, dados contidos no dataframe e seus tipos com os métodos ´size´ e ´info()´, 
-* [Explorando o dataframe](): Veja como usar alguns métodos para análise dos dados, como ´value_counts()´, ´unique()´, ´isnull()´,´loc()´, ´iloc()´
+* [Abrindo um dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/02-abrir_arquivos): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo `shape`, *registros*, dados contidos no dataframe e seus tipos com os métodos `size` e `info()`. 
+* [Explorando o dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/03-explorando%20o%20arquivo): Veja como usar alguns métodos para análise dos dados, como `value_counts()`, `unique()`, `isnull()`, `loc()`, `iloc()`, `isnull()`. Veja também alguns métodos para conversão de dataframe; `to_datetime()`, `to_numeric()`.
+
