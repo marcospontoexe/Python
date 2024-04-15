@@ -15,7 +15,7 @@
  10. [Usando listas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/10-lista): Veja como usar tuplas para manipular listas.
  11. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
  12. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
- 13. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python
+ 13. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**
  14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos 'try', 'except', e 'finally'
 
 ## BIBLIOTECAS
@@ -29,3 +29,13 @@ No pacote Tkinter existem três gerenciadores de layouts distintos (place, pack,
 * [Place](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/01-place): O gerenciador de layout **Place** posiciona os widgets no plano cartesiano (x, y).
 * [Pack](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/02-Pack): O gerenciador de layout **PACK** empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
 * [GRID](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/03-grid): O gerenciador de layout **GRID** usa linhas e colunas para posicionar os widgets, usando o conceito de planilha para o posicionamento dos widgets.
+### Widgets
+Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter. 
+* [Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/01-menu): O Widget menu disponibiliza opções de menus e submenus na barra superior da GUI.
+* [Radio Button](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/02-radio_button): Esse widget cria radio buttons para selecionar opcões.
+* [Option Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/03-option_menu): De maneira similar ao Radio Buttom, selecione opções de com Option Menu.
+* [Message Box](): Imprima informação na GUI com o Message box, com esse widget também é possível solicitar como *sim* e *não* do usuário.
+* [Frame](): Cria uma janela do tipo **frame**.
+* [Label Frame]():  Cria uma janela do tipo **frame** com um Label de informação relacionado à janela frame.
+* [Image](): Imprima imagens na GUI com este widget.
+* [Check Button](): Diferendo do **Radio Button** e do **Option Menu**, que permitem selecionar apenas uma opção, o **Check Button** permite selecionar várias opções.
