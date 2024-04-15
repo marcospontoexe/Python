@@ -34,8 +34,8 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 * [Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/01-menu): O Widget menu disponibiliza opções de menus e submenus na barra superior da GUI.
 * [Radio Button](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/02-radio_button): Esse widget cria radio buttons para selecionar opcões.
 * [Option Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/03-option_menu): De maneira similar ao Radio Buttom, selecione opções de com Option Menu.
-* [Message Box](): Imprima informação na GUI com o Message box, com esse widget também é possível solicitar como *sim* e *não* do usuário.
+* [Message Box](): Imprima informação na GUI com o Message box, com esse widget também é possível solicitar informações como *sim* e *não* do usuário.
 * [Frame](): Cria uma janela do tipo **frame**.
 * [Label Frame]():  Cria uma janela do tipo **frame** com um Label de informação relacionado à janela frame.
 * [Image](): Imprima imagens na GUI com este widget.
-* [Check Button](): Diferendo do **Radio Button** e do **Option Menu**, que permitem selecionar apenas uma opção, o **Check Button** permite selecionar várias opções.
+* [Check Button](): Diferente do **Radio Button** e do **Option Menu**, que permitem selecionar apenas uma opção, o **Check Button** permite selecionar várias opções.
