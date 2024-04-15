@@ -34,18 +34,18 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 * [Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/01-menu): O Widget menu disponibiliza opções de menus e submenus na barra superior da GUI.
 * [Radio Button](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/02-radio_button): Esse widget cria radio buttons para selecionar opcões.
 * [Option Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/03-option_menu): De maneira similar ao Radio Buttom, selecione opções de com Option Menu.
-* [Message Box](): Imprima informação na GUI com o Message box, com esse widget também é possível solicitar informações como *sim* e *não* do usuário.
-* [Frame](): Cria uma janela do tipo **frame**.
-* [Label Frame]():  Cria uma janela do tipo **frame** com um Label de informação relacionado à janela frame.
-* [Image](): Imprima imagens na GUI com este widget.
-* [Check Button](): Diferendo do **Radiobutton** e do **Optionmenu**, que permitem selecionar apenas uma opção, o **Checkbutton** permite selecionar várias opções.
-* [Entry](): Receba parâmetro de entrada pela GUI com o este widget.
-* [Combo Box](): Este widget permite selecionar opções ja exixtentes ou que o usuário digite novas opções.
-* [List Box](): Semelhante ao **Combobox**, o **Listbox** permite que o usuário inclua uma nova opção a lista de seleção, porém o menu de opções mostra todas as opções possíveis.
-* [Spin Box](): Selecione valores predefinidos.
-* [Scale](): Selecione valores a partir de uma barra de rolagem horizontal. 
-* [Note Book](): O **Notebook** permite criar um Widget semelhante a um gerenciador de Layouts.
-* [Progress Bar](): O **Progressbar** imprime uma barra de progresso na GUI.
+* [Message Box](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/04-message_box): Imprima informação na GUI com o Message box, com esse widget também é possível solicitar informações como *sim* e *não* do usuário.
+* [Frame](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/05-frame): Cria uma janela do tipo **frame**.
+* [Label Frame](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/06-label%20frame):  Cria uma janela do tipo **frame** com um Label de informação relacionado à janela frame.
+* [Image](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/07-image): Imprima imagens na GUI com este widget.
+* [Check Button](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/08-checkButton): Diferendo do **Radiobutton** e do **Optionmenu**, que permitem selecionar apenas uma opção, o **Checkbutton** permite selecionar várias opções.
+* [Entry](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/09-senha): Receba parâmetro de entrada pela GUI com o este widget.
+* [Combo Box](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/10-comboBox): Este widget permite selecionar opções ja exixtentes ou que o usuário digite novas opções.
+* [List Box](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/11-listBox): Semelhante ao **Combobox**, o **Listbox** permite que o usuário inclua uma nova opção a lista de seleção, porém o menu de opções mostra todas as opções possíveis.
+* [Spin Box](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/12-spinbox): Selecione valores predefinidos.
+* [Scale](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/13-scale): Selecione valores a partir de uma barra de rolagem horizontal. 
+* [Note Book](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/14-notebook): O **Notebook** permite criar um Widget semelhante a um gerenciador de Layouts.
+* [Progress Bar](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/15-progressBar): O **Progressbar** imprime uma barra de progresso na GUI.
 #### Eventos
 Eventos podem ser chamados com o método [´bind()´](), atribuido à uma tecla.
 ### Pandas
