@@ -61,4 +61,7 @@ Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
 * [filtrando valores](https://github.com/marcospontoexe/Python/tree/main/Pandas/05-filtrando%20valores): O `filter()` permite realizar busca mais avançada.
 * [Agrupamento de dados](https://github.com/marcospontoexe/Python/tree/main/Pandas/06-agrupamento): Faça um agrupamento de dados do o método `groupby()`, ou usando funções de agrupamento; `sum()`, `mean()`, `max()`, `min()`, `describe()`...
 ### Win32com
-O [win32com](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) é uma biblioteca que fornece acesso a muitas funcionalidades do Windows através da tecnologia COM (Component Object Model). Permite interagir com aplicativos Windows e manipular arquivos do sistema, para controlar aplicativos e processos.
+O win32com é uma biblioteca que fornece acesso a muitas funcionalidades do Windows através da tecnologia COM (Component Object Model). Permite interagir com aplicativos Windows e manipular arquivos do sistema, para controlar aplicativos e processos.
+
+
+[Nesse exemplo](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) o win32com é usado para enviar um dataframe tratado por e-mail através do *Microsoft Outlook*.
