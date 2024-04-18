@@ -4,8 +4,6 @@ lanche = [] #lista
 lanche = {} #dicionário
 '''
 
-
-
 dados = {"Nome":"Marcos", "Idade":"30"}
 print(dados["Nome"])        #Marcos
 print(dados["Idade"])       #30

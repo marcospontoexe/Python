@@ -15,6 +15,8 @@ lanche.pop()    #apaga o ultimo elemento
 lanche.remove("Pizza")   #Apaga pelo conteudo encontrado na primeira ocorrência
 if "Pizza" in lanche:   #para evitar erros
     lanche.remove("Pizza")  #erro de sintaxe caso não encontre a string "Pizza"
+
+lanche.clear()  #apaga os dados da lista
 valores = list(range(5,11))     #cria um lista com valores do 5 até o 10
 valores.sort(reverse=True)      #organiza os valores de trás pra frente
 #***********************************************
