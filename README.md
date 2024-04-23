@@ -66,4 +66,4 @@ O win32com é uma biblioteca que fornece acesso a muitas funcionalidades do Wind
 
 [Nesse exemplo](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) o win32com é usado para enviar um dataframe tratado por e-mail através do *Microsoft Outlook*.
 
-*EM CONSTRUÇÃO*
+*EM CONSTRUÇÃO...*
