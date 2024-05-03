@@ -1,0 +1,5 @@
+Esta aplicação funciona em sistema operacional Windows.
+
+É possível capturar a velocidade pressionando a barra de estaço do teclado, para 
+isso a aplicação deve estar selecionada em primeiro plano.
+
