@@ -3,6 +3,7 @@
 
  ## EXEMPLOS
  Veja a baixo alguns exemplos em Python:
+ 
  ![operadores](https://github.com/marcospontoexe/Python/blob/main/imagens/operadores.png)
  
  1. [Manipulação de entrada e saida de dados](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/01-vari%C3%A1veis): Veja maneiras de manipular entrada e saida de dados usando com o monitor e o teclado, com variáveis int, float e strings.
