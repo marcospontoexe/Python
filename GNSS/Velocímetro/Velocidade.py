@@ -165,10 +165,10 @@ window.bind("<space>", on_space)
 #------------------------------------------------------------
 
 #--------Imagens usadas-----------------------------
-imgMain = PhotoImage(file="imagens\\main.png")
-imgRst = PhotoImage(file="imagens\\reset.png")
-imgVel = PhotoImage(file="imagens\\vel.png")
-imgLog = PhotoImage(file="imagens\\log.png")
+imgMain = PhotoImage(file="imagens/main.png")
+imgRst = PhotoImage(file="imagens/reset.png")
+imgVel = PhotoImage(file="imagens/vel.png")
+imgLog = PhotoImage(file="imagens/log.png")
 #----------------------------------------------------
 
 
