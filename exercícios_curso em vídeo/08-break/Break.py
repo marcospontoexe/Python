@@ -153,4 +153,14 @@ while True:
             cédula = 1
         else:
             break
+#------------------usando continue-----------------
 
+counter = 0
+
+while counter < 10:
+    counter += 1
+    if counter == 3:
+        continue    # pula para o início do loop
+    print (counter)
+    
+print ("Outside the loop!")
