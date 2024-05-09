@@ -160,7 +160,7 @@ counter = 0
 while counter < 10:
     counter += 1
     if counter == 3:
-        continue    # pula para o início do loop
+        continue    # pula para para a próxima iteração do loop (vai para o início do loop)
     print (counter)
     
 print ("Outside the loop!")
