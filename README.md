@@ -55,6 +55,10 @@ Por exemplo, uma objeto "Carro" pode ter atributos como cor, modelo, métodos co
 ### As características
 Todo objeto possui pelo menos uma característica que descreve oque esse objeto tem, em programação essas características são chamadas de **atributos**.
 
+Para criar atributo, deve-se começar com o prefixo **self.** e depois o nome da variável. 
+
+Variáveis da classe são como variáveis globais para essa classe! O que isso significa? Isso significa que as variáveis podem ser usadas em qualquer método que pertença à classe. Este é um dos principais pontos de usar classes. Você não precisará usar variáveis globais que podem ser acessadas em qualquer parte do código, contribuindo para a construção de uma bagunça. Ao encapsular as variáveis dentro da classe, apenas os métodos da classe podem acessar essas variáveis, portanto, você tem menos chances de cometer erros.
+
 ### O comportamento do objeto
 Objetos possuem comportamento responsável em realiza uma ação, em programação esses comportamentos são nomeados de **métodos**.
 
@@ -74,8 +78,6 @@ Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo e
 É um método da classe usado para configurar os atributos e estado de um objeto no momento em que é instanciado, garantindo que o objeto esteja em um estado válido e utilizável. O método construtor tem o seguinte nome `__init__` e pode, ou não, receber parâmetros para criar um objeto.
 
 Caso não seja implementado um construtor em uma classe, o compilador fornece um construtor padrão sem parâmetros em qualquer classe que não inclui explicitamente um construtor.
-
-
 
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
