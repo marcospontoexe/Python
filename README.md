@@ -21,8 +21,61 @@
  13. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**
  14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
-## POO (Object-Oriented Programming)
-POO é baseada no conceito de "objetos". Esses objetos geralmente são definidos por duas coisas:
+## POO (Object-Oriented Programming) no Python
+A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
+
+## A evolução dos métodos de programação
+Quando os computadores começaram a surgir, na década de 40, a programação era feita em **baixo nível**. Quem fornecia as instruções para o cumputador realizar uma ação eram os próprios engenheiros que construiam os computadores, e as instruções eram binárias ou decimais. Esse tipo de programação é chamada linguagem de máquina. Dando sequência aos métodos de programação, surgil a linguagem de alto nível tornando a **programação linear**, os comandos eram mais compreensíveis para humanos, mas ainda sem rotinas internas.
+
+A evolução da programação linear deu origem à **programação estruturada** no final da década de 60, permitindo que pequenos pedações da programação linear  fosse executados fora da ordem natural, dando origem aos sistemas. Com o crescimento dos sistemas a programação estruturada começou a falhar em sua metodologia, e surgiu a **programação modular**, permitindo o desenvolvimento de softwares que envolve dividir um programa em partes menores e independentes chamadas módulos. Cada módulo tem uma responsabilidade bem definida e interage com outros módulos através de interfaces claramente definidas. Essa abordagem promove a reutilização de código, a facilidade de manutenção e a escalabilidade do software. Apliando os conceitos da programação modular, surgiu a **programação orientada a objetos**.
+
+**Alan Kay**, o pai da POO, que era formado em biologia e matemática desenvolveu a POO baseado na forma natural de como as coisas se relacionam no mundo real. Veja a baixo o seu postulado:
+> O computador ideal deve funcionar como um
+> organismo vivo, isso é, cada célula se relaciona
+> com outras a fim de alcançar um objetivo, mas
+> cada uma funciona de forma autônoma. As
+> células poderiam também reagrupar-se para
+> resolver um outro problema ou desempenhar
+> outras funções.
+
+## Vantagens da POO
+Todo software orientado a objetos é:
+* **confiável**: O isolamento entre as parte gera software seguro. Ao alterar uma parte, nenhuma outra é afetada.
+* **Oportuno**: Ao dividir tudo em partes, várias delas podem ser desenvolvidas em paralelo.
+*  **Manutenível**: Atualizar um software é mais fácil. Uma pequena modificação vai beneficiar todas as partes que usarem o objeto.
+*  **Extensível**: O software não é estático. Ele deve crescer para permanecer útil.
+*  **Reutilizável**: Podemos usar o objeto de um sistema que criamos em outro sistema fulturo.
+*  **Natural**: Mai fácil de entender. Você se preocupa mais na funcionalidade do que nos detalhes de implementação.
+
+## O que é um objeto
+Objeto é uma coisa material ou abstrata que pode ser percebido pelos sentidos e descrita por meios de suas características, comportamento e estado atual. Em programação os objetos são representados por classes, responsável por classificar características, comportamento e estado atual de um objeto.
+
+Por exemplo, uma objeto "Carro" pode ter atributos como cor, modelo, métodos como acelerar e frear, e o estado atual como ligado ou desligado. 
+
+### As características
+Todo objeto possui pelo menos uma característica que descreve oque esse objeto tem, em programação essas características são chamadas de **atributos**.
+
+### O comportamento do objeto
+Objetos possuem comportamento responsável em realiza uma ação, em programação esses comportamentos são nomeados de **métodos**.
+
+### Estado do objeto
+Em programação o estado atual do objeto é manipulado por métodos acessores e modificadores **getter** e **setter**. O getter diz qual é o estado atual de um determinado atributo do objeto, e o setter altera o estado desse atributo. No entanto, a abordagem tradicional de usar métodos getter e setter não é tão comum em Python quanto em algumas outras linguagens de programação, como Java.
+
+## Criando objetos
+Para criar um objeto, antes é necessário planejar o seu molde. A partir desse molde é possível criar inúmeros objetos.
+Esse molde é chamado de **classe** e possui todas as características e comportamento (os atributos e métodos) do objeto a ser criado.
+
+O nome dado ao processo de criação de um objeto a partir de uma classe existente se chama **instanciar** um objeto. Com objeto instanciado (criado) é possível saber qual é o estado atual desse objeto e alterar esse estado, antes disso o estado do objeto é inexistem, pois ainda não foi instanciado.
+
+### Modificadores de acesso
+Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo encapsular um objeto. No entanto em Python, não há modificadores de acesso tradicionais, como "public", "private" e "protected", como em algumas outras linguagens de programação orientada a objetos. Em vez disso, Python segue uma abordagem baseada na filosofia do "consentimento do adulto", confiando na responsabilidade do programador para acessar e modificar os atributos de uma classe.
+
+### Método construtor
+É um método da classe usado para configurar os atributos e estado de um objeto no momento em que é instanciado, garantindo que o objeto esteja em um estado válido e utilizável. O método construtor tem o seguinte nome `__init__` e pode, ou não, receber parâmetros para criar um objeto.
+
+Caso não seja implementado um construtor em uma classe, o compilador fornece um construtor padrão sem parâmetros em qualquer classe que não inclui explicitamente um construtor.
+
+
 
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
