@@ -79,6 +79,8 @@ Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo e
 
 Caso não seja implementado um construtor em uma classe, o compilador fornece um construtor padrão sem parâmetros em qualquer classe que não inclui explicitamente um construtor.
 
+[Clique aqui](https://github.com/marcospontoexe/Python/tree/main/POO) para ver um exemplo de objeto em Python. Nesse exemplo a classe "Main.py" instancia dois objetos da classe "Jedi".
+
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
 ### Tk interface
