@@ -1,5 +1,6 @@
 class Jedi:
-    def __init__(self, name):  # método construtor
+    # método construtor
+    def __init__(self, name):  # self é usado para referenciar ao construtor do objeto que chamou a classe
         self.jedi_name = name  
 
     def say_hi(self):
