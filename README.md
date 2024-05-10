@@ -21,6 +21,9 @@
  13. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**
  14. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
+## POO (Object-Oriented Programming)
+POO é baseada no conceito de "objetos". Esses objetos geralmente são definidos por duas coisas:
+
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
 ### Tk interface
