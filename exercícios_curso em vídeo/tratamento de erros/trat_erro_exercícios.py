@@ -18,6 +18,15 @@ def leiaInt(i):
             print(f"A classe do erro encontrado foi {erro.__class__}!")
         else:
             return temp
+    '''ou
+    while True:
+        try:
+            num = int(input("Digite um número: "))
+            break
+        except ValueError:
+            print("Valor inválido")
+    print("Número validado:", num)
+    '''
 
 
 def leiaFloat(f):
