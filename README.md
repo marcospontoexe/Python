@@ -19,10 +19,25 @@
     *  **Pas**: O comando pass preenche uma estrutura que, porventura, tenha de ficar vazia. Normalmente, é utilizado para testar códigos ainda não terminados. 
  12. [Usando tuplas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/09-tupla): Veja como usar tuplas para manipular dados.
  13. [Usando listas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/10-lista): Veja como usar tuplas para manipular listas.
- 14. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
- 15. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
- 16. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
- 17. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
+     
+| Método    | Descrição                                                        |
+|-----------|------------------------------------------------------------------|
+| append()  | Adiciona um elemento ao fim da lista.                            |
+| extend()  | Adiciona todos os elementos de uma lista em outra.               |
+| insert()  | Insere um elemento em determinado índice da lista.               |
+| remove()  | Remove um elemento da lista.                                     |
+| pop()     | Remove e retorna determinado elemento de um índice da lista.     |
+| clear()   | Remove todos os elementos da lista.                              |
+| index()   | Retorna o índice do primeiro elemento localizado na lista.       |
+| count()   | Retorna a quantidade de um elemento na lista passado como argumento. |
+| sort()    | Ordena os elementos de uma lista em ordem ascendente.            |
+| reverse() | Inverte a ordem dos elementos de uma lista.                      |
+| copy()    | Retorna uma cópia da lista.                                      |
+
+ 15. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
+ 16. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
+ 17. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
+ 18. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
 ## POO (Object-Oriented Programming) no Python
 A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
