@@ -33,6 +33,11 @@
 | sort()    | Ordena os elementos de uma lista em ordem ascendente.            |
 | reverse() | Inverte a ordem dos elementos de uma lista.                      |
 | copy()    | Retorna uma cópia da lista.                                      |
+| min()     |  retorna o menor valor dentro de uma lista.|
+| max()     |  retorna o maior valor dentro de uma lista. |
+| len()     |  retorna a quantidade de elementos de uma lista. |
+| sorted()  | retorna a lista passada em ordem crescente, ordenação em ordem decrescente, por meio do parâmetro reverse.  sorted(lista, reverse=True)  |
+| sum()     | retorna a soma de todos os elementos de uma lista.                                    |
 
  15. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
  16. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
