@@ -40,9 +40,24 @@
 | sum()     | retorna a soma de todos os elementos de uma lista.                                    |
 
  15. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
- 16. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
- 17. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
- 18. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
+| Método         | Descrição                                                                 |
+|----------------|---------------------------------------------------------------------------|
+| `clear()`      | Remove todos os elementos de um dicionário.                               |
+| `copy()`       | Retorna a cópia de um dicionário.                                         |
+| `fromkeys()`   | Retorna um dicionário com chaves e valores específicos.                   |
+| `get()`        | Retorna o valor de uma chave específica.                                  |
+| `items()`      | Retorna uma lista contendo uma tupla para cada par chave-valor.           |
+| `keys()`       | Retorna uma lista contendo as chaves de um dicionário.                    |
+| `pop()`        | Remove um elemento de uma chave específica.                               |
+| `popitem()`    | Remove o último elemento inserido no dicionário.                          |
+| `setdefault()` | Retorna o valor de uma chave específica. Caso não exista, insere esse valor. |
+| `update()`     | Adiciona um conjunto de pares chave-valor a um dicionário.                |
+| `values()`     | Retorna a lista de valores de um dicionário.                              |
+
+
+ 17. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
+ 18. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
+ 19. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
 ## POO (Object-Oriented Programming) no Python
 A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
