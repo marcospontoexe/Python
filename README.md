@@ -40,6 +40,7 @@
 | sum()     | retorna a soma de todos os elementos de uma lista.                                    |
 
  15. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
+
 | Método         | Descrição                                                                 |
 |----------------|---------------------------------------------------------------------------|
 | `clear()`      | Remove todos os elementos de um dicionário.                               |
