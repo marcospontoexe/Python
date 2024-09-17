@@ -57,12 +57,9 @@
 
 
  17. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
- ## Parâmetros com valor-padrão
- Todos os parâmetros com valores-padrão ficam no final da lista de parâmetros na função.
- ## Parâmetros arbitrários
- Uma função que possa receber um número variável de parâmetros precisa declarar um parâmetro arbitrário.
- ## Retornos múltiplos (tuplas)
- Este retorno pode ser capturado como uma tupla, sendo os valores acessados de forma individual a partir de cada índice. 
+ * **Parâmetros com valor-padrão**: Todos os parâmetros com valores-padrão ficam no final da lista de parâmetros na função.
+ * **Parâmetros arbitrários**: Uma função que possa receber um número variável de parâmetros precisa declarar um parâmetro arbitrário.
+ * **Retornos múltiplos (tuplas)**: Este retorno pode ser capturado como uma tupla, sendo os valores acessados de forma individual a partir de cada índice. 
  19. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
  20. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
