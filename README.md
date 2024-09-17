@@ -59,7 +59,20 @@
  17. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
  * **Parâmetros com valor-padrão**: Todos os parâmetros com valores-padrão ficam no final da lista de parâmetros na função.
  * **Parâmetros arbitrários**: Uma função que possa receber um número variável de parâmetros precisa declarar um parâmetro arbitrário.
- * **Retornos múltiplos (tuplas)**: Este retorno pode ser capturado como uma tupla, sendo os valores acessados de forma individual a partir de cada índice. 
+ * **Retornos múltiplos (tuplas)**: Este retorno pode ser capturado como uma tupla, sendo os valores acessados de forma individual a partir de cada índice.
+ *  **Documentando funções**: O desenvolvimento em Python é regido por alguns documentos de boas práticas, chamados Python Enhancement Proposals (PEPs). No caso da documentação, existe o padrão docstrings, registrado pelo PEP 257 – Docstring Conventions.
+   ```python
+   def delta(a: int, b: int, c: int) -> int:
+       """
+       Calcula o valor de delta utilizado no cálculo de raízes de polinômios de segundo grau.
+    
+       :param a: Valor do primeiro termo do polinômio.
+       :param b: Valor do segundo termo do polinômio.
+       :param c: Valor do termo independente do polinômio.
+       :return: Retorna as raízes calculadas e um booleano, indicando se o cálculo foi bem-sucedido.
+       """
+       return b*b - 4*a*c
+```
  19. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
  20. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
