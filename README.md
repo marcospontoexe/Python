@@ -73,6 +73,18 @@
        """
        return b*b - 4*a*c
 ```
+**DICAS:**
+
+* **Não use variáveis globais:**
+ 1. Tudo o que a função precisa para funcionar deve ser enviado nos parâmetros.
+ 2. Tudo o que a função precisa retornar deve estar no return.
+ 3. A dependência de estado global pode tornar seu código difícil de entender e propenso a bugs. Prefira passar variáveis como argumentos para suas funções.
+* **Mantenha suas funções pequenas e focadas:** Cada função deve fazer uma coisa e fazer bem. Isso torna as funções mais fáceis de entender, testar e reutilizar.
+* **Use nomes descritivos:** O nome da função deve indicar claramente o que ela faz. Prefira nomes mais longos e descritivos no lugar de nomes curtos e vagos.
+* **Evite muitos parâmetros:** Se uma função tem muitos parâmetros, pode ser difícil entender e usar. Considere agrupar parâmetros parecidos em uma tupla ou dicionário.
+* **Evite efeitos colaterais:** Uma função não deve modificar o estado global ou alterar seus argumentos de entrada, a menos que essa seja explicitamente sua finalidade.
+* **Use comentários e documente o seu código:** Use comentários e documente o seu código para explicar partes complicadas do código para descrever o que a função faz, seus parâmetros e o que retorna.
+* **Use a palavra-chave return explicitamente:** Mesmo que uma função não retorne um valor útil, considere usar **return None** explicitamente para tornar claro que a função é intencionalmente sem retorno.
  19. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
  20. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
