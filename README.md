@@ -73,6 +73,7 @@
        """
        return b*b - 4*a*c
 ```
+** *Sobre carga**: As funções em python não aceitam sobre carga.
 **DICAS:**
 
 * **Não use variáveis globais:**
