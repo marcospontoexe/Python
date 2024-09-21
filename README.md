@@ -97,7 +97,7 @@ with open("dados.txt", "w") as arquivo: #maneira de abrir um arquivo txt
     
 ```python
 with open("dados.txt", "r") as arquivo: #maneira de ler um arquivo txt
- linhas = arquivo.readlines()
+ linhas = arquivo.readlines() # retorna uma lista de strings, onde cada elemento da lista representa uma linha do arquivo
  print(linhas)
 ```
   
