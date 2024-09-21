@@ -73,9 +73,9 @@ Veja a baixo alguns exemplos em Python:
        """
        return b*b - 4*a*c
 ```
-** *Sobre carga**: As funções em python não aceitam sobre carga.
-**DICAS:**
+* **Sobre carga**: As funções em python não aceitam sobre carga.
 
+**DICAS:**
 * **Não use variáveis globais:**
  1. Tudo o que a função precisa para funcionar deve ser enviado nos parâmetros.
  2. Tudo o que a função precisa retornar deve estar no return.
