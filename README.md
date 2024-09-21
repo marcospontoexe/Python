@@ -89,12 +89,12 @@ Veja a baixo alguns exemplos em Python:
 13. **Manipulando arquivos:** veja como abrir e salvar **arquivos de texto**.
   * [manipulando txt](https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
   * Usando a palavra-chave reservada **with**, uma construção em Python que garante que o arquivo seja fechado corretamente após o seu uso:
-  * Veja abaixo outra maneira de abrir um arquivo *.txt*.
     ```python
     with open("dados.txt", "w") as arquivo: #maneira de abrir um arquivo txt
       arquivo.write("Counter-Strike é melhor do que Valorant.")
       arquivo.write("O correto é 'bolacha'.")
     ```
+    
     ```python
    with open("dados.txt", "r") as arquivo: #maneira de ler um arquivo txt
      linhas = arquivo.readlines()
