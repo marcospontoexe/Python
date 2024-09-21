@@ -86,7 +86,10 @@
 * **Evite efeitos colaterais:** Uma função não deve modificar o estado global ou alterar seus argumentos de entrada, a menos que essa seja explicitamente sua finalidade.
 * **Use comentários e documente o seu código:** Use comentários e documente o seu código para explicar partes complicadas do código para descrever o que a função faz, seus parâmetros e o que retorna.
 * **Use a palavra-chave return explicitamente:** Mesmo que uma função não retorne um valor útil, considere usar **return None** explicitamente para tornar claro que a função é intencionalmente sem retorno.
- 19. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python, e também como abrir e salvar **arquivos de texto**.
+19. **Manipulando arquivos:** veja como abrir e salvar **arquivos de texto**.
+  * [manipulando txt](https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
+  
+ 19. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
  20. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
 ## POO (Object-Oriented Programming) no Python
