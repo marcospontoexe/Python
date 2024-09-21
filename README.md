@@ -1,24 +1,24 @@
 # Python
- Este repositório acomoda projetos desenvolvidos em python, exemplos e como usar algumas bibliotecas Pyton.
+Este repositório acomoda projetos desenvolvidos em python, exemplos e como usar algumas bibliotecas Pyton.
 
- ## EXEMPLOS
- Veja a baixo alguns exemplos em Python:
+## EXEMPLOS
+Veja a baixo alguns exemplos em Python:
  
- ![operadores](https://github.com/marcospontoexe/Python/blob/main/imagens/operadores.png)
+![operadores](https://github.com/marcospontoexe/Python/blob/main/imagens/operadores.png)
  
- 1. [Manipulação de entrada e saida de dados](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/01-vari%C3%A1veis): Veja maneiras de manipular entrada e saida de dados usando com o monitor e o teclado, com variáveis int, float e strings.
- 2. [Manipulação de strings](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/02-string): Aprenda a manipular variáveis dotipo String.
- 3. [Uso de bibliotecas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/03-bilioteca): Veja como usar algumas bibliotecas essenciais.
- 4. [Usando `if` e `elif`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/04-if): Veja como usar o comando `if` e `elif` para criar blocos condicionais, e também operador ternário
- 5. [Colorindo saida de dados pelo monitor](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/05-cores): Veja como colorir a saida de dados no monitor.
- 6. [Usando o comando `for`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/06-for): Veja como usar o comando `for` para criar estruturas de repetição.
- 9. [Usando o comando `while`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/07-while): Veja como usar o comando `while` para criar estruturas de repetição.
- 10. [Controle de fluxo`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/08-break): Às vezes, queremos forçar alguns comportamentos nos nossos laços de repetição. Isso pode ser uma interrupção das repetições ou forçar o código para ir para a próxima iteração, por exemplo.
+1. [Manipulação de entrada e saida de dados](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/01-vari%C3%A1veis): Veja maneiras de manipular entrada e saida de dados usando com o monitor e o teclado, com variáveis int, float e strings.
+2. [Manipulação de strings](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/02-string): Aprenda a manipular variáveis dotipo String.
+3. [Uso de bibliotecas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/03-bilioteca): Veja como usar algumas bibliotecas essenciais.
+4. [Usando `if` e `elif`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/04-if): Veja como usar o comando `if` e `elif` para criar blocos condicionais, e também operador ternário
+5. [Colorindo saida de dados pelo monitor](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/05-cores): Veja como colorir a saida de dados no monitor.
+6. [Usando o comando `for`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/06-for): Veja como usar o comando `for` para criar estruturas de repetição.
+7. [Usando o comando `while`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/07-while): Veja como usar o comando `while` para criar estruturas de repetição.
+8. [Controle de fluxo`](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/08-break): Às vezes, queremos forçar alguns comportamentos nos nossos laços de repetição. Isso pode ser uma interrupção das repetições ou forçar o código para ir para a próxima iteração, por exemplo.
     * **Break**:O comando break interrompe um laço no ponto onde estiver do código, passando a execução do programa para a linha imediatamente posterior ao final do laço.
     * **Continue**: O comando continue força uma nova iteração a partir do ponto em que o programa se encontra, não sendo executado o resto do laço.
     *  **Pas**: O comando pass preenche uma estrutura que, porventura, tenha de ficar vazia. Normalmente, é utilizado para testar códigos ainda não terminados. 
- 12. [Usando tuplas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/09-tupla): Veja como usar tuplas para manipular dados.
- 13. [Usando listas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/10-lista): Veja como usar tuplas para manipular listas.
+9. [Usando tuplas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/09-tupla): Veja como usar tuplas para manipular dados.
+10. [Usando listas](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/10-lista): Veja como usar tuplas para manipular listas.
      
 | Método    | Descrição                                                        |
 |-----------|------------------------------------------------------------------|
@@ -39,7 +39,7 @@
 | sorted()  | retorna a lista passada em ordem crescente, ordenação em ordem decrescente, por meio do parâmetro reverse.  sorted(lista, reverse=True)  |
 | sum()     | retorna a soma de todos os elementos de uma lista.                                    |
 
- 15. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
+11. [Usando dicionários](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/11-dicion%C3%A1rio): Veja como usar tuplas para manipular dicionários.
 
 | Método         | Descrição                                                                 |
 |----------------|---------------------------------------------------------------------------|
@@ -56,7 +56,7 @@
 | `values()`     | Retorna a lista de valores de um dicionário.                              |
 
 
- 17. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
+12. [Usando funções](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/12-fun%C3%A7%C3%B5es): Veja como usar funções.
  * **Parâmetros com valor-padrão**: Todos os parâmetros com valores-padrão ficam no final da lista de parâmetros na função.
  * **Parâmetros arbitrários**: Uma função que possa receber um número variável de parâmetros precisa declarar um parâmetro arbitrário.
  * **Retornos múltiplos (tuplas)**: Este retorno pode ser capturado como uma tupla, sendo os valores acessados de forma individual a partir de cada índice.
@@ -86,11 +86,11 @@
 * **Evite efeitos colaterais:** Uma função não deve modificar o estado global ou alterar seus argumentos de entrada, a menos que essa seja explicitamente sua finalidade.
 * **Use comentários e documente o seu código:** Use comentários e documente o seu código para explicar partes complicadas do código para descrever o que a função faz, seus parâmetros e o que retorna.
 * **Use a palavra-chave return explicitamente:** Mesmo que uma função não retorne um valor útil, considere usar **return None** explicitamente para tornar claro que a função é intencionalmente sem retorno.
-19. **Manipulando arquivos:** veja como abrir e salvar **arquivos de texto**.
+13. **Manipulando arquivos:** veja como abrir e salvar **arquivos de texto**.
   * [manipulando txt](https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
   
- 19. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
- 20. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
+14. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
+15. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
 ## POO (Object-Oriented Programming) no Python
 A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
