@@ -99,6 +99,11 @@ with open("dados.txt", "w") as arquivo: #maneira de abrir um arquivo txt
 with open("dados.txt", "r") as arquivo: #maneira de ler um arquivo txt
  linhas = arquivo.readlines() # retorna uma lista de strings, onde cada elemento da lista representa uma linha do arquivo
  print(linhas)
+'''
+Ler uma linha de cada vez: função readline().
+Ler todo o conteúdo do arquivo em uma só string: função read().
+Ler todo o conteúdo do arquivo separando linha por linha como strings em uma única lista: função readlines().
+'''
 ```
   
 14. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
