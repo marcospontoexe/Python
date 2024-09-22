@@ -134,6 +134,7 @@ Ler todo o conteúdo do arquivo separando linha por linha como strings em uma ú
   with open("pessoa.json", "r", encoding="utf-8") as arquivo:
     #. A função load() carrega o conteúdo do arquivo JSON e converte-o em uma estrutura de dados Python, como um dicionário ou uma lista, dependendo do conteúdo do arquivo JSON.
     dados_lidos = json.load(arquivo)
+    arquivo.close() # Fecha o arquivo 
   print(dados_lidos)
   ```
   
