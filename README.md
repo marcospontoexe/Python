@@ -87,7 +87,7 @@ Veja a baixo alguns exemplos em Python:
 * **Use comentários e documente o seu código:** Use comentários e documente o seu código para explicar partes complicadas do código para descrever o que a função faz, seus parâmetros e o que retorna.
 * **Use a palavra-chave return explicitamente:** Mesmo que uma função não retorne um valor útil, considere usar **return None** explicitamente para tornar claro que a função é intencionalmente sem retorno.
 13. **Manipulando arquivos:**.
-  *  veja como abrir e salvar {arquivos **txt**}(https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
+  *  veja como abrir e salvar [arquivos **txt**](https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
   * Usando a palavra-chave reservada **with**, uma construção em Python que garante que o arquivo seja fechado corretamente após o seu uso:
 ```python
 with open("dados.txt", "w") as arquivo: #maneira de abrir um arquivo txt
@@ -137,6 +137,26 @@ Ler todo o conteúdo do arquivo separando linha por linha como strings em uma ú
     arquivo.close() # Fecha o arquivo 
   print(dados_lidos)
   ```
+
+* Arquivo **binários**: Podemos usar o módulo **pickle** para ler e salvar variáveis sem passar por nenhum tipo de conversão.
+  ```python
+  import pickle
+  
+  dados = [1, 2, 3, 4, 5]
+  
+  with open("dados.pickle", "wb") as arquivo: #Abrimos o arquivo em modo de escrita binário ("wb”)
+      pickle.dump(dados, arquivo) # pickle.dump() para armazenar uma variável "dados" dentro do arquivo binário "arquivo"
+      arquivo.close() #fecha o arquivo binário
+      '''
+      O pickle permite que você armazene e recupere uma ampla variedade de objetos Python, incluindo listas, tuplas, conjuntos, classes personalizadas e muito mais. 
+      Basta passar o objeto desejado como argumento para a função pickle.dump()
+      '''
+  
+  with open("dados.pickle", "rb") as arquivo: #Abrimos o conteúdo do arquivo pickle no modo leitura binário (“rb”)
+      variavel_lida = pickle.load(arquivo)    #"variavel_lida" recebe o conteúdo de "arquivo" 
+      arquivo.close() #fecha o arquivo binário
+  print(variavel_lida)
+  ``` 
   
 14. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
 15. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
