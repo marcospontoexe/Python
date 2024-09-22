@@ -86,8 +86,8 @@ Veja a baixo alguns exemplos em Python:
 * **Evite efeitos colaterais:** Uma função não deve modificar o estado global ou alterar seus argumentos de entrada, a menos que essa seja explicitamente sua finalidade.
 * **Use comentários e documente o seu código:** Use comentários e documente o seu código para explicar partes complicadas do código para descrever o que a função faz, seus parâmetros e o que retorna.
 * **Use a palavra-chave return explicitamente:** Mesmo que uma função não retorne um valor útil, considere usar **return None** explicitamente para tornar claro que a função é intencionalmente sem retorno.
-13. **Manipulando arquivos:** veja como abrir e salvar **arquivos de texto**.
-  * [manipulando txt](https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
+13. **Manipulando arquivos:**.
+  *  veja como abrir e salvar {arquivos **txt**}(https://github.com/marcospontoexe/Python/blob/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o/02-pacote(biblioteca)/biblioteca/arquivo/__init__.py).
   * Usando a palavra-chave reservada **with**, uma construção em Python que garante que o arquivo seja fechado corretamente após o seu uso:
 ```python
 with open("dados.txt", "w") as arquivo: #maneira de abrir um arquivo txt
@@ -105,6 +105,37 @@ Ler todo o conteúdo do arquivo em uma só string: função read().
 Ler todo o conteúdo do arquivo separando linha por linha como strings em uma única lista: função readlines().
 '''
 ```
+* **JSON**: O JSON é baseado em uma estrutura de dados composta por pares de chave e valor. Esses pares são organizados em uma sintaxe simples e legível, permitindo representar informações de forma estruturada. A estrutura básica do JSON consiste em objetos e arrays (vetores, ou listas).
+
+  * Objetos: são delimitados por chaves {} e consistem em uma coleção não ordenada de pares chave-valor. Cada chave é uma string única que identifica o valor associado a ela. Os pares chave-valor são separados por vírgulas.
+  * Arrays: são delimitados por colchetes [] e podem conter uma lista ordenada de valores. Os valores em um array podem ser de qualquer tipo válido do JSON, incluindo strings, números e outros arrays. Os elementos do array são separados por vírgulas.
+  ```python
+  import json
+  dados = {
+    "nome": "João",
+    "idade": 25,
+    "cidade": "Curitiba",
+    "frutas_favoritas": [
+      "maçã",
+      "banana",
+      "laranja"
+    ]
+  }# abrindo um arquivo chamado “pessoa.json” em modo de escrita.
+  ## encoding=”utf-8”. Definimos este parâmetro para garantir que caracteres especiais (como o “ã” e “ç”) sejam tratados corretamente.
+  with open("pessoa.json", "w", encoding="utf-8") as arquivo: 
+    #estamos usando a função json.dump() para escrever o conteúdo do dicionário dados no arquivo JSON aberto.
+    #o parâmetro ensure_ascii=False para permitir a codificação correta de caracteres não-ASCII (caracteres que não façam parte do alfabeto da língua inglesa).
+    # O código UTF-8 (Unicode) é mais amplo que o ASC-II. Ele é adequado para aplicações multilíngues e internacionais
+    json.dump(dados, arquivo, ensure_ascii=False)
+    arquivo.close() # Fecha o arquivo 
+  
+  # lendo o conteúdo do arquivo pessoa.json em modo de leitura. 
+  # Como poderemos ter caracteres especiais, usamos também o parâmetro encoding="utf-8" para evitarmos qualquer tipo de erro.  
+  with open("pessoa.json", "r", encoding="utf-8") as arquivo:
+    #. A função load() carrega o conteúdo do arquivo JSON e converte-o em uma estrutura de dados Python, como um dicionário ou uma lista, dependendo do conteúdo do arquivo JSON.
+    dados_lidos = json.load(arquivo)
+  print(dados_lidos)
+  ```
   
 14. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
 15. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
