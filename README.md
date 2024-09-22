@@ -126,7 +126,7 @@ Ler todo o conteúdo do arquivo separando linha por linha como strings em uma ú
     #estamos usando a função json.dump() para escrever o conteúdo do dicionário dados no arquivo JSON aberto.
     #o parâmetro ensure_ascii=False para permitir a codificação correta de caracteres não-ASCII (caracteres que não façam parte do alfabeto da língua inglesa).
     # O código UTF-8 (Unicode) é mais amplo que o ASC-II. Ele é adequado para aplicações multilíngues e internacionais
-    json.dump(dados, arquivo, ensure_ascii=False)
+    json.dump(dados, arquivo, ensure_ascii=False, ident=4)
     arquivo.close() # Fecha o arquivo 
   
   # lendo o conteúdo do arquivo pessoa.json em modo de leitura. 
