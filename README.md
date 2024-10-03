@@ -208,9 +208,12 @@ Em programação o estado atual do objeto é manipulado por métodos acessores e
 
 ### Herança
 Herança é quando classes herdam características de outras classes. 
-[Veja nesse exemplo]() que a classe "Forma" é uma classe base que contém os métodos que todas as outras classes irão herdar. A partir dela, foram criadas as subclasses "Circulo" e "Retangulo", cada uma com seus próprios métodos e atributos. Perceba que temos agora **class Circulo(Forma)** e **class Retangulo(Forma)**. Este **(Forma)** presente em ambos os casos é o que diz que estas duas classes são herdadas de Forma.
+[Veja nesse exemplo](https://github.com/marcospontoexe/Python/blob/main/POO/Heranca.py) que a classe "Forma" é uma classe base que contém os métodos que todas as outras classes irão herdar. A partir dela, foram criadas as subclasses "Circulo" e "Retangulo", cada uma com seus próprios métodos e atributos. Perceba que temos agora **class Circulo(Forma)** e **class Retangulo(Forma)**. Este **(Forma)** presente em ambos os casos é o que diz que estas duas classes são herdadas de Forma.
 
 Não é necessário implementar todos os métodos da superclasse para todas as classes filhas. Se não implementarmos, a classe filha usará a mesma lógica implementada pela superclasse. Como não foi implementada a própria lógica de **calcular_area()** para Circulo e Retangulo e nem implementamos a nossa lógica de calcular_perimetro() para o Retangulo, o algoritmo usou a lógica que existia na superclasse.
+
+### Polimorfismo
+O polimorfismo permite que classes filhas herdem o mesmo métoda da superclasse mas com comportamento defirente para cada classe filha. [Veja um exemplo](https://github.com/marcospontoexe/Python/blob/main/POO/Polimorfismo.py).
 
 ## Criando objetos
 Para criar um objeto, antes é necessário planejar o seu molde. A partir desse molde é possível criar inúmeros objetos.
