@@ -200,7 +200,8 @@ Para criar atributo, deve-se começar com o prefixo **self.** e depois o nome da
 Variáveis da classe são como variáveis globais para essa classe! O que isso significa? Isso significa que as variáveis podem ser usadas em qualquer método que pertença à classe. Este é um dos principais pontos de usar classes. Você não precisará usar variáveis globais que podem ser acessadas em qualquer parte do código, contribuindo para a construção de uma bagunça. Ao encapsular as variáveis dentro da classe, apenas os métodos da classe podem acessar essas variáveis, portanto, você tem menos chances de cometer erros.
 
 ### O comportamento do objeto
-Objetos possuem comportamento responsável em realiza uma ação, em programação esses comportamentos são nomeados de **métodos**.
+Objetos possuem comportamento responsável em realizar uma ação, em programação esses comportamentos são nomeados de **métodos**.
+Todo método de classe deve passar como primeiro parâmetro, obrigatoriamente, o objeto **self**, que é uma referência à própria classe à qual o método pertence.
 
 ### Estado do objeto
 Em programação o estado atual do objeto é manipulado por métodos acessores e modificadores **getter** e **setter**. O getter diz qual é o estado atual de um determinado atributo do objeto, e o setter altera o estado desse atributo. No entanto, a abordagem tradicional de usar métodos getter e setter não é tão comum em Python quanto em algumas outras linguagens de programação, como Java.
