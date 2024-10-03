@@ -1,7 +1,7 @@
 # Python
 Este repositório acomoda projetos desenvolvidos em python, exemplos e como usar algumas bibliotecas Pyton.
 
-## EXEMPLOS
+## EXEMPLOS DE SINTAXE
 Veja a baixo alguns exemplos em Python:
  
 ![operadores](https://github.com/marcospontoexe/Python/blob/main/imagens/operadores.png)
@@ -161,7 +161,7 @@ Ler todo o conteúdo do arquivo separando linha por linha como strings em uma ú
 14. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
 15. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
 
-## POO (Object-Oriented Programming) no Python
+# POO (Object-Oriented Programming) no Python
 A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
 
 ## A evolução dos métodos de programação
@@ -205,6 +205,12 @@ Todo método de classe deve passar como primeiro parâmetro, obrigatoriamente, o
 
 ### Estado do objeto
 Em programação o estado atual do objeto é manipulado por métodos acessores e modificadores **getter** e **setter**. O getter diz qual é o estado atual de um determinado atributo do objeto, e o setter altera o estado desse atributo. No entanto, a abordagem tradicional de usar métodos getter e setter não é tão comum em Python quanto em algumas outras linguagens de programação, como Java.
+
+### Herança
+Herança é quando classes herdam características de outras classes. 
+[Veja nesse exemplo]() que a classe "Forma" é uma classe base que contém os métodos que todas as outras classes irão herdar. A partir dela, foram criadas as subclasses "Circulo" e "Retangulo", cada uma com seus próprios métodos e atributos. Perceba que temos agora **class Circulo(Forma)** e **class Retangulo(Forma)**. Este **(Forma)** presente em ambos os casos é o que diz que estas duas classes são herdadas de Forma.
+
+Não é necessário implementar todos os métodos da superclasse para todas as classes filhas. Se não implementarmos, a classe filha usará a mesma lógica implementada pela superclasse. Como não foi implementada a própria lógica de **calcular_area()** para Circulo e Retangulo e nem implementamos a nossa lógica de calcular_perimetro() para o Retangulo, o algoritmo usou a lógica que existia na superclasse.
 
 ## Criando objetos
 Para criar um objeto, antes é necessário planejar o seu molde. A partir desse molde é possível criar inúmeros objetos.
