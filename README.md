@@ -217,6 +217,8 @@ Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo e
 
 Porém ainda sim é possível garantir uma proteção aos dados internos da classe, pode-se definir um escopo **privado** para eles. Ou seja, os dados só podem ser alterados pelo código interno da classe, e não por uma chamada externa sem controle. Essa implementação é feita colocando dois underscores **(_)** antes do nome do parâmetro. A partir deste momento, o acesso aos atributos privados devem ser feito a partir de métodos públicos da classe.
 
+Para tornar um **método privado**, basta adicionar dois underscores antes de seu nome. Isso indica que o método deve ser utilizado internamente pela classe e não deve ser acessado externamente.
+
 ### Método construtor
 É um método da classe usado para configurar os atributos e estado de um objeto no momento em que é instanciado, garantindo que o objeto esteja em um estado válido e utilizável. O método construtor tem o seguinte nome `__init__` e pode, ou não, receber parâmetros para criar um objeto.
 
