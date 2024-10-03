@@ -220,6 +220,8 @@ Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo e
 
 Caso não seja implementado um construtor em uma classe, o compilador fornece um construtor padrão sem parâmetros em qualquer classe que não inclui explicitamente um construtor.
 
+Ao contrário de outras linguagens de programação, o Python não permite a criação de diversos construtores. Por outro lado, conforme as regras de funções é possível dar valores-padrão para os parâmetros do construtor.
+
 [Clique aqui](https://github.com/marcospontoexe/Python/tree/main/POO) para ver um exemplo de objeto em Python. Nesse exemplo a classe "Main.py" instancia dois objetos da classe "Jedi".
 
 ## BIBLIOTECAS
