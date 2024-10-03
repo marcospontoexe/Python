@@ -7,8 +7,8 @@ class Jedi:
         print('Hello, my name is ', self.jedi_name)
 
 '''
-Caso essa classe seja executada, sem instanciar um objeto por exemplo,
-será executada a condição a baixo.
+As linhas dentro do bloco if __name__ == '__main__': só serão executadas caso o arquivo Classe.py seja executado diretamente. 
+Caso seja feita sua importação, esses códigos não serão executados.
 '''
 if __name__ == '__main__':
 
