@@ -213,7 +213,9 @@ Esse molde é chamado de **classe** e possui todas as características e comport
 O nome dado ao processo de criação de um objeto a partir de uma classe existente se chama **instanciar** um objeto. Com objeto instanciado (criado) é possível saber qual é o estado atual desse objeto e alterar esse estado, antes disso o estado do objeto é inexistem, pois ainda não foi instanciado.
 
 ### Modificadores de acesso
-Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo encapsular um objeto. No entanto em Python, não há modificadores de acesso tradicionais, como "public", "private" e "protected", como em algumas outras linguagens de programação orientada a objetos. Em vez disso, Python segue uma abordagem baseada na filosofia do "consentimento do adulto", confiando na responsabilidade do programador para acessar e modificar os atributos de uma classe.
+Indicam o nível de acesso aos atributos e métodos de uma classe, permintindo encapsular um objeto. No entanto em Python, não há modificadores de acesso tradicionais, como "public", "private" e "protected", como em algumas outras linguagens de programação orientada a objetos. 
+
+Porém ainda sim é possível garantir uma proteção aos dados internos da classe, pode-se definir um escopo **privado** para eles. Ou seja, os dados só podem ser alterados pelo código interno da classe, e não por uma chamada externa sem controle. Essa implementação é feita colocando dois underscores **(_)** antes do nome do parâmetro. A partir deste momento, o acesso aos atributos privados devem ser feito a partir de métodos públicos da classe.
 
 ### Método construtor
 É um método da classe usado para configurar os atributos e estado de um objeto no momento em que é instanciado, garantindo que o objeto esteja em um estado válido e utilizável. O método construtor tem o seguinte nome `__init__` e pode, ou não, receber parâmetros para criar um objeto.
