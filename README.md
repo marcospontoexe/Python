@@ -228,6 +228,8 @@ Ao contrário de outras linguagens de programação, o Python não permite a cri
 
 [Clique aqui](https://github.com/marcospontoexe/Python/tree/main/POO) para ver um exemplo de objeto em Python. Nesse exemplo a classe "Main.py" instancia dois objetos da classe "Jedi".
 
+Veja nesse [outro exemplo](https://github.com/marcospontoexe/Python/blob/main/POO/Televisao.py) uma classe Televisao, em que o usuário é capaz de trocar de canais, aumentar ou diminuir o volume. O limite de canais válidos vai de 1 a 15 e o limite de volume válido vai de 0 a 10. No caso de um canal inválido, é definido como padrão o canal 1.
+
 ## BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
 ### Tk interface
