@@ -271,16 +271,20 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 Eventos podem ser chamados com o método [`bind()`](https://github.com/marcospontoexe/Python/tree/main/tkinter/03-eventos/01-bind), atribuido à uma tecla.
 ### Pandas
 Pandas é uma biblioteca para manipulação de dados.
+
 A biblioteca cria uma data frame, que é uma tabela contendo linhas e colunas.
 As **colunas**, chamadas de *séries*, são do tipo *lista* e pode ter apenas um tipo de variável (float, int, boleana...).
 As **linhas**, chamadas de *registros* ou *amostras*. São do tipo *dicionário* e podem conter vários tipos de variáveis (float, int, boleana...).
+
 Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
+
 * [Criando Dataframes](https://github.com/marcospontoexe/Python/tree/main/Pandas/01-gerando%20arquivos): Veja alguns exemplos para criação de um dataframe. Veja também como inserir e apagar *séries* e *registros*, e salvar o dataframe como um arquivo ".CSV" ou ".XLSX".
 * [Abrindo um dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/02-abrir_arquivos): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo `shape`, *registros*, dados contidos no dataframe e seus tipos com os métodos `size` e `info()`. 
 * [Explorando o dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/03-explorando%20o%20arquivo): Veja como usar alguns métodos para análise dos dados, como `value_counts()`, `unique()`, `isnull()`, `loc()`, `iloc()`, `isnull()`. Veja também alguns métodos para conversão de dataframe; `to_datetime()`, `to_numeric()`.
 * [Manipulando dados](https://github.com/marcospontoexe/Python/tree/main/Pandas/04-manipulando%20valores): Veja como manipular dados.
 * [filtrando valores](https://github.com/marcospontoexe/Python/tree/main/Pandas/05-filtrando%20valores): O `filter()` permite realizar busca mais avançada.
 * [Agrupamento de dados](https://github.com/marcospontoexe/Python/tree/main/Pandas/06-agrupamento): Faça um agrupamento de dados do o método `groupby()`, ou usando funções de agrupamento; `sum()`, `mean()`, `max()`, `min()`, `describe()`...
+
 ### Win32com
 O win32com é uma biblioteca que fornece acesso a muitas funcionalidades do Windows através da tecnologia COM (Component Object Model). Permite interagir com aplicativos Windows e manipular arquivos do sistema, para controlar aplicativos e processos.
 
