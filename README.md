@@ -278,6 +278,10 @@ As **linhas**, chamadas de *registros* ou *amostras*. São do tipo *dicionário*
 
 Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
 
+![pandas](https://github.com/marcospontoexe/Python/blob/main/Pandas/imagens/pandas-componentes-principais.png)
+
+DataFrames e Series são muito semelhantes, pois muitas operações podem ser feitas com uma ou com a outra (e.g., preencher valores nulos, calcular a média).
+
 * [Criando Dataframes](https://github.com/marcospontoexe/Python/tree/main/Pandas/01-gerando%20arquivos): Veja alguns exemplos para criação de um dataframe. Veja também como inserir e apagar *séries* e *registros*, e salvar o dataframe como um arquivo ".CSV" ou ".XLSX".
 * [Abrindo um dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/02-abrir_arquivos): Veja como gerar um dataframe a partir de um arquivo ".CSV" ou ".XLSX", e ver a quantidade de *séries* com o metodo `shape`, *registros*, dados contidos no dataframe e seus tipos com os métodos `size` e `info()`. 
 * [Explorando o dataframe](https://github.com/marcospontoexe/Python/tree/main/Pandas/03-explorando%20o%20arquivo): Veja como usar alguns métodos para análise dos dados, como `value_counts()`, `unique()`, `isnull()`, `loc()`, `iloc()`, `isnull()`. Veja também alguns métodos para conversão de dataframe; `to_datetime()`, `to_numeric()`.
