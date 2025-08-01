@@ -453,11 +453,14 @@ re.findall(r"[^a-z]", "Lucas Oliveira\nMurilo Silva\nDiego Prudêncio\nRodrigo R
 #['L', ' ', 'O', '\n', 'M', ' ', 'S', '\n', 'D', ' ', 'P', 'ê', '\n', 'R', ' ', 'R']
 ```
 
-
-
+* **.** - Indica QUALQUER caracter, exceto quebra de linha (\n):
 ```python
-
+# Busca tuda ocorrencia de "ato" e o caracter anterior
+re.findall(r".ato", "O rato é amigo do pato que presenciou o ato no meio do mato.")
+# ['rato', 'pato', ' ato', 'mato']
 ```
+
+### Classes de caracteres
 
 
 ```python
