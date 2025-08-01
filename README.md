@@ -414,4 +414,4 @@ partes = re.split(r"/", "10/05/1999") # ['10', '05', '1999']
 
 Agora que você sabe utilizar as principais funções da biblioteca re, podemos criar padrões de busca mais complexos e poderosos. Existe uma série de caracteres especiais que podem lhe ajudar a construir os padrões de texto desejados. Não é preciso decorá-los, apenas saber como utilizá-los. A seguir uma tabela de referência com vários destes caracteres.
 
-![regex]
+![regex](https://github.com/marcospontoexe/Python/blob/main/imagens/regex-cheat-sheet.png)
