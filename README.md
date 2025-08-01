@@ -426,26 +426,26 @@ Por exemplo, para encontrar todas vogais no texto: [aeiou]
 re.findall(r"[aeiou]", "Sentença para obter vogais.") # ['e', 'e', 'a', 'a', 'a', 'o', 'e', 'o', 'a', 'i']
 ```
 
-* [0-9] - Obtém todos números:
+* **[0-9]** - Obtém todos números:
 ```python
 re.findall(r"[0-9]", "Hoje, dia 26/11/2019 o dólar alcançou o valor de R$ 4,20 perante o real.")  # ['2', '6', '1', '1', '2', '0', '1', '9', '4', '2', '0']
 ```
 
-* [a-z] - Obtém todos números
+* **[a-z]** - Obtém todos números
 ```python
 re.findall(r"[A-Z]", "AFV-5631")  #['A', 'F', 'V']
 ```
 
 * Os **parênteses** indicam um GRUPO de caracteres que podem fazer parte do padrão. Podemos juntar a eles outros caracteres especiais.
 
-* | - Indica o operador lógico **OU**:
+* **|** - Indica o operador lógico **OU**:
 
 ```python
 # Busca Lucas OU Rodrigo
 re.findall(r"(Lucas|Rodrigo)", "Lucas Oliveira\nMurilo Silva\nDiego Prudêncio\nRodrigo Rezende")  #['Lucas', 'Rodrigo']
 ```
 
-# ^ - Indica operador lógico **NÃO**:
+* **^** - Indica operador lógico **NÃO**:
 
 ```python
 # Busca tudo, exceto letras minúsculas
