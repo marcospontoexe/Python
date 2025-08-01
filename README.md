@@ -365,7 +365,7 @@ match = re.match(r"clássico", "clássico é clássico e vice-versa")
 #match.end()
 ```
 
-````python
+```python
 m = re.match(r"teste", "Este é um teste de regex.")
 print(m)    # None
 ```
