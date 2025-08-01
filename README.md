@@ -160,6 +160,7 @@ Ler todo o conteúdo do arquivo separando linha por linha como strings em uma ú
   
 14. [Modularizando scripts](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/13-modulariza%C3%A7%C3%A3o): Veja como modularizar scripts e criar bibliotecas python.
 15. [Tratamento de erros](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo/tratamento%20de%20erros): Veja como deixar o script mais robusto a erros com os comandos `try`, `except`, e `finally`.
+---
 
 # POO (Object-Oriented Programming) no Python
 A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
@@ -238,19 +239,20 @@ Ao contrário de outras linguagens de programação, o Python não permite a cri
 [Clique aqui](https://github.com/marcospontoexe/Python/tree/main/POO) para ver um exemplo de objeto em Python. Nesse exemplo a classe "Main.py" instancia dois objetos da classe "Jedi".
 
 Veja nesse [outro exemplo](https://github.com/marcospontoexe/Python/blob/main/POO/Televisao.py) uma classe Televisao, em que o usuário é capaz de trocar de canais, aumentar ou diminuir o volume. O limite de canais válidos vai de 1 a 15 e o limite de volume válido vai de 0 a 10. No caso de um canal inválido, é definido como padrão o canal 1.
+---
 
-## BIBLIOTECAS
+# BIBLIOTECAS
 Veja como usar algumas bibliotecas Python
-### Tk interface
+## Tk interface
 A biblioteca Tkinter é uma ferramenta comumente usada com interface gráfica para programas em Python, e faz parte do kit de ferramentas Tcl/Tk GUI. Tanto o Tk quanto o tkinter estão disponíveis na maioria das plataformas Unix, incluindo macOS, bem como em sistemas Windows.
-#### Gerenciador de layouts
+### Gerenciador de layouts
 O gerenciador de layout é um widget responsável por gerenciar o posicionamento de outros widget dentro de um container. 
 É recomendado usar apenas um único gerenciador de layout em cada container, porém podemos usar um container dentro de outro container.
 No pacote Tkinter existem três gerenciadores de layouts distintos (place, pack, grid).
 * [Place](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/01-place): O gerenciador de layout **Place** posiciona os widgets no plano cartesiano (x, y).
 * [Pack](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/02-Pack): O gerenciador de layout **PACK** empacota os widgets, alinhando na direção horizontal ou vertical a partir do atributo "side" (TOP, BOTTOM, LEFT ou RIGHT).
 * [GRID](https://github.com/marcospontoexe/Python/tree/main/tkinter/01-gerenciador%20de%20layout/03-grid): O gerenciador de layout **GRID** usa linhas e colunas para posicionar os widgets, usando o conceito de planilha para o posicionamento dos widgets.
-#### Widgets
+### Widgets
 Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter. 
 * [Menu](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/01-menu): O Widget menu disponibiliza opções de menus e submenus na barra superior da GUI.
 * [Radio Button](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/02-radio_button): Esse widget cria radio buttons para selecionar opcões.
@@ -267,9 +269,9 @@ Nessa sessão estão disponíveis alguns widgets da biblioteca Tkinter.
 * [Scale](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/13-scale): Selecione valores a partir de uma barra de rolagem horizontal. 
 * [Note Book](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/14-notebook): O **Notebook** permite criar um Widget semelhante a um gerenciador de Layouts.
 * [Progress Bar](https://github.com/marcospontoexe/Python/tree/main/tkinter/02-WidGets/15-progressBar): O **Progressbar** imprime uma barra de progresso na GUI.
-#### Eventos
+### Eventos
 Eventos podem ser chamados com o método [`bind()`](https://github.com/marcospontoexe/Python/tree/main/tkinter/03-eventos/01-bind), atribuido à uma tecla.
-### Pandas
+## Pandas
 Pandas é uma biblioteca para manipulação de dados.
 
 A biblioteca cria uma data frame, que é uma tabela contendo linhas e colunas.
@@ -289,10 +291,127 @@ DataFrames e Series são muito semelhantes, pois muitas operações podem ser fe
 * [filtrando valores](https://github.com/marcospontoexe/Python/tree/main/Pandas/05-filtrando%20valores): O `filter()` permite realizar busca mais avançada.
 * [Agrupamento de dados](https://github.com/marcospontoexe/Python/tree/main/Pandas/06-agrupamento): Faça um agrupamento de dados do o método `groupby()`, ou usando funções de agrupamento; `sum()`, `mean()`, `max()`, `min()`, `describe()`...
 
-### Win32com
+## Win32com
 O win32com é uma biblioteca que fornece acesso a muitas funcionalidades do Windows através da tecnologia COM (Component Object Model). Permite interagir com aplicativos Windows e manipular arquivos do sistema, para controlar aplicativos e processos.
 
 
 [Nesse exemplo](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) o win32com é usado para enviar um dataframe tratado por e-mail através do *Microsoft Outlook*.
 
-*EM CONSTRUÇÃO...*
+## re
+A biblioteca **re** em Python é utilizada para **trabalhar com expressões regulares (regex)** — uma poderosa ferramenta para **buscar, verificar, extrair, substituir e dividir strings com base em padrões de texto**.
+
+### O que são expressões regulares?
+
+Expressões regulares são **sequências de caracteres especiais que definem um padrão de busca**. Por exemplo:
+
+* `\d` → qualquer dígito (0–9)
+* `\w` → qualquer caractere alfanumérico (a–z, A–Z, 0–9, \_)
+* `.` → qualquer caractere (exceto nova linha)
+* `*` → repete zero ou mais vezes
+* `+` → repete uma ou mais vezes
+* `^` → início da string
+* `$` → fim da string
+
+Você poderá fazer uso de expressões regulares nas mais diversas situações em que precise localizar ou extrair padrões em meio ao texto (e.g., encontrar CEPs de endereço no texto, obter os preços de produtos de uma listagem). Você pode usar expressões regulares em linguagens de programação e editores de texto por exemplo.
+
+Sempre que possível, use **raw strings** (prefixo `r""`) para evitar que o Python interprete barras invertidas como escapes:
+
+```python
+re.search(r"\d+", "ano 2025")
+```
+### Definir para qual funcionalidade o padrão RegEx será utilizado
+Você pode usar um padrão para:
+
+* Buscar padrões/valores no texto (i.e., **search**, **match**, **findall**)
+* Quebrar texto em sub-textos (i.e., **split**)
+* Substituir dados no texto (i.e., **sub**)
+
+texto = "clássico é clássico e vice-versa"
+
+```python
+# A função search() retorna um objeto caso encontre o padrão no texto
+if re.search(padrao, texto):
+  print("Encontrou")
+else:
+  print("Não encontrou")
+```
+
+### `re.search(pattern, string)`
+
+Busca o **primeiro match** do padrão em qualquer lugar da string.
+
+```python
+match = re.search(r"clássico", "clássico é clássico e vice-versa")  # <re.Match object; span=(0, 8), match='clássico'>
+# Mostra o objeto/match da busca - caso não encontre o padrão retorna None
+match
+```
+
+```python
+re.search(r"\d+", "Hoje é dia 01 de agosto")  # Match: '01'
+```
+
+### `re.match(pattern, string)`
+Verifica se o padrão **ocorre no início da string**.
+
+```python
+match = re.match(r"clássico", "clássico é clássico e vice-versa")
+# Mostra o objeto/match da busca - caso não encontre o padrão retorna None
+
+# Caso queira mostrar o trecho de texto encontrado usar a função group()
+#match.group()
+
+# Caso queira obter a posição de início e fim do texto encontrado
+#match.start()
+#match.end()
+```
+
+````python
+m = re.match(r"teste", "Este é um teste de regex.")
+print(m)    # None
+```
+
+```python
+re.match(r"\d+", "2025 é o ano")  # Match: '2025'
+```
+
+### `re.findall(pattern, string)`
+
+Retorna **todas as ocorrências** do padrão na string.
+
+```python
+re.findall(r"\d+", "Dias: 01, 02, 03")  # ['01', '02', '03']
+```
+
+```python
+match = re.findall(r"clássico", "clássico é clássico e vice-versa") # ['clássico', 'clássico']
+```
+
+### `re.sub(pattern, replacement, string)`
+
+Substitui todas as ocorrências do padrão por outro valor.
+
+```python
+re.sub(r"\d+", "XX", "Dia 01 de agosto")  # 'Dia XX de agosto'
+```
+
+```python
+r = re.sub(r"gato", "cachorro", "Este é meu gato Thomas. Eu adoro ter um gato em casa.")  #Este é meu cachorro Thomas. Eu adoro ter um cachorro em casa.
+```
+
+### `re.split(pattern, string)`
+
+Divide o texto toda vez que encontrar a ocorrência do padrão dado.
+
+```python
+re.split(r",\s*", "maçã, banana, uva")  # ['maçã', 'banana', 'uva']
+```
+
+```python
+partes = re.split(r"/", "10/05/1999") # ['10', '05', '1999']
+```
+
+### Como escrever padrões mais complexos?
+
+Agora que você sabe utilizar as principais funções da biblioteca re, podemos criar padrões de busca mais complexos e poderosos. Existe uma série de caracteres especiais que podem lhe ajudar a construir os padrões de texto desejados. Não é preciso decorá-los, apenas saber como utilizá-los. A seguir uma tabela de referência com vários destes caracteres.
+
+![regex]
