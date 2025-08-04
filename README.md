@@ -426,26 +426,26 @@ Por exemplo, para encontrar todas vogais no texto: [aeiou]
 re.findall(r"[aeiou]", "Sentença para obter vogais.") # ['e', 'e', 'a', 'a', 'a', 'o', 'e', 'o', 'a', 'i']
 ```
 
-* **[0-9]** - Obtém todos números:
+* `**[0-9]**` - Obtém todos números:
 ```python
 re.findall(r"[0-9]", "Hoje, dia 26/11/2019 o dólar alcançou o valor de R$ 4,20 perante o real.")  # ['2', '6', '1', '1', '2', '0', '1', '9', '4', '2', '0']
 ```
 
-* **[a-z]** - Obtém todos números
+* `**[a-z]**` - Obtém todos números
 ```python
 re.findall(r"[A-Z]", "AFV-5631")  #['A', 'F', 'V']
 ```
 
 * Os **parênteses** indicam um GRUPO de caracteres que podem fazer parte do padrão. Podemos juntar a eles outros caracteres especiais.
 
-* **|** - Indica o operador lógico **OU**:
+* `**|**` - Indica o operador lógico **OU**:
 
 ```python
 # Busca Lucas OU Rodrigo
 re.findall(r"(Lucas|Rodrigo)", "Lucas Oliveira\nMurilo Silva\nDiego Prudêncio\nRodrigo Rezende")  #['Lucas', 'Rodrigo']
 ```
 
-* **^** - Indica operador lógico **NÃO**:
+* `**^**` - Indica operador lógico **NÃO**:
 
 ```python
 # Busca tudo, exceto letras minúsculas
@@ -453,7 +453,7 @@ re.findall(r"[^a-z]", "Lucas Oliveira\nMurilo Silva\nDiego Prudêncio\nRodrigo R
 #['L', ' ', 'O', '\n', 'M', ' ', 'S', '\n', 'D', ' ', 'P', 'ê', '\n', 'R', ' ', 'R']
 ```
 
-* **.** - Indica QUALQUER caracter, exceto quebra de linha (\n):
+* `**.**` - Indica QUALQUER caracter, exceto quebra de linha (\n):
 ```python
 # Busca tuda ocorrencia de "ato" e o caracter anterior
 re.findall(r".ato", "O rato é amigo do pato que presenciou o ato no meio do mato.")
@@ -461,15 +461,15 @@ re.findall(r".ato", "O rato é amigo do pato que presenciou o ato no meio do mat
 ```
 
 ### Classes de caracteres
-* **\s** - Obtém todos espaços (white-space)
-* **\S** - Obtém todos NÃO espaços (white-space)
+* `**\s**` - Obtém todos espaços (white-space)
+* `**\S**` - Obtém todos NÃO espaços (white-space)
 
 ```python
 re.findall(r"\s", "Conseguimos pegar o que não é espaço?")  # [' ', ' ', ' ', ' ', ' ', ' ']
 ```
 
 ### Ancoras
-* **^** - Indica início de texto
+* `**^**` - Indica início de texto
 
 ```python
 # Faz match apenas se a palavra clássico estiver no início do texto
@@ -481,7 +481,7 @@ match = re.findall(r"^clássico", "clássico é clássico e vice-versa")    # ['
 match = re.findall(r"^clássico", "Este jogo é um clássico") # []
 ```
 
-* **$** - Indica fim de texto
+* `**$**` - Indica fim de texto
 
 ```python
 # Faz match apenas se a palavra clássico estiver no fim do texto
