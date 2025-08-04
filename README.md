@@ -511,7 +511,7 @@ match = re.findall(r"[0-9]{1,5}", "João tem 5 laranjas, enquanto Maria tem 25. 
 match = re.findall(r"[0-9]{1,}", "João tem 5 laranjas, enquanto Maria tem 25. Já Henrique possui 10000.")   #  ['5', '25', '10000']
 ```
 
-* ***** - Zero ou mais ocorrências
+* * - Zero ou mais ocorrências
 
 ```python
 
