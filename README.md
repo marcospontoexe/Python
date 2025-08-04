@@ -461,7 +461,57 @@ re.findall(r".ato", "O rato é amigo do pato que presenciou o ato no meio do mat
 ```
 
 ### Classes de caracteres
+* **\s** - Obtém todos espaços (white-space)
+* **\S** - Obtém todos NÃO espaços (white-space)
 
+```python
+re.findall(r"\s", "Conseguimos pegar o que não é espaço?")  # [' ', ' ', ' ', ' ', ' ', ' ']
+```
+
+### Ancoras
+* **^** - Indica início de texto
+
+```python
+# Faz match apenas se a palavra clássico estiver no início do texto
+match = re.findall(r"^clássico", "clássico é clássico e vice-versa")    # ['clássico']
+```
+
+```python
+# Faz match apenas se a palavra clássico estiver no início do texto
+match = re.findall(r"^clássico", "Este jogo é um clássico") # []
+```
+
+* **$** - Indica fim de texto
+
+```python
+# Faz match apenas se a palavra clássico estiver no fim do texto
+match = re.findall(r"clássico$", "Este jogo é um clássico")   # ['clássico']
+```
+
+```python
+# Faz match apenas se a palavra clássico estiver no fim do texto
+match = re.findall(r"clássico$", "clássico é clássico e vice-versa")   # []
+```
+
+### Quantificadores
+Em alguns momentos você pode querer quantificar a quantidade de vezes que um determinado padrão aparece.
+
+```python
+# Padrão que encontra dois números em sequencia
+match = re.findall(r"[0-9]{2}", "João tem 5 laranjas, enquanto Maria tem 25.")  # ['25']
+```
+
+```python
+# Padrão que encontra de um a cinco números em sequencia
+match = re.findall(r"[0-9]{1,5}", "João tem 5 laranjas, enquanto Maria tem 25. Já Henrique possui 10000.")  # ['5', '25', '10000']
+```
+
+```python
+# Padrão que encontra um ou mais numeros em sequencia
+match = re.findall(r"[0-9]{1,}", "João tem 5 laranjas, enquanto Maria tem 25. Já Henrique possui 10000.")   #  ['5', '25', '10000']
+```
+
+* ***** - Zero ou mais ocorrências
 
 ```python
 
@@ -472,3 +522,7 @@ re.findall(r".ato", "O rato é amigo do pato que presenciou o ato no meio do mat
 
 ```
 
+
+```python
+
+```
