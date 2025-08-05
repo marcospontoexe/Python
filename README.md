@@ -551,9 +551,9 @@ Você pode realizar o que chamamos de EXTRAÇÃO DE GRUPO usando as expressões 
 
 ```python
 re.findall(r"([a-z-.]+)@([a-z-.]+)", texto)   
-/*
+'''
 [('lucas.oliveira', 'pucpr.br'),
 ('maria-silva', 'gmail.com'),
 ('jobs', 'apple.com')]
-*/
+'''
 ```
