@@ -551,9 +551,58 @@ Você pode realizar o que chamamos de EXTRAÇÃO DE GRUPO usando as expressões 
 
 ```python
 re.findall(r"([a-z-.]+)@([a-z-.]+)", texto)   
-'''
+"""
 [('lucas.oliveira', 'pucpr.br'),
 ('maria-silva', 'gmail.com'),
 ('jobs', 'apple.com')]
-'''
+"""
 ```
+
+texto do linkDigamos que você queira remover todos os e-mails do texto por questões de privacidade.
+
+```python
+re.sub(r"[a-z-.]+@[a-z-.]+", "-CONFIDENCIAL-", texto)   # Lucas Oliveira: -CONFIDENCIAL- \n -CONFIDENCIAL- \n -CONFIDENCIAL- 
+```
+
+É possível ainda utilizar os agrupamentos para efetuar substituições mais complexas. Por exemplo, imagine que queiramos apenas substituir o servidor de e-mail, mas mantendo o nome de usuário.
+
+```python
+# Nesse caso podemos usar os agrupamentos da expressão regular
+# \1 indica a informação obtida no primeiro agrupamento - neste caso o nome do usuário
+# \2 indica a informação obtida no segundo agrupamento - neste caso o servidor do e-mail
+re.sub(r"([a-z-.]+)@([a-z-.]+)", r"\1@regex.com", texto)    # Lucas Oliveira: lucas.oliveira@regex.com \n maria-silva@regex.com \n jobs@regex.com
+```
+
+### CARACTER DE ESCAPE
+E quando eu quero procurar algum caractere que já representa algo em expressões regulares? (e.g., ponto final, interrogação). Nesse caso podemos usar o que chamamos de CARACTER DE ESCAPE, representado pelo caracter `\`.
+
+Exemplo: Quero obter todas perguntas presentes em um texto
+```python
+texto = """Este é um texto de exemplo.
+Mas será que ele é confiável?
+Além dos questionamentos acima há outras questões a serem levantadas.
+Você está gostando de aprender expressões regulares?
+PLN é uma área de seu interesse?"""
+
+# Obtém qualquer sequencia de caracteres (exceto quebra de linha)
+re.findall(r".+", texto)  
+"""
+['Este é um texto de exemplo.',
+ 'Mas será que ele é confiável?',
+ 'Além dos questionamentos acima há outras questões a serem levantadas.',
+ 'Você está gostando de aprender expressões regulares?',
+ 'PLN é uma área de seu interesse?']
+"""
+```
+
+Neste caso, o ponto de interrogação é considerado um quantificador de Expressão Regular, portanto, é interpretado como tal. Para fazermos com que ele seja interpretado como um caracter comum, usamos o escape `\`.
+
+```python
+re.findall(r".+\?", texto)  
+"""
+['Mas será que ele é confiável?',
+ 'Você está gostando de aprender expressões regulares?',
+ 'PLN é uma área de seu interesse?']
+"""
+```
+---
