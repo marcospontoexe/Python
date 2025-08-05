@@ -514,15 +514,46 @@ match = re.findall(r"[0-9]{1,}", "João tem 5 laranjas, enquanto Maria tem 25. J
 * `*` - Zero ou mais ocorrências
 
 ```python
-
+# Padrão que encontra de um a cinco números em sequencia
+match = re.findall(r"[a-zA-Z]{1,} x* [a-zA-Z]{1,}", "Vasco x Palmeiras - Corinthians x Santos - Portuguesa xxx Guarani")  # ['Vasco x Palmeiras', 'Corinthians x Santos', 'Portuguesa xxx Guarani']
 ```
 
+* `+` - Uma ou mais ocorrências
 
 ```python
-
+# Padrão que encontra um ou mais numeros em sequencia
+match = re.findall(r"[0-9]+", "João tem 5 laranjas, enquanto Maria tem 25. Já Henrique possui 10000.")  # ['5', '25', '10000']
 ```
 
+* `?` - Zero ou uma ocorrência
 
 ```python
+# Padrão que encontra 9 numeros, seguidos ou não por um hífen, seguidos de dois números
+match = re.findall(r"[0-9]{9}-?[0-9]{2}", "RG: 8122691-8 CPF: 064555874-90 / RG: 81623338 CPF: 06454357320 ") # ['064555874-90', '06454357320']
+```
 
+### Exemplo 
+Vamos fazer uma expressão regular para obter endereços de e-mail no texto
+
+```python
+texto = "Lucas Oliveira: lucas.oliveira@pucpr.br \n maria-silva@gmail.com \n jobs@apple.com "
+re.findall(r"[a-z]+@[a-z]+", texto)   # ['oliveira@pucpr', 'silva@gmail', 'jobs@apple']
+```
+
+O padrão acima obtém as letras, porém, ignora o hífen e o ponto final. Para resolver podemos criar um RANGE adicionando estes caracteres.
+
+```python
+re.findall(r"[a-z-.]+@[a-z-.]+", texto)   # ['lucas.oliveira@pucpr.br', 'maria-silva@gmail.com', 'jobs@apple.com']
+```
+
+###  EXTRAÇÃO DE GRUPO
+Você pode realizar o que chamamos de EXTRAÇÃO DE GRUPO usando as expressões regulares. Basta agrupar os sub-padrões que você deseja extrair separadamente com os parênteses.
+
+```python
+re.findall(r"([a-z-.]+)@([a-z-.]+)", texto)   
+/*
+[('lucas.oliveira', 'pucpr.br'),
+('maria-silva', 'gmail.com'),
+('jobs', 'apple.com')]
+*/
 ```
