@@ -421,6 +421,7 @@ Agora que você sabe utilizar as principais funções da biblioteca re, podemos 
 **DICA IMPORTANTE**: Você também pode testar as expressões regulares a seguir no site [**Pythex**](https://pythex.org/), que tem uma interface bem interessante para visualizar e testar suas expressões regulares.
 
 ### Metacaracteres
+Os metacaracteres são o coração das Expressões Regulares (Regex). Eles são caracteres que não **representam** a si mesmos, mas sim uma ideia, uma **regra ou um conceito**. É o que transforma uma busca de texto simples em uma busca por padrões poderosa.
 
 #### Metacaracteres Representantes (ou de Classe de Caracteres)
 
@@ -435,8 +436,22 @@ Agora que você sabe utilizar as principais funções da biblioteca re, podemos 
 | **`\d`** | Dígito | Corresponde a qualquer dígito numérico (`0` a `9`). | A regex `CEP: \d\d\d\d\d-\d\d\d` encontrará "CEP: 12345-678". |
 | **`\s`** | Espaço em Branco | Corresponde a qualquer caractere de espaçamento (espaço, tabulação `\t`, nova linha `\n`). | A regex `Olá\sMundo` encontrará "Olá Mundo". |
 
----
+* Os **colchetes** indicam um **RANGE** de caracteres que podem fazer parte do padrão.
 
+Por exemplo, para encontrar todas vogais no texto: [aeiou]
+```python
+re.findall(r"[aeiou]", "Sentença para obter vogais.") # ['e', 'e', 'a', 'a', 'a', 'o', 'e', 'o', 'a', 'i']
+```
+
+* `[0-9]` - Obtém todos números:
+```python
+re.findall(r"[0-9]", "Hoje, dia 26/11/2019 o dólar alcançou o valor de R$ 4,20 perante o real.")  # ['2', '6', '1', '1', '2', '0', '1', '9', '4', '2', '0']
+```
+
+* `[a-z]` - Obtém todos números
+```python
+re.findall(r"[A-Z]", "AFV-5631")  #['A', 'F', 'V']
+```
 #### Metacaracteres Quantificadores
 
 **Para que servem:** Eles definem **quantas vezes** o caractere, grupo ou classe anterior pode se repetir. Eles nunca aparecem sozinhos, sempre modificam o item que vem imediatamente antes deles.
@@ -449,68 +464,6 @@ Agora que você sabe utilizar as principais funções da biblioteca re, podemos 
 | **`{n}`** | Chaves (Exato) | Corresponde ao item anterior exatamente **n** vezes. | A regex `\d{3}` encontrará "123", "987", mas não "12" ou "1234". |
 | **`{n,}`** | Chaves (Mínimo) | Corresponde ao item anterior **no mínimo n** vezes. | A regex `\d{2,}` encontrará "12", "123" e "1234", mas não "1". |
 | **`{n,m}`** | Chaves (Intervalo) | Corresponde ao item anterior **no mínimo n** e **no máximo m** vezes. | A regex `\w{3,5}` encontrará "gato" e "cinco", mas não "eu" ou "paralelepípedo". |
-
----
-
-#### Metacaracteres Âncoras (ou de Posição)
-
-**Para que servem:** Eles não correspondem a um caractere, mas a uma **posição** específica na string (início, fim, ou fronteira de palavra). Eles garantem que o padrão seja encontrado apenas em um determinado local.
-
-| Metacaractere | Nome | O que faz | Exemplo Prático |
-| :--- | :--- | :--- | :--- |
-| **`^`** | Circunflexo | Corresponde ao **início** da string ou da linha. | A regex `^Olá` encontrará "Olá" em "Olá mundo", mas não em "Diga Olá mundo". |
-| **`$`** | Cifrão | Corresponde ao **fim** da string ou da linha. | A regex `mundo$` encontrará "mundo" em "Olá mundo", mas não em "mundo cruel". |
-| **`\b`** | Borda de Palavra | Corresponde à posição entre um caractere de palavra (`\w`) e um não-palavra (`\W`). | A regex `\bato\b` encontrará "ato" em "um ato de coragem", mas não em "gato" ou "trator". É perfeito para encontrar palavras inteiras. |
-
----
-
-#### Metacaracteres de Agrupamento e Alternância
-
-**Para que servem:** Eles permitem criar sub-padrões mais complexos, agrupar partes de uma expressão ou definir alternativas.
-
-| Metacaractere | Nome | O que faz | Exemplo Prático |
-| :--- | :--- | :--- | :--- |
-| **`()`** | Parênteses | **Agrupa** uma parte da expressão para aplicar um quantificador a todo o grupo. Também "captura" o texto correspondente para uso posterior. | A regex `(ha)+` encontrará "ha", "haha", "hahaha". Sem os parênteses, `ha+` encontraria "ha", "haa", "haaa". |
-| **`|`** | Barra Vertical (OU) | Funciona como um operador **OU**, correspondendo à expressão da esquerda **ou** à da direita. | A regex `gato|cachorro` encontrará "gato" ou "cachorro". |
-| **`\`** | Barra Invertida (Escape) | **Escapa** um metacaractere, ou seja, remove sua função especial e o trata como um caractere literal. | Para encontrar um ponto final de verdade, você usa `\.`. A regex `site\.com` encontrará "site.com" e não "siteXcom". |
-
-Entender essas quatro categorias e como elas se combinam é o que permite construir expressões regulares para resolver praticamente qualquer problema de busca e manipulação de texto.
-
-### Groups & Ranges
-
-
-### Classes de caracteres
-* `\s` - Obtém todos espaços (white-space)
-* `\S` - Obtém todos NÃO espaços (white-space)
-
-```python
-re.findall(r"\s", "Conseguimos pegar o que não é espaço?")  # [' ', ' ', ' ', ' ', ' ', ' ']
-```
-
-### Ancoras
-* `^` - Indica início de texto
-
-```python
-# Faz match apenas se a palavra clássico estiver no início do texto
-match = re.findall(r"^clássico", "clássico é clássico e vice-versa")    # ['clássico']
-```
-
-```python
-# Faz match apenas se a palavra clássico estiver no início do texto
-match = re.findall(r"^clássico", "Este jogo é um clássico") # []
-```
-
-* `$` - Indica fim de texto
-
-```python
-# Faz match apenas se a palavra clássico estiver no fim do texto
-match = re.findall(r"clássico$", "Este jogo é um clássico")   # ['clássico']
-```
-
-```python
-# Faz match apenas se a palavra clássico estiver no fim do texto
-match = re.findall(r"clássico$", "clássico é clássico e vice-versa")   # []
-```
 
 ### Quantificadores
 Em alguns momentos você pode querer quantificar a quantidade de vezes que um determinado padrão aparece.
@@ -549,6 +502,88 @@ match = re.findall(r"[0-9]+", "João tem 5 laranjas, enquanto Maria tem 25. Já 
 ```python
 # Padrão que encontra 9 numeros, seguidos ou não por um hífen, seguidos de dois números
 match = re.findall(r"[0-9]{9}-?[0-9]{2}", "RG: 8122691-8 CPF: 064555874-90 / RG: 81623338 CPF: 06454357320 ") # ['064555874-90', '06454357320']
+```
+---
+
+#### Metacaracteres Âncoras (ou de Posição)
+
+**Para que servem:** Eles não correspondem a um caractere, mas a uma **posição** específica na string (início, fim, ou fronteira de palavra). Eles garantem que o padrão seja encontrado apenas em um determinado local.
+
+| Metacaractere | Nome | O que faz | Exemplo Prático |
+| :--- | :--- | :--- | :--- |
+| **`^`** | Circunflexo | Corresponde ao **início** da string ou da linha. | A regex `^Olá` encontrará "Olá" em "Olá mundo", mas não em "Diga Olá mundo". |
+| **`$`** | Cifrão | Corresponde ao **fim** da string ou da linha. | A regex `mundo$` encontrará "mundo" em "Olá mundo", mas não em "mundo cruel". |
+| **`\b`** | Borda de Palavra | Corresponde à posição entre um caractere de palavra (`\w`) e um não-palavra (`\W`). | A regex `\bato\b` encontrará "ato" em "um ato de coragem", mas não em "gato" ou "trator". É perfeito para encontrar palavras inteiras. |
+
+### Ancoras
+* `^` - Indica início de texto
+
+```python
+# Faz match apenas se a palavra clássico estiver no início do texto
+match = re.findall(r"^clássico", "clássico é clássico e vice-versa")    # ['clássico']
+```
+
+```python
+# Faz match apenas se a palavra clássico estiver no início do texto
+match = re.findall(r"^clássico", "Este jogo é um clássico") # []
+```
+
+* `$` - Indica fim de texto
+
+```python
+# Faz match apenas se a palavra clássico estiver no fim do texto
+match = re.findall(r"clássico$", "Este jogo é um clássico")   # ['clássico']
+```
+
+```python
+# Faz match apenas se a palavra clássico estiver no fim do texto
+match = re.findall(r"clássico$", "clássico é clássico e vice-versa")   # []
+```
+---
+
+#### Metacaracteres de Agrupamento e Alternância
+
+**Para que servem:** Eles permitem criar sub-padrões mais complexos, agrupar partes de uma expressão ou definir alternativas.
+
+| Metacaractere | Nome | O que faz | Exemplo Prático |
+| :--- | :--- | :--- | :--- |
+| **`()`** | Parênteses | **Agrupa** uma parte da expressão para aplicar um quantificador a todo o grupo. Também "captura" o texto correspondente para uso posterior. | A regex `(ha)+` encontrará "ha", "haha", "hahaha". Sem os parênteses, `ha+` encontraria "ha", "haa", "haaa". |
+| **`|`** | Barra Vertical (OU) | Funciona como um operador **OU**, correspondendo à expressão da esquerda **ou** à da direita. | A regex `gato|cachorro` encontrará "gato" ou "cachorro". |
+| **`\`** | Barra Invertida (Escape) | **Escapa** um metacaractere, ou seja, remove sua função especial e o trata como um caractere literal. | Para encontrar um ponto final de verdade, você usa `\.`. A regex `site\.com` encontrará "site.com" e não "siteXcom". |
+
+Entender essas quatro categorias e como elas se combinam é o que permite construir expressões regulares para resolver praticamente qualquer problema de busca e manipulação de texto.
+
+* Os **parênteses** indicam um GRUPO de caracteres que podem fazer parte do padrão. Podemos juntar a eles outros caracteres especiais.
+
+* `|` - Indica o operador lógico **OU**:
+
+```python
+# Busca Lucas OU Rodrigo
+re.findall(r"(Lucas|Rodrigo)", "Lucas Oliveira\nMurilo Silva\nDiego Prudêncio\nRodrigo Rezende")  #['Lucas', 'Rodrigo']
+```
+
+* `^` - Indica operador lógico **NÃO**:
+
+```python
+# Busca tudo, exceto letras minúsculas
+re.findall(r"[^a-z]", "Lucas Oliveira\nMurilo Silva\nDiego Prudêncio\nRodrigo Rezende") 
+#['L', ' ', 'O', '\n', 'M', ' ', 'S', '\n', 'D', ' ', 'P', 'ê', '\n', 'R', ' ', 'R']
+```
+
+* `.` - Indica QUALQUER caracter, exceto quebra de linha (\n):
+```python
+# Busca tuda ocorrencia de "ato" e o caracter anterior
+re.findall(r".ato", "O rato é amigo do pato que presenciou o ato no meio do mato.")
+# ['rato', 'pato', ' ato', 'mato']
+```
+---
+
+### Classes de caracteres
+* `\s` - Obtém todos espaços (white-space)
+* `\S` - Obtém todos NÃO espaços (white-space)
+
+```python
+re.findall(r"\s", "Conseguimos pegar o que não é espaço?")  # [' ', ' ', ' ', ' ', ' ', ' ']
 ```
 
 ### Exemplo 
@@ -624,14 +659,5 @@ re.findall(r".+\?", texto)
  'PLN é uma área de seu interesse?']
 """
 ```
----
-
-
-
-
-Com certeza! Os **metacaracteres** são o coração das Expressões Regulares (Regex). Eles são caracteres que não representam a si mesmos, mas sim uma ideia, uma regra ou um conceito. É o que transforma uma busca de texto simples em uma busca por padrões poderosa.
-
-Vamos dividir os metacaracteres em quatro categorias principais, explicando para que servem e com exemplos práticos.
 
 ---
-
