@@ -1,0 +1,18 @@
+# Ambientes virtuais (são criados por máquina e guardam caminhos locais)
+venv/
+.venv/
+env/
+
+# Bytecode gerado pelo Python
+__pycache__/
+*.py[cod]
+
+# Checkpoints do Jupyter
+.ipynb_checkpoints/
+
+# Ficheiros temporários de bloqueio do Office (Excel/Word abertos)
+~$*
+
+# Notas locais de trabalho
+CONTEXTO.md
+DOCS/
