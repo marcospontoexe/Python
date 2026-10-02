@@ -1,8 +1,39 @@
 # Python
-Este repositório acomoda projetos desenvolvidos em python, exemplos e como usar algumas bibliotecas Pyton.
+Este repositório acomoda projetos desenvolvidos em Python, exemplos e como usar algumas bibliotecas Python.
+
+## Conteúdo do repositório
+
+| Diretório | Conteúdo |
+|---|---|
+| [GNSS](https://github.com/marcospontoexe/Python/tree/main/GNSS/Veloc%C3%ADmetro) | **Projeto real:** velocímetro assistido por satélite (Raspberry Pi + Tkinter + NMEA). Veja [Projetos](#projetos). |
+| [exercícios_curso em vídeo](https://github.com/marcospontoexe/Python/tree/main/exerc%C3%ADcios_curso%20em%20v%C3%ADdeo) | Material didático e exercícios do Curso de Python 3 do Curso em Vídeo: [Mundo 1](https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6), [Mundo 2](https://www.youtube.com/watch?v=nJkVHusJp6E&list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye) e [Mundo 3](https://www.youtube.com/watch?v=0LB3FSfjvao&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH). |
+| [POO](https://github.com/marcospontoexe/Python/tree/main/POO) | Material didático e exercícios do curso [Python POO: Programação Orientada a Objetos](https://www.youtube.com/watch?v=Mim6nnkdOto&list=PLHz_AreHm4dn_RXXoa3Ameh77f95Hgwv3) do Curso em Vídeo. |
+| [MT5](https://github.com/marcospontoexe/Python/tree/main/MT5) | Material didático e exercícios do curso [Python e MetaTrader5 - MQL5](https://www.youtube.com/watch?v=RRj2wqtf-tY&list=PLNJN8eyDzxuMmVeyllbZYC1SJBkRHXq0c): coleta de ativos, ticks, candles e preços em tempo real. |
+| [Pandas](https://github.com/marcospontoexe/Python/tree/main/Pandas) | Exercícios com a biblioteca pandas: criação, leitura, exploração, filtragem e agrupamento de DataFrames. |
+| [Pandas e e-mail](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) | Exercício com pandas e win32com: relatório de faturamento por loja enviado por e-mail pelo Outlook. |
+| [tkinter](https://github.com/marcospontoexe/Python/tree/main/tkinter) | Exercícios com a biblioteca tkinter: gerenciadores de layout, widgets e eventos. |
+
+## Projetos
+
+### Velocímetro assistido por GNSS
+Velocímetro portátil que mede e registra a velocidade de um veículo a partir de sinais de satélite (GPS, GLONASS, Galileo...), usado como referência em testes de calibração de radares de velocidade. O equipamento roda numa Raspberry Pi 4 com tela touchscreen de 7", antena GNSS u-blox, botões físicos e bateria. O software em Python lê as sentenças NMEA `$GNVTG` (velocidade) e `$GNRMC` (data e hora UTC) pela porta serial, mostra a velocidade numa interface Tkinter e indica em verde quando ela está a ±1 km/h da velocidade de calibração escolhida. No teste de campo, as medidas ficaram a menos de 2 km/h das de um radar calibrado.
+
+**Tecnologias:** Python, Tkinter, threading, pyserial, pytz, RPi.GPIO, NMEA 0183, UBX, Raspberry Pi, systemd.
+
+![Tela principal do velocímetro](https://github.com/marcospontoexe/Python/blob/main/GNSS/Veloc%C3%ADmetro/imagens/relatorio/fig06-tela-principal.png)
+
+* [README do projeto](https://github.com/marcospontoexe/Python/tree/main/GNSS/Veloc%C3%ADmetro): como funciona, resultados e como executar.
+* [Relatório de projeto](https://github.com/marcospontoexe/Python/blob/main/GNSS/Veloc%C3%ADmetro/relatorio.md): manual de uso, hardware, software, diagrama, testes de campo e melhorias futuras.
+
+### Relatório de vendas por e-mail
+[Script](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) que lê uma planilha de vendas com pandas, calcula o faturamento, a quantidade vendida e o ticket médio de cada loja, e envia as tabelas formatadas em HTML por e-mail pelo Microsoft Outlook (win32com).
+
+---
 
 ## EXEMPLOS DE SINTAXE
-Veja a baixo alguns exemplos em Python:
+Os exemplos a seguir foram desenvolvidos durante o Curso de Python 3 do Curso em Vídeo ([Mundo 1](https://www.youtube.com/watch?v=S9uPNppGsGo&list=PLHz_AreHm4dlKP6QQCekuIPky1CiwmdI6), [Mundo 2](https://www.youtube.com/watch?v=nJkVHusJp6E&list=PLHz_AreHm4dk_nZHmxxf_J0WRAqy5Czye) e [Mundo 3](https://www.youtube.com/watch?v=0LB3FSfjvao&list=PLHz_AreHm4dksnH2jVTIVNviIMBVYyFnH)).
+
+Veja abaixo alguns exemplos em Python:
  
 ![operadores](https://github.com/marcospontoexe/Python/blob/main/imagens/operadores.png)
  
@@ -163,6 +194,8 @@ Ler todo o conteúdo do arquivo separando linha por linha como strings em uma ú
 ---
 
 # POO (Object-Oriented Programming) no Python
+O material e os [exemplos desta seção](https://github.com/marcospontoexe/Python/tree/main/POO) foram desenvolvidos durante o curso [Python POO: Programação Orientada a Objetos](https://www.youtube.com/watch?v=Mim6nnkdOto&list=PLHz_AreHm4dn_RXXoa3Ameh77f95Hgwv3) do Curso em Vídeo.
+
 A programação orientada a objetos tem o objetivo de aproximar o mundo digital do mundo real.  
 
 ## A evolução dos métodos de programação
@@ -280,7 +313,7 @@ As **linhas**, chamadas de *registros* ou *amostras*. São do tipo *dicionário*
 
 Ocabeçalho da tabela é chamado de *features*, *atributo* ou *variável*.
 
-![pandas](https://github.com/marcospontoexe/Python/blob/main/Pandas/imagens/pandas-componentes-principais.png)
+![pandas](https://github.com/marcospontoexe/Python/blob/main/Pandas/Nova%20pasta/pandas-componentes-principais.png)
 
 DataFrames e Series são muito semelhantes, pois muitas operações podem ser feitas com uma ou com a outra (e.g., preencher valores nulos, calcular a média).
 
@@ -296,6 +329,21 @@ O win32com é uma biblioteca que fornece acesso a muitas funcionalidades do Wind
 
 
 [Nesse exemplo](https://github.com/marcospontoexe/Python/tree/main/Pandas%20e%20e-mail) o win32com é usado para enviar um dataframe tratado por e-mail através do *Microsoft Outlook*.
+
+## MetaTrader5
+A biblioteca **MetaTrader5** permite que um script Python se conecte ao terminal MetaTrader 5 (que precisa estar instalado e aberto no Windows) para obter informações de ativos, ticks e candles da bolsa. Os exemplos a seguir foram desenvolvidos durante o curso [Python e MetaTrader5 - MQL5](https://www.youtube.com/watch?v=RRj2wqtf-tY&list=PLNJN8eyDzxuMmVeyllbZYC1SJBkRHXq0c):
+
+* [Conectando](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/01-conectando): Inicia o MetaTrader 5 com `initialize()` e mostra as informações do terminal com `terminal_info()`.
+* [Adquirindo preço](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/02-adquirindo%20pre%C3%A7o): Coleta os ticks de um ativo a partir de uma data com `copy_ticks_from()` e os transforma em DataFrame.
+* [Listando ativos](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/03-adquirindo%20ticks): Lista o nome de todos os ativos disponíveis com `symbols_get()`.
+* [Informações de um ativo](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/04-info%20de%20ticks): Mostra todas as propriedades de um ativo com `symbol_info()`, também em formato de DataFrame.
+* [Coletando candles](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/05-coletando%20candle): Coleta candles de um período gráfico com `copy_rates_from()` e salva em um arquivo CSV.
+* [Preço em tempo real](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/06-preco_tempo_real): Consulta o preço do último candle a cada 2 segundos.
+* [Inserindo ativo no MT5](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/07-inserindo%20ativo%20no%20mt5): Adiciona um ativo à observação de mercado com `symbol_select()`.
+* [Plotando gráfico](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/08-plotando%20grafico): Gera um gráfico de candles com a biblioteca cufflinks (script e Jupyter Notebook).
+* [Lendo CSV](https://github.com/marcospontoexe/Python/tree/main/MT5/analista%20quant/09-lendo_csv): Lê com pandas um histórico de candles salvo em CSV (`WIN$_H1.csv`, separado por tabulação).
+
+Na pasta [numerofobia](https://github.com/marcospontoexe/Python/tree/main/MT5/numerofobia) há mais dois exemplos, baseados [nesta playlist](https://www.youtube.com/watch?v=FqDE4OKdAm8&list=PLNmM068iM_p79qkUW7APi0hHj1iHvafhi&index=3): contagem e listagem dos ativos e coleta do preço de fechamento diário.
 
 ## re
 A biblioteca **re** em Python é utilizada para **trabalhar com expressões regulares (regex)** — uma poderosa ferramenta para **buscar, verificar, extrair, substituir e dividir strings com base em padrões de texto**.
