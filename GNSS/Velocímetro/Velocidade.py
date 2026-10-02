@@ -26,10 +26,6 @@ speed_str = ""
 flag = 0
 
 
-''' COORDENADAS DA VELSIS (GRAU DECIMAL)
--25 25.7960, -49 19.7240
-
-'''
 # Função para lidar com o evento de pressionar a barra de espaço
 def on_space(event):
     global hora
