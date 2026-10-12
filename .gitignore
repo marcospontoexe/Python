@@ -13,7 +13,4 @@ __pycache__/
 # Ficheiros temporários de bloqueio do Office (Excel/Word abertos)
 ~$*
 
-# Notas locais de trabalho
-CONTEXTO.md
-CLAUDE.md
-DOCS/
+
